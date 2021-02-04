@@ -13,6 +13,7 @@ local_backend: true
 # publish_mode: editorial_workflow
 collections:
   - label: "Guides"
+    label_singular: "Guide"
     name: "guides"
     folder: "src/guides"
     create: true
