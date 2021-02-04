@@ -1,9 +1,7 @@
 items:
+  - text: Guides
+    url: /guides
   - text: Demos
     url: https://ccp-myi.netlify.app/03-demos.html
-  - text: Menu Two
-    url: "#"
-  - text: Menu Three
-    url: "#"
   - text: Blog
     url: /blog
