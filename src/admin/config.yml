@@ -21,7 +21,8 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "string" }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1 }
       - { label: "Body", name: "body", widget: "markdown" }
   - label: "Blog"
     name: "blog"
