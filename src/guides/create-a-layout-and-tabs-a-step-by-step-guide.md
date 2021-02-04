@@ -1,7 +1,7 @@
 ---
 title: "Create a Layout and Tabs: a Step-by-Step Guide"
 description: Learn how to create your dashboard's overall structure
-order: 2
+date: 2021-01-02
 ---
 ## Layout
 
