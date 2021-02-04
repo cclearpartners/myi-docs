@@ -1,7 +1,7 @@
 ---
 title: "Create an HTML Report: a Step-by-Step Guide"
 description: Learn the very first step.
-order: 1
+date: 2021-01-01
 ---
 The HTML Report delivers the dashboard code to the end user’s device and makes the dashboard available in the orange tab strip.
 
