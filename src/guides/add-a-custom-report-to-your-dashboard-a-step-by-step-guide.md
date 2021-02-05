@@ -1,7 +1,7 @@
 ---
 title: "Add a Custom Report to Your Dashboard: a Step-by-Step Guide"
 description: Learn how to add and customise a custom-coded report to your dashboard
-order: 2021-01-04T08:15:49.824Z
+date: 2021-01-04T08:15:49.824Z
 ---
 You can mix reports you've created yourself with reports created specifically for your org by developers.
 
