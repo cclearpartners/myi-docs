@@ -22,7 +22,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Short Description", name: "description", widget: "string" }
-      - { label: "Date (used for guide order)", name: "order", widget: "date" }
+      - { label: "Date (used for guide order)", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
   - label: "Blog"
     name: "blog"
