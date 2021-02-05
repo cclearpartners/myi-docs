@@ -1,7 +1,7 @@
 ---
 title: "Add a Data Visualisation to Your Dashboard: a Step-by-Step Guide"
 description: Learn how to add data visualisations to your dashboard
-order: 2021-01-03T07:30:01.210Z
+date: 2021-01-03T07:30:01.210Z
 ---
 After creating a [HTML Report](/guides/create-an-html-report-a-step-by-step-guide/) and a [Layout with Tabs](/guides/create-a-layout-and-tabs-a-step-by-step-guide/), you are ready to add data visualisations to your dashboard.
 
