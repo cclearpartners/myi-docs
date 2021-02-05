@@ -29,7 +29,7 @@ module.exports = function (eleventyConfig) {
   // Add Tailwind Output CSS as Watch Target
   eleventyConfig.addWatchTarget("./_tmp/static/css/style.css");
 
-  // Copy Static Files to /_Site
+  // Copy Static Files to /_site
   eleventyConfig.addPassthroughCopy({
     "./_tmp/static/css/style.css": "./static/css/style.css",
     "./src/admin/config.yml": "./admin/config.yml",
@@ -37,7 +37,9 @@ module.exports = function (eleventyConfig) {
     "./node_modules/prismjs/themes/prism-tomorrow.css":
       "./static/css/prism-tomorrow.css",
   });
-  eleventyConfig.addPassthroughCopy("demos/education-dashboard");
+  
+  // Copy demos to /_site
+  eleventyConfig.addPassthroughCopy("./src/demos/education-dashboard");
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
