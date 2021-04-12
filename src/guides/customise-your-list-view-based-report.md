@@ -1,7 +1,7 @@
 ---
 title: "Customise your List View-based Report"
 description: Learn how to customise a report you've created yourself
-date: 2021-01-04T08:15:49.824Z
+date: 2021-01-05T08:15:49.824Z
 ---
 
 Reports can be customised in two ways: list views and custom parameters.
