@@ -1,0 +1,17 @@
+---
+layout: guides
+title: Demos
+---
+
+<section class="mt-15">
+    {% for demo in demos.items %}
+        <article class="my-8">
+            <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                <a href="{{ demo.url | url }}">{{ demo.title }}</a>
+            </h2>
+            <p class="text-lg text-gray-500 mb-3">
+                {{ demo.description }}
+            </p>
+        </article>
+    {% endfor %}
+</section>

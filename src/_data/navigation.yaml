@@ -1,7 +1,9 @@
 items:
   - text: Guides
-    url: /guide
+    url: /guides
   - text: Demos
-    url: /demos/education-dashboard
-  - text: Blog
-    url: /blog
+    url: /demos
+  - text: References
+    url: /references
+  - text: Releases
+    url: /releases

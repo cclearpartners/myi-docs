@@ -27,6 +27,8 @@ Mark at least one field as the group by field, to decide the focus point of the 
 
 ![Group By Field](/static/img/doughnut-group-by.png "Group By Field")
 
+For more information about list views, see the [list view guide](/guides/customise-your-list-view-based-report/).
+
 ## Reporting Block Layout for Display and Position
 
 ![Edit Reporting Block Layout](/static/img/block-edit.png "Edit Reporting Block Layout")
