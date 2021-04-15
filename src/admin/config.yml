@@ -36,6 +36,18 @@ collections:
       - { label: "Short Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Releases"
+    label_singular: "Release"
+    name: "releases"
+    folder: "src/releases"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "string" }
+      - { label: "Release Date", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - label: "Settings"
     name: "settings"
     editor:
