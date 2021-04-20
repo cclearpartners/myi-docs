@@ -24,6 +24,17 @@ collections:
       - { label: "Short Description", name: "description", widget: "string" }
       - { label: "Date (used for guide order)", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Home Page Items"
+    label_singular: "Home Page Item"
+    name: "homes"
+    folder: "src/homes"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date (used for order)", name: "date", widget: "date" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - label: "References"
     label_singular: "Reference"
     name: "references"
