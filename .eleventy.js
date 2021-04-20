@@ -64,6 +64,8 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
