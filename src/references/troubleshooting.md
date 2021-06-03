@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting
 description: Tips to resolve common issues
+date: 2021-01-03T00:00:00.000Z
 ---
 
 Here are steps admins can take before asking the developers for help.
