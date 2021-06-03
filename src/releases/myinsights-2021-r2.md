@@ -1,8 +1,14 @@
 ---
 title: MyInsights+ 2021 R2
-description: Conversion to DX and Bugfixes
+description: Filters Custom Parameter Improvements, Conversion to DX and Bugfixes
 date: 2021-05-19T20:04:41.863Z
 ---
+## filters Custom Parameter
+
+The filters custom parameter is now much more powerful. It can be used as a where clause, with AND, OR and groupings. There are also new keywords such as `$LAST_N_DAYS` and `$ACCOUNT_ID` that allow for much better queries.
+
+See all the details in the [Custom Parameters Reference](/references/custom-parameters).
+
 ## Conversion to DX
 
 DX is Salesforce's latest and greatest way of packaging code deployed to orgs. Instead of one, very large XML file, we will provide a clearer, more structured view in smaller XML files.
