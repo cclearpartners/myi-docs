@@ -12,6 +12,14 @@ h2 {
   @apply text-2xl font-bold mb-3;
 }
 
+.header-anchor {
+  display: none;
+}
+
+:is(h2:hover, h3:hover) .header-anchor {
+  display: initial;
+}
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],

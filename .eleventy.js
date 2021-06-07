@@ -1,3 +1,5 @@
+const markdownIt = require('markdown-it')
+const markdownItAnchor = require('markdown-it-anchor')
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -9,6 +11,16 @@ module.exports = function (eleventyConfig) {
 
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
+
+  // Configure Markdown options
+  const markdownItOptions = { html: true };
+  const markdownItAnchorOptions = { permalink: true };
+  const markdownLib = markdownIt(markdownItOptions).use(
+    markdownItAnchor,
+    markdownItAnchorOptions
+  );
+
+  eleventyConfig.setLibrary("md", markdownLib);
 
   // human readable date
   eleventyConfig.addFilter("readableDate", (dateObj) => {
