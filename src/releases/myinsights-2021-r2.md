@@ -3,7 +3,7 @@ title: MyInsights+ 2021 R2
 description: Filters Custom Parameter Improvements, Conversion to DX and Bugfixes
 date: 2021-05-19T20:04:41.863Z
 ---
-## filters Custom Parameter
+## Filters Custom Parameter
 
 The filters custom parameter is now much more powerful. It can be used as a where clause, with AND, OR and groupings. There are also new keywords such as `$LAST_N_DAYS` and `$ACCOUNT_ID` that allow for much better queries.
 
@@ -18,6 +18,8 @@ In the future, this will enable MyInsights+ packages to be deployed just like pa
 ## Remove "Displayed On" field from Listview
 
 The 'Displayed On' field had become obsolete, as it was not used by developers, admins or users. This will have a positive impact on the user experience.
+
+![Remove "Displayed On" field from Listview](/static/img/microsoftteams-image-1-.png "Remove \"Displayed On\" field from Listview")
 
 ## Bugfixes
 
