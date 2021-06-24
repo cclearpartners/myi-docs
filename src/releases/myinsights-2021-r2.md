@@ -5,7 +5,7 @@ date: 2021-05-19T20:04:41.863Z
 ---
 ## Filters Custom Parameter
 
-The filters custom parameter is now much more powerful. It can be used as a where clause, with AND, OR and groupings. There are also new keywords such as `$LAST_N_DAYS` and `$ACCOUNT_ID` that allow for much better queries.
+The filters custom parameter is now much more powerful. It can be used as a where clause, with AND, OR and groupings. There are also new keywords such as `$LAST_N_DAYS`, `$TRUE`, `$FALSE` and `$ACCOUNT_ID` that allow for much better queries.
 
 See all the details in the [Custom Parameters Reference](/references/custom-parameters).
 
