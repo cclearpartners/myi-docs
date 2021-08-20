@@ -152,6 +152,10 @@ Example usage: `useTranslationWorkbenchLabels:true;`
 
 Adapts the size of the report. Optional, defaults to 1. The size of the report relative to the other reports.
 
+### width
+
+The width of the report. Can be any CSS Unit (%, px, etc.)
+
 ## Home Page List View Reports
 
 ### Counter
