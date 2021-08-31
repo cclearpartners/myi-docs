@@ -34,6 +34,8 @@ Placeholders start with a `$` and are replaced. Available placeholders:
 
 $EMPTY and $NONE are important because while a block might not need a title in the context of a user's dashboard, the admin needs to be able to identify it. These tokens make that possible.
 
+NOTE: Since 2021.R2, Reporting Block Layout names are editable, instead of being auto-numbered. This makes them more easily identifiable in lists in Salesforce.
+
 ## Tab Titles
 
 To translate a Tab's title, write a Veeva Message's name in the Message Key field.
