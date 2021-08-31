@@ -44,17 +44,27 @@ Fields with a constrained range of values are best suited to be filters. Picklis
 |---------------------|-------|-------------|
 | smartlink           | Boolean  | Optional. When false, prevents the detail table from smartlinking to the individual record | 
 
-## Highlight
+### Highlight
 
 In the top-right corner, the end user will see a highlight number. It displays the total amount of records currently being displayed in the doughnut. The user can click on it to view the records' details in a table.
 
 The value of the highlight changes to reflect the currently-applied filters.
 
-## Labels
+### Labels
 
 The labels under the chart are the unique values found in the field currently being grouped by.
 
 By clicking on a label, the end user can view the details of the records that are part of the group.
+
+## Table
+
+Uses a List View to display data in a table.
+
+### Custom Parameters
+
+| Name                | Type  | Description |
+|---------------------|-------|-------------|
+| smartlink           | Boolean  | Optional. When false, clicking on the row does not smart link to the individual record | 
 
 ## Web Link
 
