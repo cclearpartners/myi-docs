@@ -66,6 +66,27 @@ Uses a List View to display data in a table.
 |---------------------|-------|-------------|
 | smartlink           | Boolean  | Optional. When false, clicking on the row does not smart link to the individual record | 
 
+## Aggregation Table
+
+Table that will display one row per aggregated value based on the Group By field.
+
+When the Group By value is clicked a modal will be opened that shows the detailed values of the records that are part of the group.
+
+### List View Definitions
+
+#### Group By
+
+One field must have the Group By checkbox checked. All other fields will be rolled up based on that field.
+
+### Aggragations 
+
+| Type           | Aggregation | Description                                  |
+|----------------|-------------|----------------------------------------------|
+| Number, Double | Sum         | The sum of the values will be shown.         |
+| Date, DateTime | Range       | The range between the dates will be shown.   |
+| String         | First       | The value of the first String will be shown. |
+
+
 ## Web Link
 
 Displays a URL.
