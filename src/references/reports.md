@@ -84,7 +84,7 @@ One field must have the Group By checkbox checked. All other fields will be roll
 |----------------|-------------|----------------------------------------------|
 | Number, Double | Sum         | The sum of the values will be shown.         |
 | Date, DateTime | Range       | The range between the dates will be shown.   |
-| String         | First       | The value of the first String will be shown. |
+| Other          | First       | The value of the first String will be shown. |
 
 
 ## Web Link
