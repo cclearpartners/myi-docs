@@ -78,14 +78,19 @@ When the Group By value is clicked a modal will be opened that shows the detaile
 
 One field must have the Group By checkbox checked. All other fields will be rolled up based on that field.
 
-### Aggragations 
+### Aggregations 
 
 | Type           | Aggregation | Description                                  |
 |----------------|-------------|----------------------------------------------|
 | Number, Double | Sum         | The sum of the values will be shown.         |
 | Date, DateTime | Range       | The range between the dates will be shown.   |
-| Other          | First       | The value of the first String will be shown. |
+| Other          | First       | The value of the first record will be shown. |
 
+### Custom Parameters
+
+| Name                | Type   | Description |
+|---------------------|--------|-------------|
+| numericAggregation  | String | Optional. Type of aggregation that will be used for the numeric values. Options are SUM or AVG. When not filled in SUM will be used as default. | 
 
 ## Web Link
 
