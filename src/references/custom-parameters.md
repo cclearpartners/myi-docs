@@ -137,6 +137,23 @@ The block's highlight value will not be displayed when this is set to `false`. D
 
 Example usage: `showHighlight:false`
 
+### toc
+
+Generates a floating menu containing all of the reports with this custom parameter.
+
+In the menu, the name and the icon of each report is displayed.
+
+Example usage: `toc:insight`
+
+The following values can be used:
+
+|Value      |Icon|
+|-----------|------|
+|insight    |lightbulb|
+|table      |table|
+|thumbs-up  |thumbs up|
+|thumbs-down|thumbs down|
+
 ### useTranslationWorkbenchLabels
 
 Indicates that Translation Workbench labels should be used for listview fields when available. The default behaviour is to use the default Veeva labels.
