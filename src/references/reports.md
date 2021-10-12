@@ -4,6 +4,10 @@ description: Details of all available standard reports
 date: 2021-01-01T00:00:00.000Z
 ---
 
+## Account Info Multi-Column
+
+
+
 ## Counter
 
 Displays the number of records in a query. When clicked, displays the records' details in a modal.
@@ -42,7 +46,10 @@ Fields with a constrained range of values are best suited to be filters. Picklis
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| smartlink           | Boolean  | Optional. When false, prevents the detail table from smartlinking to the individual record | 
+| categoriesMax       | Number  | Total number of categories that should be shown. Eg. 4 means that the 3 biggest categories will be shown and all remaining categories will be aggregated into one.  |
+| highlightsMax       | Number  | Total number of categories to leave in colour. Other categories will be greyed out. Eg. 2 means that the 2 biggest categories will be in colour, while all others will be grey  |
+| monochrome          | CSS colour  | All categories will have this colour. Can be combined with highlightsMax or categoriesMax.  |
+| smartlink           | Boolean | Optional. When false, prevents the detail table from smartlinking to the individual record | 
 
 ### Highlight
 
@@ -55,6 +62,21 @@ The value of the highlight changes to reflect the currently-applied filters.
 The labels under the chart are the unique values found in the field currently being grouped by.
 
 By clicking on a label, the end user can view the details of the records that are part of the group.
+
+### Examples
+
+
+Aggregation: `categoriesMax:3`
+
+![Doughnut Chart with Aggregation](/static/img/release-2021R3-doughnut-aggregation.png "Doughnut Chart Aggregation")
+
+When "Others" is clicked, the detail table shows all the records that have been aggregated into the same category:
+
+![Doughnut Chart with Aggregation](/static/img/release-2021R3-doughnut-aggregation-detail.png "Doughnut Chart Aggregation")
+
+Highlighting: `highlightsMax:1`
+
+![Doughnut Chart with Highlight](/static/img/release-2021R3-doughnut-highlight.png "Doughnut Chart Highlight")
 
 ## Table
 
