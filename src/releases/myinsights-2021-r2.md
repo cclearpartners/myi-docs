@@ -5,6 +5,8 @@ date: 2021-05-19T20:04:41.863Z
 ---
 ## Filters Custom Parameter
 
+<feature-badges zip></feature-badges>
+
 The filters custom parameter is now much more powerful. It can be used as a where clause, with AND, OR and groupings. There are also new keywords such as `$LAST_N_DAYS`, `$TRUE`, `$FALSE` and `$ACCOUNT_ID` that allow for much better queries.
 
 See all the details in the [Custom Parameters Reference](/references/custom-parameters).
@@ -16,13 +18,13 @@ DX is Salesforce's latest and greatest way of packaging code deployed to orgs. I
 In the future, this will enable MyInsights+ packages to be deployed just like packages from the Salesforce AppExchange.
 
 ## Remove "Displayed On" field from Listview
-
+<feature-badges package></feature-badges>
 The 'Displayed On' field had become obsolete, as it was not used by developers, admins or users. This will have a positive impact on the user experience.
 
 ![Remove "Displayed On" field from Listview](/static/img/microsoftteams-image-1-.png "Remove \"Displayed On\" field from Listview")
 
 ## Bugfixes
-
+<feature-badges package></feature-badges>
 * When editing a List View Definition whose Display checkbox was unchecked, it will now remain unchecked
 * The Report Type is now mandatory when creating a Reporting Block Layout.
 * The reference field is now mandatory for List View Definitions that refer to a lookup field.
