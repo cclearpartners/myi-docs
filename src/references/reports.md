@@ -78,6 +78,22 @@ Highlighting: `highlightsMax:1`
 
 ![Doughnut Chart with Highlight](/static/img/release-2021R3-doughnut-highlight.png "Doughnut Chart Highlight")
 
+## Selector Filter
+
+Combines a "selector" dropdown with one or more filter dropdowns. The contents of the filter dropdowns is controlled by the value selected in the "selector" dropdown.
+
+<video width="100%" controls>
+  <source src="/static/video/release-2021R4-selector-filter.mov" type="video/mp4">
+</video>
+
+### Configuration
+
+Create a list view.
+
+Choose one field (no more and no less) as the Group By field. This field is the controlling selector dropdown.
+
+Optionally, choose other fields as Filter By fields. These will be the filter dropdowns on the right.
+
 ## Table
 
 Uses a List View to display data in a table.
