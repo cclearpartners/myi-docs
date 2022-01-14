@@ -30,3 +30,15 @@ body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
 }
+
+.toc ol {
+  margin-left: 1rem;
+}
+
+.toc li {
+  list-style-type: decimal;
+}
+
+.toc li li li {
+  list-style-type: none;
+}
