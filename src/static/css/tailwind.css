@@ -35,10 +35,10 @@ body pre[class*="language-"] {
   margin-left: 1rem;
 }
 
-.toc li {
-  list-style-type: decimal;
+.toc > ol > li {
+  font-weight: bold;
 }
 
-.toc li li li {
-  list-style-type: none;
+li li {
+  font-weight: normal;
 }
