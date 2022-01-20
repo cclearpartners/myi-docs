@@ -8,7 +8,7 @@ date: 2021-01-02T00:00:00.000Z
 
 ### collapsable
 
-Causes the Panel to be collapsed and revealed via a toggle. Here is an example of both states:
+Causes the report to be collapsable via a toggle. Here is an example of both states:
 
 ![Collapsed and revealed panels](/static/img/custom-parameter-collapsable.png "Collapsed and revealed panels")
 
@@ -17,7 +17,13 @@ Causes the Panel to be collapsed and revealed via a toggle. Here is an example o
 |false |Default. Panel is not collapsable. No toggle is displayed.|
 |true |Panel has a toggle and is first displayed in a collapsed state|
 
-Example usage: `collapsable:true;`
+Example usage: `collapsable;`
+
+### collapsed
+
+Causes the report to initially appear collapsed and revealable via a toggle.
+
+Example usage: `collapsed;`
 
 ### countriesInclude
 

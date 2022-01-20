@@ -1,5 +1,6 @@
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
+const pluginTOC = require('eleventy-plugin-toc')
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -14,7 +15,7 @@ module.exports = function (eleventyConfig) {
 
   // Configure Markdown options
   const markdownItOptions = { html: true };
-  const markdownItAnchorOptions = { permalink: true };
+  const markdownItAnchorOptions = { permalink: false };
   const markdownLib = markdownIt(markdownItOptions).use(
     markdownItAnchor,
     markdownItAnchorOptions
@@ -32,6 +33,9 @@ module.exports = function (eleventyConfig) {
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  // Support table of contents
+  eleventyConfig.addPlugin(pluginTOC)
+  
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
   eleventyConfig.addDataExtension("yaml", (contents) =>

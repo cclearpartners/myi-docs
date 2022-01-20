@@ -20,9 +20,25 @@ h2 {
   display: initial;
 }
 
+feature-badges {
+  align-items: baseline;
+} 
+
 /* Syntax Highlighting*/
 
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
+}
+
+.toc ol {
+  margin-left: 1rem;
+}
+
+.toc > ol > li {
+  font-weight: bold;
+}
+
+li li {
+  font-weight: normal;
 }
