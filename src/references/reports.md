@@ -78,6 +78,19 @@ Highlighting: `highlightsMax:1`
 
 ![Doughnut Chart with Highlight](/static/img/release-2021R3-doughnut-highlight.png "Doughnut Chart Highlight")
 
+## Members
+
+Displays a list of Accounts linked to the same HCO. Can be used on both HCP and HCO Account dashboards.
+
+Requires a List View based on Account.
+
+### Custom Parameters
+
+| Name        | Type  | Description |
+|-------------|-------|-------------|
+|text         |String |Optional. Can be a Veeva Message or plain text. Receives the number of HCPs as an argument. When set, this text will be displayed and will open the modal with the table of Accounts.|
+|helpText |String |Optional. Veeva Message or plain text to show in tooltip. Displayed in header or in the body after the text.|
+
 ## Table
 
 Uses a List View to display data in a table.
