@@ -6,3 +6,6 @@ links:
   - title: Demos
     url: "/demos/"
     desc: Examples of what can be achieved.
+  - title: "Release Notes"
+    url: "/releases/2021-r4/"
+    desc: 2021 R4
