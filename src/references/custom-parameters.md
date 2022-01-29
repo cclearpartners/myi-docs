@@ -82,6 +82,7 @@ Example: `Product_vod__c/Product_Type_vod__c='Sample' OR Approved=$TRUE,Call2_vo
 Keywords are used to make the queries more powerful. When the query is executed, they are replaced by actual values.
 
 - `$ACCOUNT_ID`: In an Account dashboard, refers to the ID of the current Account.
+- `$ACCOUNT_PLAN_ID`: In an Account Plan dashboard, refers to the ID of the current Account Plan.
 - `$LAST_N_DAYS`: Specifies how many days to go back. Example: `$LAST_N_DAYS:30` is 30 days ago. 
 - `$TRUE`, `$FALSE`
 - `$NULL`: Specifies an empty field
