@@ -54,17 +54,27 @@ In this case, SUM will be used for all applicable fields, except for `Amount_ccp
 
 Displays the number of records in a query. When clicked, displays the records' details in a modal.
 
+Use the `listViews` custom parameter to show more than one counter in the same report.
+
 ### Configuration Examples
 
-`counterIconClasses:fas fa-pencil;counterSubtitle:My Subtitle`
+`counterIconClasses:fas fa-pencil;counterSubtitle:Publications;`
+
+![Counter](/static/img/report-counter.png "Counter")
+
+`listViews:Premium Accounts,Clinical Trials,Recent Calls;counterIconClasses:fas fa-user,fas fa-flask,fas fa-phone;counterSubtitle:premium_accounts,$OBJECT_NAME,Latest Phone Calls;`
+
+![Counter with multiple list views](/static/img/report-counter-listviews.png "Counter with multiple list views")
+
 
 ### Custom Parameters
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| counterIconClasses  | Text  | Optional. font-awesome classes. | 
-| counterSubtitle     | Text  | Optional. Shown under the counter. If not specified, the pluralised name of the list view's main object is displayed | 
-| smartlink           | Boolean  | Optional. When false, prevents the detail table from smartlinking to the individual record | 
+| counterIconClasses  | Text  | Required. font-awesome classes for the icon to be displayed. | 
+| counterSubtitle     | Text  | Shown under the counter. Can be a plain text, a Veeva Message or `$OBJECT_NAME`. If `$OBJECT_NAME` is used or no value is specified, the pluralised name of the list view's main object is displayed | 
+| listViews           | Text  | Comma-separated list of List View names. The order of the List Views determines the order they are shown in. `counterIconClasses` becomes a comma-separated list. `counterSubtitle` becomes a comma-separated list, with the special token `$OBJECT_NAME` used for the objects' translated and pluralised name. |
+| smartlink           | Boolean  | When false, prevents the detail table from smartlinking to the individual record | 
 
 ## Doughnut Chart
 
