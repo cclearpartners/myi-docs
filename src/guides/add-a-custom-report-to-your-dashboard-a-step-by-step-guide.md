@@ -8,7 +8,7 @@ You can mix reports you've created yourself with reports created specifically fo
 Custom reports are added to a dashboard in exactly the same way. Two fields, MyInsights+ Reporting Block and Custom Parameters play an important role.
 
 <video width="100%" controls>
-  <source src="/static/img/custom-block.mov" type="video/mp4">
+  <source src="/static/video/custom-block.mov" type="video/mp4">
 </video>
 
 ## Reporting Block
