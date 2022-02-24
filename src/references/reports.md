@@ -8,7 +8,7 @@ date: 2021-01-01T00:00:00.000Z
 
 [Details](/reports/aggregation-table)
 
-##Counter
+## Counter
 
 [Details](/reports/counter)
 
