@@ -86,6 +86,7 @@ Keywords are used to make the queries more powerful. When the query is executed,
 - `$LAST_N_DAYS`: Specifies how many days to go back. Example: `$LAST_N_DAYS:30` is 30 days ago. 
 - `$TRUE`, `$FALSE`
 - `$NULL`: Specifies an empty field
+- `$TODAY`: For a date field, today's date
 
 Limitations:
 - Does not support queries with values that are not [cross-platform](https://support.veeva.com/hc/en-us/articles/360021663794-Why-do-HTML-Reports-Work-Differently-on-Different-Platforms-?source=search).
