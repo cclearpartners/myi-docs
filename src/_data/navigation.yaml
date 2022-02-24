@@ -1,6 +1,8 @@
 items:
   - text: Guides
     url: /guides
+  - text: Reports
+    url: /reports
   - text: Demos
     url: /demos
   - text: References

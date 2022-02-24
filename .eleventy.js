@@ -30,6 +30,12 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // sort by title
+  eleventyConfig.addFilter("sortByTitle", records => {
+    console.log(records[0].data.title);
+    return [...records].sort((record1, record2) => 'title' in record1.data ? record1.data.title.localeCompare(record2.data.title) : 1);
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
