@@ -13,6 +13,7 @@ Create an admin list view. Fields used in the max, value and title custom parame
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
+| details             | String| One of: above,below,left,modal,right. Defaults to modal. Determines where the details table will be displayed. |
 | mode                | String| Can be one of: list,sum. Defaults to list. List shows one progress bar per record. Sum aggregates all the records into one progress bar. | 
 | max                 | String,Number| When a number is given, each progress bar has a fixed maximum value. When a field path is given, the progress's maximum is set to the field's value. | 
 | type                | String| Can be one of: segment. Defaults to segment. | 
