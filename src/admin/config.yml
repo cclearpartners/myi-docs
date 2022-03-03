@@ -59,6 +59,14 @@ collections:
       - { label: "Short Description", name: "description", widget: "string" }
       - { label: "Release Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Reports"
+    name: "reports"
+    folder: "src/reports"
+    create: true
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - label: "Settings"
     name: "settings"
     editor:
