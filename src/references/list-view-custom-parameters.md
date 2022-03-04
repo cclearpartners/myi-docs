@@ -52,4 +52,4 @@ Limitations:
 
 ### limit
 
-A number. Limits the number of results of the list view's main object.
+A number. Limits the number of results for the query on the list view's main object.
