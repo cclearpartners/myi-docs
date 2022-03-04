@@ -1,7 +1,8 @@
 ---
 title: Reports Reference
-description: Details of all available standard reports
+description: Deprecated. See the Reports menu instead.
 date: 2021-01-01T00:00:00.000Z
+order: 5
 ---
 
 ## Aggregation Table

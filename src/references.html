@@ -4,7 +4,7 @@ title: References
 ---
 
 <section class="mt-15">
-    {% set postslist = collections.references %}
+    {% set postslist = collections.references | sortByOrder %}
 
     {% for post in postslist %}
         <article class="my-8">

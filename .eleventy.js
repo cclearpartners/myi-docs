@@ -32,8 +32,12 @@ module.exports = function (eleventyConfig) {
 
   // sort by title
   eleventyConfig.addFilter("sortByTitle", records => {
-    console.log(records[0].data.title);
     return [...records].sort((record1, record2) => 'title' in record1.data ? record1.data.title.localeCompare(record2.data.title) : 1);
+  });
+
+  // sort by title
+  eleventyConfig.addFilter("sortByOrder", records => {
+    return [...records].sort((record1, record2) => 'order' in record1.data ? record1.data.order - record2.data.order : 1);
   });
 
   // Syntax Highlighting for Code blocks
