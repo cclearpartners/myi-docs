@@ -60,6 +60,7 @@ collections:
       - { label: "Release Date", name: "date", widget: "date" }
       - { label: "Body", name: "body", widget: "markdown" }
   - label: "Reports"
+    label_singular: "Report"
     name: "reports"
     folder: "src/reports"
     create: true
