@@ -50,3 +50,6 @@ Keywords are used to make the queries more powerful. When the query is executed,
 Limitations:
 - Does not support queries with values that are not [cross-platform](https://support.veeva.com/hc/en-us/articles/360021663794-Why-do-HTML-Reports-Work-Differently-on-Different-Platforms-?source=search).
 
+### limit
+
+A number. Limits the number of results for the query on the list view's main object.
