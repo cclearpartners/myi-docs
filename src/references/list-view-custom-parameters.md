@@ -1,7 +1,7 @@
 ---
 title: List View Custom Parameters
 description: Custom Parameters that can be used on the List View object
-date: 2022-03-04T14:54:54.912Z
+date: 2021-01-03T02:54:54.912Z
 ---
 
 ## fieldsInclude
