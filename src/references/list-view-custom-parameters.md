@@ -4,6 +4,7 @@ description: Custom Parameters that can be used on the List View object
 date: 2021-01-03T02:54:54.912Z
 order: 2
 ---
+These custom parameters can be set either on a List View or on a Reporting Block Layout.
 
 ## fieldsInclude
 
