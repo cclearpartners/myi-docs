@@ -38,19 +38,25 @@ Example: `filters:Product_vod__c/Product_Type_vod__c='Sample' OR Approved=$TRUE,
 
 ### Keywords
 
-Keywords are used to make the queries more powerful. When the query is executed, they are replaced by actual values.
+Keywords are used to make the queries more powerful and handle values that are not [cross-platform](https://support.veeva.com/hc/en-us/articles/360021663794-Why-do-HTML-Reports-Work-Differently-on-Different-Platforms-?source=search). When the query is executed, keywords are replaced by actual values.
 
 - `$ACCOUNT_ID`: In an Account dashboard, refers to the ID of the current Account.
 - `$ACCOUNT_PLAN_ID`: In an Account Plan dashboard, refers to the ID of the current Account Plan.
+- `$IN`: Specifies a list of possible matches. Matches are separated by a pipe character: **|**. Example: `Status_vod__c $IN(Saved_vod|Submitted_vod|Pending_vod)`.
 - `$LAST_N_DAYS`: Specifies how many days to go back. Example: `$LAST_N_DAYS:30` is 30 days ago. 
 - `$TRUE`, `$FALSE`
 - `$NULL`: Specifies an empty field.
 - `$TODAY`: For a date field, today's date.
 - `$USER_ID`: The current user's ID.
 
-Limitations:
-- Does not support queries with values that are not [cross-platform](https://support.veeva.com/hc/en-us/articles/360021663794-Why-do-HTML-Reports-Work-Differently-on-Different-Platforms-?source=search).
-
 ### limit
 
 A number. Limits the number of results for the query on the list view's main object.
+
+### recordTypes
+
+Specifies the developer names of Record Types the query should include. If no object is specified, the associated listview's main object is used.
+
+Example usage: `recordTypes:Professional_vod,Multi_Channel_Activitiy_vod__c/Email_vod`
+
+Here, Email_vod is a record type on Multi Channel Activity. Professional_vod defaults to a record type on the listview's main object.

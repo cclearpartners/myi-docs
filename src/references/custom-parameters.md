@@ -50,15 +50,15 @@ Example: `groupBy:Opened_vod__c,Account.Name`
 
 ### fieldsInclude
 
-This has moved to [List View Custom Parameters](/references/list-view-custom-parameters/#fieldsinclude)
+This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#fieldsinclude)
 
 ### fieldsExclude
 
-This has moved to [List View Custom Parameters](/references/list-view-custom-parameters/#fieldsexclude)
+This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#fieldsexclude)
 
 ### filters
 
-This has moved to [List View Custom Parameters](/references/list-view-custom-parameters/#filters)
+This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#filters)
 
 ### labels
 
@@ -68,7 +68,7 @@ Example: Account/Name=Acc Holder,Product_vod__c/Status_vod__c=status_translation
 
 ### limit
 
-This has moved to [List View Custom Parameters](/references/list-view-custom-parameters/#limit)
+This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#limit)
 
 ### moreLimit
 
@@ -102,11 +102,7 @@ Indicates the UI theme to use. How this is interpreted is up to individual compo
 
 ### recordTypes
 
-Specifies the developer names of Record Types the query should include. If no object is specified, the associated listview's main object is used.
-
-Example usage: `recordTypes:Professional_vod,Multi_Channel_Activitiy_vod__c/Email_vod`
-
-Here, Email_vod is a record type on Multi Channel Activity. Professional_vod defaults to a record type on the listview's main object.
+This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
 
 ### showHighlight
 
