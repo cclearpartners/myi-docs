@@ -110,6 +110,16 @@ The block's highlight value will not be displayed when this is set to `false`. D
 
 Example usage: `showHighlight:false`
 
+### tabFilters
+
+Specifies how the report should use the value selected in a filter, such as a [Record Filter](/reports/record-filter).
+
+Consists of a filter name and an object/field combination. When the specified filter changes, the report is updated.
+
+Example: `tabFilters:Event_vod__c.Id=Event_Attendee_vod__c/Medical_Event_vod__c`
+
+The first part identifies the filter. The second part identifies the field in the List View that must match the filter's value.
+
 ### toc
 
 Generates a floating menu containing all of the reports with this custom parameter.
