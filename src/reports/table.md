@@ -21,5 +21,4 @@ Use the List View Definition's Help Text field to display a help button at the t
 | pagination          | Number,Boolean | Defaults to 10. Set to false to remove all pagination. Set to a number to change page size. |
 | search              | Boolean | Defaults to false. Set this to true to enable searching the table's contents. | 
 | smartlink           | Boolean  | Optional. Defaults to true. When true, if the List View's main object is smartlinkable, the user can click on a row to view the record's page. When false, clicking on the row does not smart link to the individual record. | 
-| tabFilterEvents     | String  | Optional. Consists of an event name and a field path. `Event_vod__c.Id=Event_Attendee_vod__c.Medical_Event_vod__c` The first part identifies the filter. The second part identifies the field in the List View that must match the filter's value. |
 
