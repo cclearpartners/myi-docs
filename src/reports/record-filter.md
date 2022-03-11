@@ -19,7 +19,7 @@ Use the filters custom parameter to limit the records that are shown.
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| multiple            | Boolean| Defaults to false. When set to true, multiple values can be selected in the dropdown. |
+| multiple            | Boolean| Defaults to true. When set to false, only one value can be selected in the dropdown. |
 
 ## Example
 
