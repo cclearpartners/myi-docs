@@ -4,7 +4,8 @@ description: Custom Parameters that can be used on the List View object
 date: 2021-01-03T02:54:54.912Z
 order: 2
 ---
-These custom parameters can be set either on a List View or on a Reporting Block Layout.
+
+These custom parameters can be set either on a List View or on a Reporting Block Layout. The ones set on Reporting Block Layout override the ones set on List View.
 
 ## fieldsInclude
 
@@ -49,14 +50,24 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$TODAY`: For a date field, today's date.
 - `$USER_ID`: The current user's ID.
 
-### limit
+## limit
 
 A number. Limits the number of results for the query on the list view's main object.
 
-### recordTypes
+## recordTypes
 
 Specifies the developer names of Record Types the query should include. If no object is specified, the associated listview's main object is used.
 
 Example usage: `recordTypes:Professional_vod,Multi_Channel_Activitiy_vod__c/Email_vod`
 
 Here, Email_vod is a record type on Multi Channel Activity. Professional_vod defaults to a record type on the listview's main object.
+
+## requiredLookups
+
+Specifies which lookups are required. Similar to an INNER JOIN in SQL.
+
+This can be used when the lookup is optional and you only want the ones that are filled in.
+
+This can also be useful to filter out records that are linked to parent records that are not synced to the user's iPad, such as Sent Emails linked to a template the rep does not have access to, or Calls to an Account outside of the rep's territory.
+
+For example, here's how to query only Product Metrics records that are linked to a Location: `requiredLookups:Location_vod__c;`.
