@@ -1,5 +1,5 @@
 ---
-title: Dashboard Custom Parameters Reference
+title: Dashboard Custom Parameters
 description: Details of all available standard dashboard custom parameters
 date: 2021-01-03T00:00:00.000Z
 order: 3
