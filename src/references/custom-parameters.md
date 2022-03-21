@@ -1,11 +1,9 @@
 ---
-title: Custom Parameters Reference
+title: Reporting Block Layout Custom Parameters Reference
 description: Details of all available standard custom parameters
 date: 2021-01-02T00:00:00.000Z
 order: 1
 ---
-
-## General Custom Parameters
 
 ### collapsable
 
@@ -25,6 +23,14 @@ Example usage: `collapsable;`
 Causes the report to initially appear collapsed and revealable via a toggle.
 
 Example usage: `collapsed;`
+
+### cellStyle
+
+| Value | Effect |
+|-------|--------|
+| single| Makes all reports in the same cell (same row and same column) appear as if they are in the same report |
+
+Example: `cellStyle:single;`
 
 ### countriesInclude
 
@@ -153,35 +159,6 @@ Example usage: `useTranslationWorkbenchLabels:true;`
 Adapts the size of the report. Optional, defaults to 1. The size of the report relative to the other reports.
 
 ## Home Page List View Reports
-
-### Counter
-
-#### counterIconClasses
-
-CSS classes used to generate the Counter's icon.
-Example: `fas fa-check-circle`
-
-#### counterSubtitle
-
-Associate a listview to the report to define its data.
-
-### List View
-
-#### frozenColumn
-
-Since 2021 R1.
-
-For very wide tables, allows one column to be frozen in place when scrolling horizontally. The column will stick to the left edge.
-
-<video width="100%" controls>
-  <source src="/static/video/custom-parameters-frozenColumn.mov" type="video/mp4">
-</video>
-
-The value is the name of the field if the field is on the main object, or the name of the lookup field on the main object, a dot and then the name of the field on the lookup object.
-
-Example of a field on the main object: `frozenColumn:Account_Name_vod__c`
-
-Example of a field on a lookup object: `frozenColumn:Account_vod__c.Name`
 
 ### Child_Accounts_vod__c
 
