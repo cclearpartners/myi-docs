@@ -64,10 +64,12 @@ Here, Email_vod is a record type on Multi Channel Activity. Professional_vod def
 
 ## requiredLookups
 
-Specifies which lookups are required. Similar to an INNER JOIN in SQL.
+This is a comma-separated list of lookup field names that specifies which lookups are required. Similar to an INNER JOIN in SQL.
 
 This can be used when the lookup is optional and you only want the ones that are filled in.
 
-This can also be useful to filter out records that are linked to parent records that are not synced to the user's iPad, such as Sent Emails linked to a template the rep does not have access to, or Calls to an Account outside of the rep's territory.
+This also filters out records that are linked to parent records that are not synced to the user's iPad, such as Sent Emails linked to a template the rep does not have access to, or Calls to an Account outside of the rep's territory.
 
-For example, here's how to query only Product Metrics records that are linked to a Location: `requiredLookups:Location_vod__c;`.
+Make sure that any lookup fields used here are also in your List View!
+
+For example, the Product Metrics object has a Location lookup field. First add a List View Definition for the Location field and then the Name field on the reference object. To retain only the records that are linked to a Location, add the following custom parameter: `requiredLookups:Location_vod__c;`. Any Product Metrics record where `Location_vod__c` is empty will be filtered out. Any Product Metrics record where `Location_vod__c` is filled in but the record is not available (for example, due to sharing rules or because it was not synced to the Veeva app) will also be filtered out.
