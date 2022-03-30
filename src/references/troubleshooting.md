@@ -34,3 +34,9 @@ Here you can see how many records there are of each object:
 ![Database](/static/img/troubleshooting-no_data-database.png "Database")
 
 If there are none, it might mean the object is not being synced or the VMOC's where clause is preventing them from being synced.
+
+## Errors during sync related to the MyInsights Data object
+
+If there are sync errors along these lines: `Error: Field name provided, Mobile_ID_vod__c does not match an External ID, Salesforce Id, or indexed field for xxx(field name)`, there may be a misconfigured field on the MyInsights Data object.
+
+See [these instructions](https://support.veeva.com/hc/en-us/articles/360042551994-Error-Field-name-provided-Mobile-ID-vod-c-does-not-match-an-External-ID-Salesforce-Id-or-indexed-field-for-xxx-field-name-During-CRM-Offline-Sync) to resolve it.
