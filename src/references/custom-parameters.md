@@ -126,6 +126,14 @@ Example: `tabFilters:Event_vod__c.Id=Event_Attendee_vod__c/Medical_Event_vod__c`
 
 The first part identifies the filter. The second part identifies the field in the List View that must match the filter's value.
 
+For Date Range Filters, the syntax is a little different, as a start date field and an optional end date field may be specified. It is also possible to indicate whether the date fields can be empty with a `*` after the field name.
+
+Example: `tabFilters:objectiveDateRange=Call_Objective_vod__c/Date_vod__c*` The same field is used for the start and end of the range and is required
+
+Example: `tabFilters:eventDateRange=Medical_Event_vod__c/Start_Date_vod__c/End_Date_vod__c` Different fields are used for the start and end of the range and both can be empty
+
+Example: `tabFilters:eventDateRange=Medical_Event_vod__c/Start_Date_vod__c/End_Date_vod__c*` Different fields are used for the start and end of the range and the end date must have a value
+
 ### toc
 
 Generates a floating menu containing all of the reports with this custom parameter.
