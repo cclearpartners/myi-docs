@@ -45,9 +45,10 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$ACCOUNT_PLAN_ID`: In an Account Plan dashboard, refers to the ID of the current Account Plan.
 - `$IN`: Specifies a list of possible matches. Matches are separated by a pipe character: **|**. Example: `Status_vod__c $IN(Saved_vod|Submitted_vod|Pending_vod)`.
 - `$LAST_N_DAYS`: Specifies how many days to go back. Example: `$LAST_N_DAYS:30` is 30 days ago. 
-- `$TRUE`, `$FALSE`
 - `$NULL`: Specifies an empty field.
+- `$START_OF_YEAR`: For a date field, the first day of the current year. Useful for YTD queries when combined with `$TODAY`.
 - `$TODAY`: For a date field, today's date.
+- `$TRUE`, `$FALSE`
 - `$USER_ID`: The current user's ID.
 
 ## limit
