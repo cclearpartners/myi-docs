@@ -46,6 +46,7 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$IN`: Specifies a list of possible matches. Matches are separated by a pipe character: **|**. Example: `Status_vod__c $IN(Saved_vod|Submitted_vod|Pending_vod)`.
 - `$LAST_N_DAYS`: Specifies how many days to go back. Example: `$LAST_N_DAYS:30` is 30 days ago. 
 - `$NULL`: Specifies an empty field.
+- `$PROFILE_ID`: The ID of the current user's Profile.
 - `$START_OF_YEAR`: For a date field, the first day of the current year. Useful for YTD queries when combined with `$TODAY`.
 - `$TODAY`: For a date field, today's date.
 - `$TRUE`, `$FALSE`
