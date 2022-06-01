@@ -53,7 +53,6 @@ npm run start
 
 See CONTRIBUTING.md for info.
 
-## Authors
+### 7\. Update Website
 
-Billie Peeters
-Moandji Ezana
+Push to master to update the production website.
