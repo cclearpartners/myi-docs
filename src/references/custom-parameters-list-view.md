@@ -19,7 +19,7 @@ Example usage: `fieldsInclude:Account-US,BR-Field_1_vod__c,Field_2_vod__c/Call2_
 
 This means that when querying Account, only the US and Brazil will get Field 1 and Field 2, while only Mexico will get Field 3.
 
-Example usage: `fieldsInclude:Clinical_Trial_vod__c-US``
+Example usage: `fieldsInclude:Clinical_Trial_vod__c-US`
 
 This means that ony the US will query for Clinical Trial.
 

@@ -42,3 +42,7 @@ body pre[class*="language-"] {
 li li {
   font-weight: normal;
 }
+
+.prose code:after, .prose code:before {
+  content: "";
+}
