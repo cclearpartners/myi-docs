@@ -44,8 +44,7 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$ACCOUNT_ID`: In an Account dashboard, refers to the ID of the current Account.
 - `$ACCOUNT_PLAN_ID`: In an Account Plan dashboard, refers to the ID of the current Account Plan.
 - `$IN`: Specifies a list of possible matches. Matches are separated by a pipe character: **|**. Example: `Status_vod__c $IN(Saved_vod|Submitted_vod|Pending_vod)`.
-- `$LAST_N_DAYS`: Specifies how many days to go back. Optionally the date type can be defined: DATE (default) or TIME (DATETIME type). 
-Example: `$LAST_N_DAYS:30` is 30 days ago, `$LAST_N_DAYS:30:TIME` is 30 days ago but as a DateTime.
+- `$LAST_N_DAYS`: Specifies how many days to go back. When the field you are filtering is a DateTime, you MUST also use the `:TIME` suffix. Example: `My_Date > $LAST_N_DAYS:30` is 30 days ago, `My_DateTime > $LAST_N_DAYS:30:TIME` is 30 days ago but for a DateTime field.
 - `$NULL`: Specifies an empty field.
 - `$PROFILE_ID`: The ID of the current user's Profile.
 - `$START_OF_YEAR`: For a date field, the first day of the current year. Useful for YTD queries when combined with `$TODAY`.
