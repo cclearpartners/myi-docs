@@ -54,18 +54,6 @@ Override the groupBy set in listview. A comma-separated list of field API names.
 
 Example: `groupBy:Opened_vod__c,Account.Name`
 
-### fieldsInclude
-
-This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#fieldsinclude)
-
-### fieldsExclude
-
-This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#fieldsexclude)
-
-### filters
-
-This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#filters)
-
 ### labels
 
 Relabel object fields. The format is OBJECT_NAME/FIELD_NAME=VALUE. `VALUE` can be plain text or a translation key.

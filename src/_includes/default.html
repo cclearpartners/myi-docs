@@ -15,6 +15,7 @@
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
   </head>
   <body>
     {% include "./partials/navbar.html" %}
@@ -32,5 +33,17 @@
       <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     {% endif %}
 
+    <!-- This powers the search bar in the navigation -->
+    <!-- cf. https://www.algolia.com/doc/tools/crawler/netlify-plugin/quick-start/ -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+    <script type="text/javascript">
+      algoliasearchNetlify({
+        appId: 'Y1XX4DX09K',
+        apiKey: 'b7ca2c1dd4e9163cdd10e1c65b7eeaf7',
+        siteId: '6bebcd0e-8c13-4d02-8282-9d0756f3f732',
+        branch: 'master',
+        selector: 'div#search',
+      });
+    </script>
   </body>
 </html>
