@@ -36,7 +36,24 @@ $EMPTY and $NONE are important because while a block might not need a title in t
 
 NOTE: Since 2021.R2, Reporting Block Layout names are editable, instead of being auto-numbered. This makes them more easily identifiable in lists in Salesforce.
 
-## Tab Titles
+### Tab Titles
 
 To translate a Tab's title, write a Veeva Message's name in the Message Key field.
+
+### List View Definition's Label field
+
+The List View Definition's Label field overrides the field's default label and can be hard-coded text, a Veeva Message or a placeholder.
+
+To use a Veeva Message, write the message's name: `my_message_name`.
+
+Placeholders start with a `$` and are replaced. Available placeholder:
+
+- `$OBJECT_AND_FIELD`: Distinguish between multiple fields with the same name by adding the name of the object before the field name. If it's a Reference Object and the 'Use Main Object Label' is selected, the name of the Main Object is used in stead of the name of the Reference Object.
+  **Example:**
+  A list view with lookups to Account.Status and Product.Status. In a table, this would normally be shown as
+  Status | Status
+  | ------ | ------ |
+  By setting `$OBJECT_AND_FIELD` on both List View Definition's Label fields, it becomes:
+  | Account Status | Product Status |
+  | ------ | ------|
 
