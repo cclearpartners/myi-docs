@@ -51,6 +51,13 @@ A field within a List View
 
 - Child of MyInsights+ List View
 
+#### MyInsights+ List View Association
+
+Links a Reporting Block Layout to multiple List Views.
+
+- Lookup to MyInsights+ Reporting Block Layout
+- Lookup to MyInsights+ List View
+
 ### Tabs
 
 Only visible to users with the MyInsights+ Administrator permission set assigned.
@@ -123,7 +130,8 @@ Add the following VMOCs:
 |MyInsights+ Tab (MyInsights_Tab__c)||Full Sync|iPad_vod|True|
 |MyInsights+ Reporting Block Layout (MyInsights_Reporting_Block_Lay_Out__c)||Full Sync|iPad_vod|True|
 |MyInsights+ List View (MyInsights_List_View__c)||Full Sync|iPad_vod|True|
-MyInsights+ List View Definition (MyInsights_List_View_Definition__c)||Full Sync|iPad_vod|True|
+|MyInsights+ List View Definition (MyInsights_List_View_Definition__c)||Full Sync|iPad_vod|True|
+|MyInsights+ List View Association (MyInsights_List_View_Association__c)||Full Sync|iPad_vod|True|
 
 ### Permission Set Assignment
 
