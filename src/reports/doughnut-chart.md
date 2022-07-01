@@ -29,6 +29,7 @@ Fields with a constrained range of values are best suited to be filters. Picklis
 | highlightsMax       | Number  | Total number of categories to leave in colour. Other categories will be greyed out. Eg. 2 means that the 2 biggest categories will be in colour, while all others will be grey  |
 | legendLabels        | String | Changes the text displayed in the chart's legend. Useful when grouping on a boolean field, for example. It's a comma-separated list of `value=label` pairs, where `label` can be a Veeva Message or hardcoded text. `value` can be a picklist value API name, a boolean, a string or `$EMPTY`. Eg. `true=Yes,false=No,$EMPTY=No Value`. |
 | monochrome          | CSS colour  | All categories will have this colour. Can be combined with highlightsMax or categoriesMax. |
+| noHscroll           | Boolean   | Optional. Defaults to false. Set to true to force all columns of the modal table to fit without horizontal scrolling. |
 | percent             | Boolean | When true, the doughnuts labels will be shown as percentages instead of a total |
 | smartlink           | Boolean | Optional. When false, prevents the detail table from smartlinking to the individual record | 
 
