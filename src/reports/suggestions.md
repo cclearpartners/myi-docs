@@ -3,7 +3,15 @@ title: Suggestions
 description: Displays actionable Suggestions
 ---
 
-The Suggestions report is a fully-configurable way to pull in data from the Suggestion, Suggestion Feedback and Suggestion Tag objects. Suggestions that have not been executed, marked as complete or dismissed display buttons so the user can act on them.
+The Suggestions report is a fully-configurable way to pull in data from the Suggestion, Suggestion Feedback and Suggestion Tag objects. Suggestions that have not been actioned (executed, marked as complete or dismissed) display buttons so the user can act on them.
+
+The report can be shown as a Table:
+
+![Suggestions Table](/static/img/suggestions-table.png "Suggestions Table")
+
+or as a Doughnut Chart:
+
+![Suggestions Doughnut](/static/img/suggestions-doughnut.png "Suggestions Doughnut")
 
 ## Configuration
 
@@ -11,7 +19,7 @@ The Suggestions report is a fully-configurable way to pull in data from the Sugg
 
 The List View and Doughnut Display Types are supported. When using Doughnut, make sure to have a Group By field.
 
-Depending on the selected Display Type, all [Table](./table) or [Doughnut Chart](./doughnut-chart) custom parameters can be used.
+Depending on the selected Display Type, all [Table](/reports/table) or [Doughnut Chart](/reports/doughnut-chart) custom parameters can be used.
 
 ### List Views
 
