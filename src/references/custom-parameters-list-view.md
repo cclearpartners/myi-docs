@@ -50,7 +50,7 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$OFFLINE_ACCOUNT_IDS`: All of the Accounts that are synced to the user's iPad. This may differ from the Accounts assigned to a User's territory. This is useful for online territory dashboards. Example: `Account_vod__c IN $OFFLINE_ACCOUNT_IDS`.
 - `$PROFILE_ID`: The ID of the current user's Profile.
 - `$START_OF_YEAR`: For a date field, the first day of the current year. Useful for YTD queries when combined with `$TODAY`.
-- `$TODAY`: For a date field, today's date.
+- `$TODAY`: For a date field, today's date. Add the `:TIME` suffix when filtering on a DateTime field. Example: `Creation_Date_Time >= $TODAY:TIME`.
 - `$TRUE`, `$FALSE`
 - `$USER_ID`: The current user's ID.
 
