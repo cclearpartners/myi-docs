@@ -47,7 +47,7 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$LAST_N_DAYS`: For Date fields, specifies how many days to go back. Example: `$LAST_N_DAYS:30` is 30 days ago. Add the `:TIME` suffix when filtering on a DateTime field. Example: `Creation_Date_Time >= $LAST_N_DAYS:5:TIME`.
 - `$NULL`: Specifies an empty field.
 - `$NULL_NUM`: Specifies an empty number field. Example: `$NULL_NUM(Total_vod__c)`.
-- `$OFFLINE_ACCOUNT_IDS`: All of the Accounts that are synced to the user's iPad. This may differ from the Accounts assigned to a User's territory. This is useful for online territory dashboards. Example: `Account_vod__c $IN($OFFLINE_ACCOUNT_IDS)`.
+- `$OFFLINE_ACCOUNT_IDS`: All of the Accounts that are synced to the user's iPad. This may differ from the Accounts assigned to a User's territory. This is useful for online territory dashboards. Example: `Account_vod__c IN $OFFLINE_ACCOUNT_IDS`.
 - `$PROFILE_ID`: The ID of the current user's Profile.
 - `$START_OF_YEAR`: For a date field, the first day of the current year. Useful for YTD queries when combined with `$TODAY`.
 - `$TODAY`: For a date field, today's date.
