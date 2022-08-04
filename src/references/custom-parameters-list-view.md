@@ -64,7 +64,13 @@ Specifies the developer names of Record Types the query should include. If no ob
 
 Example usage: `recordTypes:Professional_vod,Multi_Channel_Activitiy_vod__c/Email_vod`
 
-Here, Email_vod is a record type on Multi Channel Activity. Professional_vod defaults to a record type on the listview's main object.
+Here, `Email_vod` is a record type on Multi Channel Activity. Professional_vod defaults to a record type on the listview's main object.
+
+You can also exclude record types with an exclamation point.
+
+Example usage: `recordTypes:!Professional_vod,Multi_Channel_Activitiy_vod__c/!Email_vod`
+
+In this case, records with the record type of `Professional_vod` or `Email_vod` will be ignored.
 
 ## requiredLookups
 
