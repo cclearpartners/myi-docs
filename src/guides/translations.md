@@ -40,13 +40,13 @@ NOTE: Since 2021.R2, Reporting Block Layout names are editable, instead of being
 
 To translate a Tab's title, write a Veeva Message's name in the Message Key field.
 
-### List View Definition's Label field
+### List View Definition Label
 
-The List View Definition's Label field overrides the field's default label and can be hard-coded text, a Veeva Message or a placeholder.
+The List View Definition's Label field overrides the field's default label and can be hard-coded text, a Veeva Message or a placeholder. The latter two allow for translation, whereas hard-coded text cannot be translated.
 
 To use a Veeva Message, write the message's name: `my_message_name`.
 
-Placeholders start with a `$` and are replaced. Available placeholder:
+Placeholders start with a `$` and are replaced. Available placeholders:
 
 - `$OBJECT_AND_FIELD`: Distinguish between multiple fields with the same name by adding the name of the object before the field name. If it's a Reference Object and the 'Use Main Object Label' is selected, the name of the Main Object is used in stead of the name of the Reference Object.
   **Example:**
