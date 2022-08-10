@@ -43,6 +43,8 @@ Keywords are used to make the queries more powerful and handle values that are n
 
 - `$ACCOUNT_ID`: In an Account dashboard, refers to the ID of the current Account.
 - `$ACCOUNT_PLAN_ID`: In an Account Plan dashboard, refers to the ID of the current Account Plan.
+- `$FILTER`: When using tab filters such as [Record Filter](/reports/record-filter) or Picklist Filter, this allows you to use the filter's value in a where clause. Example: `filters:Call2_vod__c/$FILTER:Status_vod__c` will be replaced by the currently selected values of the tab filter on Call's Status field, or by nothing if no values have been selected. To combine this keyword with other clauses, use the `:AND` or `:OR` suffix. Example: `filters:Call2_vod__c/$FILTER:Status_vod__c:AND Call_Date_vod__c >= $START_DATE`.
+- `$FILTER_FIELDS`: Is replaced by the currently selected values from all [Record Filter](/reports/record-filter) and Picklist Filter reports in the current tab. Example: if there are filters on Call Status and Call Name, `filters:Call2_vod__c/$FILTER_FIELDS` is equivalent to `SELECT * FROM Call2_vod__c WHERE Status IN (...) AND Name IN (...)`. This can also be used on multiple objects: `filters:Call2_vod__c/$FILTER_FIELDS,Account/$FILTER_FIELDS`. In this case, the relevant filters will be applied to each object. To combine this keyword with other clauses, use the `:AND` suffix. Example: `filters:Call2_vod__c/$FILTER_FIELDS:AND Call_Date_vod__c >= $START_DATE`. NOTE: do not use `$FILTER` and `$FILTER_FIELDS` simultaneously on the same object in the same custom parameters.
 - `$IN`: Specifies a list of possible matches. Matches are separated by a pipe character: **|**. Example: `Status_vod__c $IN(Saved_vod|Submitted_vod|Pending_vod)`.
 - `$LAST_N_DAYS`: For Date fields, specifies how many days to go back. Example: `$LAST_N_DAYS:30` is 30 days ago. Add the `:TIME` suffix when filtering on a DateTime field. Example: `Creation_Date_Time >= $LAST_N_DAYS:5:TIME`.
 - `$NULL`: Specifies an empty field.
@@ -64,7 +66,13 @@ Specifies the developer names of Record Types the query should include. If no ob
 
 Example usage: `recordTypes:Professional_vod,Multi_Channel_Activitiy_vod__c/Email_vod`
 
-Here, Email_vod is a record type on Multi Channel Activity. Professional_vod defaults to a record type on the listview's main object.
+Here, `Email_vod` is a record type on Multi Channel Activity. Professional_vod defaults to a record type on the listview's main object.
+
+You can also exclude record types with an exclamation point.
+
+Example usage: `recordTypes:!Professional_vod,Multi_Channel_Activitiy_vod__c/!Email_vod`
+
+In this case, records with the record type of `Professional_vod` or `Email_vod` will be ignored.
 
 ## requiredLookups
 
