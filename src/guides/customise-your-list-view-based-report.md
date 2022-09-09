@@ -4,7 +4,7 @@ description: Learn how to customise a report you've created yourself
 date: 2021-01-05T08:15:49.824Z
 ---
 
-Reports can be customised in two ways: list views and custom parameters.
+Reports can be customised in two ways: list views and custom parameters. Each Reporting Block Layout can have one Main List View and zero or more List View Associations.
 
 ## List Views
 
@@ -20,7 +20,7 @@ The `Call_Date_vod__c`, `Call_Type_vod__c` and `Status_vod__c` are fields on the
 
 `Account_vod__c` and `Status_vod__c`, however, are lookups to the `Account` and `User` objects, respectively (as shown in the Reference SObject Name column).
 
-Lots of functionality comes out-of-the-box when using a listview-based report with the Home Page List View report type: changing the data visualization (Table, Doughnut, Counter), grouping, filtering, modals and smart linking.
+Lots of functionality comes out-of-the-box when using a listview-based report with the Table, Doughnut and Counter reports: grouping, filtering, modals and smart linking.
 
 ![Doughnt demo](/static/img/doughnut-demo.gif)
 
@@ -68,8 +68,24 @@ The Custom Parameters field is free text that accepts a wide range of predefined
 
 ![Custom Parameters](/static/img/custom-block-custom-parameters.png "Custom Parameters")
 
-There are many standard custom parameters.
+There are many standard custom parameters: those that [apply to all Reports](/references/custom-parameters), those that are Report-specific and those for [List Views](/references/custom-parameters-list-view).
 
 The developer will document which custom parameters and values are available for each custom report.
 
-See the Custom Parameters Reference for details of each available custom parameter.
+## List View Associations
+
+List View Associations enable more complex scenarios.
+
+### Filtering
+
+When the Main List View is built on an object that cannot be directly filtered by Account or date (e.g. Call Key Message), a Filtering List View Association can be used to avoid retrieving too much data.
+
+### Multiple UI Elements
+
+Certain Reports, such as Table and Counter, use List View Assocations to put multiple tables or counters in the same report. In this case, it is not necessary to have a Main List View.
+
+For example, for each List View Association, the Table Report will show a different table, separated by the Title field, if it is filled in.
+
+### Custom Behaviour
+
+In custom Reports, the Main List View and List View Associations can be combined to enable complex data queryies while maintaining admin configurability.
