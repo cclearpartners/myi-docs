@@ -90,6 +90,16 @@ The Reporting Block Layout will be displayed ONLY to users from the profiles in 
 
 Example usage: `profilesInclude:PROFILE_2,PROFILE_4;`
 
+### rowStyle
+
+Set this once per row, on any Reporting Block Layout.
+
+| Value | Effect |
+|-------|--------|
+| filters| Suited for a row of filter reports. |
+
+Example: `rowStyle:filters;`
+
 ### theme
 
 Indicates the UI theme to use. How this is interpreted is up to individual components.
