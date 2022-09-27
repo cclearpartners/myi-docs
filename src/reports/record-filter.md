@@ -11,7 +11,7 @@ Use the `$FILTER_FIELDS` or `$FILTER` in the [filters custom parameter](referenc
 
 To use this filter explicitly in other Reporting Block Layouts, its name is Object_Name.Field_Name, eg. `Call2_vod__c.Status_vod__c`.
 
-For example, a Reporting Block Layout listening to this filter can use its value like this: `filters:Call2_vod__c/$FILTER:Status_vod__c:Call2_vod__c.Status_vod__c`
+For example, a Reporting Block Layout listening to this filter can use its value like this: `filters:Call2_vod__c/Status_vod__c=$FILTER:Call2_vod__c.Status_vod__c`
 
 ## List View Configuration
 
