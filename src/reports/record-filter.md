@@ -13,6 +13,10 @@ To use this filter explicitly in other Reporting Block Layouts, its name is Obje
 
 For example, a Reporting Block Layout listening to this filter can use its value like this: `filters:Call2_vod__c/Status_vod__c=$FILTER:Call2_vod__c.Status_vod__c`
 
+## Example
+
+![Record Filter](/static/img/report-record-filter.png "Record Filter")
+
 ## List View Configuration
 
 You must select only one field to display, meaning that the Display checkbox is checked.
@@ -25,6 +29,8 @@ To filter on one field but display another (eg. filter by ID but show the Name f
 
 Use the filters custom parameter to limit the records that are shown.
 
-## Example
+## Custom Parameters
 
-![Record Filter](/static/img/report-record-filter.png "Record Filter")
+| Name                | Type  | Description |
+|---------------------|-------|-------------|
+| search         | Boolean| Optional. Adds a search box within the dropdown. |
