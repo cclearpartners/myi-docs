@@ -54,6 +54,18 @@ Override the groupBy set in listview. A comma-separated list of field API names.
 
 Example: `groupBy:Opened_vod__c,Account.Name`
 
+### hideBelow
+
+Remove the report when it contains too little data.
+
+Example: `hideBelow:2` will hide the report when it contains 0 or 1 records.
+
+### hideWhenNoData
+
+Remove the report when it contains no data.
+
+Example: `hideWhenNoData;`
+
 ### labels
 
 Relabel object fields. The format is OBJECT_NAME/FIELD_NAME=VALUE. `VALUE` can be plain text or a translation key.
