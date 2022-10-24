@@ -57,3 +57,4 @@ Placeholders start with a `$` and are replaced. Available placeholders:
   | Account Status | Product Status |
   | ------ | ------ |
 
+- `$NONE`: The column has no title.
