@@ -48,6 +48,10 @@ Example usage: `countriesExclude:BR`
 
 Identifies which custom report should handle this reporting block.
 
+### filterStyle
+
+Sets the look of the report's filters. Defaults to light, can also be primary.
+
 ### groupBy
 
 Override the groupBy set in listview. A comma-separated list of field API names.
