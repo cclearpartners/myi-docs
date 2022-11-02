@@ -8,6 +8,7 @@ description: Filter other reports by named date ranges
 | Name | Type | Description |
 |------|------|-------------|
 | periods | String | A comma-separated list of codes, in the order in which they will be displayed in the filter. Example: `periods:QP,QC,QN,M-6,Y-1,YC,M+6,Y+1` |
+| name | String | When combined with the DateRangeFilter Report, if both reports have the same name, the DateRangeFilter values will be updated according to the selected period. |
 
 ### Period Codes
 
