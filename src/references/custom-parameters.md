@@ -5,6 +5,8 @@ date: 2021-01-02T00:00:00.000Z
 order: 1
 ---
 
+These custom parameters are applicable to all Reporting Block Layouts.
+
 ### collapsable
 
 Causes the report to be collapsable via a toggle. Here is an example of both states:
@@ -74,7 +76,7 @@ A number that limits how much data is displayed initially. The rest of the data 
 
 In a table, this will limit how many rows are displayed, but not how many rows are queried.
 
-Example: moreLimit:4
+Example: `moreLimit:4`
 
 ### panelType
 
@@ -96,7 +98,7 @@ Example usage: `profilesInclude:PROFILE_2,PROFILE_4;`
 
 ### rowStyle
 
-Set this once per row, on any Reporting Block Layout.
+Set this once per row, on any Reporting Block Layout, to affect the row's styling, such as background color and margins.
 
 | Value | Effect |
 |-------|--------|
