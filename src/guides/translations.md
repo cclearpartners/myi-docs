@@ -19,6 +19,8 @@ Useful for translations unrelated to object and field labels. Can also be used f
 
 Veeva Messages can be used as Tab and Report titles, as well as in custom-developed Reports.
 
+Veeva Messages can also be used to [translate HTML Report names](https://crmhelp.veeva.com/doc/Content/CRM_topics/MyInsights/MyInsightsAdvFunct/TabTranslations.htm).
+
 ### Report Titles
 
 The Chart Title Veeva Message field of a Reporting Block Layout can refer to a Veeva Message or a placeholder.
@@ -57,3 +59,4 @@ Placeholders start with a `$` and are replaced. Available placeholders:
   | Account Status | Product Status |
   | ------ | ------ |
 
+- `$NONE`: The column has no title.
