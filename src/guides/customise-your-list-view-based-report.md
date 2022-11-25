@@ -62,6 +62,14 @@ In this example, the previous chart is filtered on the "Planned" call status, bu
 
 When Display is checked, that column is displayed in the table view (both in the main view and in the modal). When using a listview with a custom report, it can be useful to retrieve a field for data manipulation purposes, but not display it to the end user.
 
+### Required Lookups
+
+The Required Lookup checkbox applies only to fields on a lookup object, and not on the main object. It indicates that records which do not have this lookup will be ignored. This can happen when:
+
+- The lookup field on the main object is empty
+- The lookup field is filled in, but the user does not have access to the looked up record
+- The user has access to the looked up record, but that record is not synced to the iPad
+
 ## Custom Parameters
 
 The Custom Parameters field is free text that accepts a wide range of predefined values.
