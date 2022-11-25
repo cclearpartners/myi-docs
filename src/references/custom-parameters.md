@@ -62,15 +62,9 @@ Example: `groupBy:Opened_vod__c,Account.Name`
 
 ### hideBelow
 
-Remove the report when it contains too little data.
+Hides the Reporting Block Layout when its List View has fewer than the given number of records.The report can be displayed
 
-Example: `hideBelow:2` will hide the report when it contains 0 or 1 records.
-
-### hideWhenNoData
-
-Remove the report when it contains no data.
-
-Example: `hideWhenNoData;`
+Example: `hideBelow:3` will not display the report when there are 2 records or less.
 
 ### labels
 
@@ -107,6 +101,12 @@ Example usage: `profilesExclude:PROFILE_1,PROFILE_3;`
 The Reporting Block Layout will be displayed ONLY to users from the profiles in this list.
 
 Example usage: `profilesInclude:PROFILE_2,PROFILE_4;`
+
+### removeWhenNoData
+
+When the Reporting Block Layout's List View has no data, the report is removed entirely and the remaining reports expand to fill the empty space.
+
+Example: `removeWhenNoData;`
 
 ### rowStyle
 
