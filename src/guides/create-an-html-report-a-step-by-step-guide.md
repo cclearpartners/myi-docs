@@ -4,11 +4,14 @@ description: Learn the very first step.
 date: 2021-01-01
 order: 2021-02-05T09:15:38.889Z
 ---
+
 The HTML Report delivers the dashboard code to the end user’s device and makes the dashboard available in the orange tab strip at the top of the Veeva app.
 
 <video width="100%" controls>
   <source src="/static/video/dashboard-html-report.mov" type="video/mp4">
 </video>
+
+## Setup
 
 To start, switch to the HTML Reports screen with the app switcher in the left corner:
 
@@ -40,4 +43,8 @@ For a user to see the dashboard, the HTML Report record must be shared with them
 
 After clicking Save, the next step is to upload the ZIP file you received from the dashboard developer. Click the Upload Files button and choose the file.
 
-Once that is uploaded, you can start creating your own custom dashboard.
+Once that is uploaded, you can [start creating your own custom dashboard](/guides/create-a-layout-and-tabs-a-step-by-step-guide).
+
+## Maintenance
+
+You can use the MyInsights+ Lightning App to, among other things, get an overview of the HTML Reports that may need to be updated. ZIPs that were uploaded more than 6 months ago are listed in a table.
