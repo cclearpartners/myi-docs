@@ -5,6 +5,8 @@ description: Display interactions per channel
 
 Gives an overview of activity, split by channel, in a given time period. When an activity is clicked, its details are shown in a table in a modal.
 
+An activity owned by someone other than the current user is shown smaller.
+
 When more than one activity occurred for the same channel on the same day, it is shown as a diamond instead of as a circle.
 
 List View Associations are used to define the channels that are shown.
