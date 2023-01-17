@@ -5,7 +5,7 @@ description: Toggle between activities belonging to the current user and all act
 
 When set to "My Activities", only records belonging to the user are shown.
 
-Use `$ACTIVITY` in the [filters custom parameter](references/custom-parameters-list-view) in other Reporting Block Layouts in the same tab to filter queries accordingly.
+Use `$ACTIVITY` in the [filters custom parameter](/references/custom-parameters-list-view#keywords) in other Reporting Block Layouts in the same tab to filter queries accordingly.
 
 For example, a Reporting Block Layout can listen to the activity filter like this: `filters:Call2_vod__c/OwnerId=$ACTIVITY`
 
