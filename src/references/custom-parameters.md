@@ -114,11 +114,11 @@ Indicates the UI theme to use. How this is interpreted is up to individual compo
 
 This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
 
-### showHighlight
+### highlight
 
 The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
 
-Example usage: `showHighlight:false`
+Example usage: `highlight:false`
 
 ### tabFilters
 
