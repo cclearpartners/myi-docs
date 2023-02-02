@@ -60,3 +60,4 @@ Placeholders start with a `$` and are replaced. Available placeholders:
   | ------ | ------ |
 
 - `$NONE`: The column has no title.
+- `$FIELD`: Use another field's label. If the field is on the same object, then only the field API name is required, e.g. `$FIELD:Other_Field__c`. If the field is on a different object, the object's API name must also be included, e.g. `$FIELD:Other_Object__c.Other_Field__c`.
