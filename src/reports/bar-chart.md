@@ -23,6 +23,7 @@ Same configuration with the following custom parameters added: `groupBy2:Call_Da
 
 | Name | Type | Description |
 |------|------|-------------|
+| dataLabels | Boolean | Defaults to false. Set to true to write the value on each bar. |
 | groupBy2 | String | A field path to group bars along a second dimension. This results in multiple bars per category created with the List View's Group By field. |
 | horizontal | Boolean | Set to true for a horizontal chart. |
 | monochrome | Boolean or Color | Sets all bars to the same color. Set to true to use the first default color or set it to a specific color, such as `#ff0000`. |
