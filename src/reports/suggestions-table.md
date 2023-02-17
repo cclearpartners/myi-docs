@@ -34,3 +34,4 @@ To only show certain types of suggestions, you can add the [recordTypes](/refere
 | actionsLabel        | String| Optional. Add a Veeva Message to be displayed as the Actions column's title. |
 | collapseAt          |Number | For the Title and Reason fields, the number of characters to show before collapsing the text. |
 | detailsColumn       | String[] | A comma-separated list of field paths. These fields will be put into a single column. This allows a more condensed table layout. The fields will be displayed in the column of the first field in the list. |
+| noLegend            | Boolean | Default: false. Set this to true to remove the legend from above the table. |
