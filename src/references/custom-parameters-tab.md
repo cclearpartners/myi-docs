@@ -7,7 +7,15 @@ order: 4
 
 These custom parameters allow various tab-level controls, such as visibility.
 
-### countriesExclude
+## activity
+
+Sets the initial value for the mine / all activity filter. The user can change the value with the [Activity Filter](/reports/activity-filter) report. Use `$ACTIVITY` in the [filters custom parameter](/references/custom-parameters-list-view#keywords) in the tab's Reporting Block Layouts to filter queries accordingly.
+
+Can be: `mine` or `all`. Defaults to `mine`.
+
+Example: `activity:all;`
+
+## countriesExclude
 
 The Tab will NOT be displayed to users from the countries in this list.
 

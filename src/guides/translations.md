@@ -30,7 +30,9 @@ To use a Veeva Message, write the message's name: `my_message_name`.
 Placeholders start with a `$` and are replaced. Available placeholders:
 
 - $OBJECT_NAME: The translated name of the object the associated listview is based on
-- $OBJECT_NAME_PLURAL: The pluralised version of the object's translated name
+- $OBJECT_NAME_PLURAL: The translated, plural name of the object the associated listview is based on
+- $OBJECT: The singular version of an arbitrary object's translated name. Eg. `$OBJECT:Suggestion_vod__c`.
+- $FIELD: The name of an arbitrary field. Use the object and field's API names, separated by a dot. Eg. `$FIELD:Call2_vod__c.Call_Date_vod__c`.
 - $NONE: The report has no title and the entire title section is removed. This means that the report cannot have any filters or other elements that would appear in the title section. The advantage is that this saves vertical space.
 - $EMPTY: The report has no title, but the title section is preserved so that filters can be included.
 
@@ -60,3 +62,4 @@ Placeholders start with a `$` and are replaced. Available placeholders:
   | ------ | ------ |
 
 - `$NONE`: The column has no title.
+- `$FIELD`: Use another field's label. If the field is on the same object, then only the field API name is required, e.g. `$FIELD:Other_Field__c`. If the field is on a different object, the object's API name must also be included, e.g. `$FIELD:Other_Object__c.Other_Field__c`.

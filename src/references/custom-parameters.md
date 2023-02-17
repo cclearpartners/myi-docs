@@ -114,29 +114,11 @@ Indicates the UI theme to use. How this is interpreted is up to individual compo
 
 This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
 
-### showHighlight
+### highlight
 
 The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
 
-Example usage: `showHighlight:false`
-
-### tabFilters
-
-Specifies how the report should use the value selected in a filter, such as a [Record Filter](/reports/record-filter).
-
-Consists of a filter name and an object/field combination. When the specified filter changes, the report is updated.
-
-Example: `tabFilters:Event_vod__c.Id=Event_Attendee_vod__c/Medical_Event_vod__c`
-
-The first part identifies the filter. The second part identifies the field in the List View that must match the filter's value.
-
-For Date Range Filters, the syntax is a little different, as a start date field and an optional end date field may be specified. It is also possible to indicate whether the date fields can be empty with a `*` after the field name.
-
-Example: `tabFilters:objectiveDateRange=Call_Objective_vod__c/Date_vod__c*` The same field is used for the start and end of the range and is required
-
-Example: `tabFilters:eventDateRange=Medical_Event_vod__c/Start_Date_vod__c/End_Date_vod__c` Different fields are used for the start and end of the range and both can be empty
-
-Example: `tabFilters:eventDateRange=Medical_Event_vod__c/Start_Date_vod__c/End_Date_vod__c*` Different fields are used for the start and end of the range and the end date must have a value
+Example usage: `highlight:false`
 
 ### toc
 
@@ -154,21 +136,6 @@ The following values can be used:
 |table      |table|
 |thumbs-up  |thumbs up|
 |thumbs-down|thumbs down|
-
-### useTranslationWorkbenchLabels
-
-Indicates that Translation Workbench labels should be used for listview fields when available. The default behaviour is to use the default Veeva labels.
-
-Disadvantages of using the Translation Workbench labels:
-
-1. If multiple objects have fields with the same label, the resulting table will have columns with the same name
-2. The wrong label may be used if there are several fields from the same lookup object.
-
-Example usage: `useTranslationWorkbenchLabels:true;`
-
-### weight
-
-Adapts the size of the report. Optional, defaults to 1. The size of the report relative to the other reports.
 
 ## Home Page List View Reports
 

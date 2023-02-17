@@ -33,4 +33,5 @@ Use the filters custom parameter to limit the records that are shown.
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
+| filterStyle         | String| Defaults to light. Can also be: primary for a darker look. |
 | search         | Boolean| Optional. Adds a search box within the dropdown. |

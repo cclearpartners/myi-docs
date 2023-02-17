@@ -21,6 +21,7 @@ Use the List View Definition's Help Text field to display a help button at the t
 | highlight           | Boolean  | Optional. Defaults to true. Set to false to hide the row count in the top-right corner of the report. |
 | noHscroll           | Boolean   | Optional. Defaults to false. Set to true to force all columns to fit without horizontal scrolling. |
 | pagination          | Number,Boolean | Defaults to 10. Set to false to remove all pagination. Set to a number to change page size. Set to a comma-separated list of numbers to allow the user to choose between multiple page sizes. |
+| placeholder         | String | Optional. Text to show when a field is empty. E.g. a dash (-). |
 | search              | Boolean | Defaults to false. Set this to true to enable searching the table's contents. | 
 | smartlink           | Boolean  | Optional. Defaults to true. When true, if the List View's main object is smartlinkable, the user can click on a row to view the record's page. When false, clicking on the row does not smart link to the individual record. | 
 
