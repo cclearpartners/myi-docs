@@ -33,6 +33,12 @@ The Tab will be shown only to HCO accounts.
 
 Example: `hcoOnly;`
 
+## offlineOnly
+
+The Tab will only be shown offline (iPad, Windows app, iPhone).
+
+Example: `offlineOnly;`
+
 ### profilesExclude
 
 The Tab will NOT be displayed to users from the profiles in this list. Profiles take precedence over countries
