@@ -34,6 +34,14 @@ Causes the report to initially appear collapsed and revealable via a toggle.
 
 Example usage: `collapsed;`
 
+### collapseRows
+
+Collapses the specified rows.
+
+Example: `collapseRows:2,3,5` will collapse rows 2, 3 and 5, but will leave rows 1 and 4 unaffected.
+
+In the previous example, if this is set on a Reporting Block Layout on row 1, it will be unaffected. If this is set on a Reporting Block Layout on row 2, then only the contents of the report will collapse, not the entire row.
+
 ### countriesInclude
 
 The Reporting Block Layout will be displayed ONLY to users from the countries in this list.
