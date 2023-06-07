@@ -139,6 +139,15 @@ Set this once per row, on any Reporting Block Layout, to affect the row's stylin
 
 Example: `rowStyle:filters;`
 
+### titleStyle
+
+Sets how the report title is displayed.
+
+| Value | Effect |
+|-------|--------|
+| primary| Default. |
+| secondary| Smaller, dark, bold text. |
+
 ### theme
 
 Indicates the UI theme to use. How this is interpreted is up to individual components.
