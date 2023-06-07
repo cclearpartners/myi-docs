@@ -114,6 +114,21 @@ Example usage: `profilesInclude:PROFILE_2,PROFILE_4;`
 
 This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
 
+### rowGroup
+
+Makes reports on different rows appear as if they belong to a single group.
+
+The best practice is to put the custom parameter on the first Reporting Block Layout of a row.
+
+Example: `rowGroup:start;`
+
+| Value | Effect |
+|-------|--------|
+| end | Closes the row group |
+| middle | A row within the row group |
+| start | Starts the row group |
+
+
 ### rowStyle
 
 Set this once per row, on any Reporting Block Layout, to affect the row's styling, such as background color and margins.
