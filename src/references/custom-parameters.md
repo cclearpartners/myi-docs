@@ -118,7 +118,7 @@ This has moved to [List View Custom Parameters](/references/custom-parameters-li
 
 Makes reports on different rows appear as if they belong to a single group.
 
-The best practice is to put the custom parameter on the first Reporting Block Layout of a row.
+The best practice is to put the custom parameter on the first Reporting Block Layout of a row. It is typically used with `rowStyle:single;`
 
 Example: `rowGroup:start;`
 
@@ -136,6 +136,7 @@ Set this once per row, on any Reporting Block Layout, to affect the row's stylin
 | Value | Effect |
 |-------|--------|
 | filters| Suited for a row of filter reports. |
+| single| Remove the margin between all the reports of the row so they appear to be one report. |
 
 Example: `rowStyle:filters;`
 
