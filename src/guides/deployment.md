@@ -58,6 +58,14 @@ Links a Reporting Block Layout to multiple List Views.
 - Lookup to MyInsights+ Reporting Block Layout
 - Lookup to MyInsights+ List View
 
+#### MyInsights+ Parameter
+- To keep organisation independance, this object has an independant Identifier field which can be used to create a match to other objects.
+- Has a MyInsights+ Reporting Block External Id field that is used to match a paramater to a MyInsights+ Reporting Block.
+
+#### MyInsights+ Parameter Value
+- Lookup to MyInsights+ Reporting Block Layout
+- Lookup to MyInsights+ Parameter
+
 ### Tabs
 
 Only visible to users with the MyInsights+ Administrator permission set assigned.
@@ -66,6 +74,7 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 |----|----|
 |MyInsights+ Layouts|Provide access to the MyInsights+ Layout records|
 |MyInsights+ Reporting Blocks|Provide access to the MyInsights+ Reporting Blocks records|
+|MyInsights+ ListView|Provide access to the MyInsights+ ListView records|
 
 ### Permission Sets
 
@@ -83,6 +92,9 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 |MyInsights+ Reporting Block Layout|Controlled by Parent|
 |MyInsights+ List View|Controlled by Parent|
 |MyInsights+ List View Definition|Controlled by Parent|
+|MyInsights+ List View Association|Controlled by Parent|
+|MyInsights+ Parameter|Public Read/Write|
+|MyInsights+ Parameter Value|Controlled by Parent|
 
 ### Sharing Rules
 
@@ -97,6 +109,7 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 |MyInsights_Admin_NewEditPage|Allows multiple profiles to be assigned to a MyInsights Layout|
 |MyInsights_List_View_NewEditPage|Allows any object (standard or custom) to be assigned to a List View|
 |MyInsights_List_View_Def_NewEditPage|Allows List View Definitions to be created for any field on the List View's object or on an object accessible via lookup|
+|MyInsights_Admin_DeepClone|Overwrites the default MyInsights+ Layout clone button to perform a clone of the object itself and all the attached children|
 
 ### Apex Classes
 
@@ -104,6 +117,67 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 - MyInsights_Admin_newEditPage_Ext
 - MyInsights_schemaSObjectTypeWrapper
 - MyInsights_List_View_newEditPage_Ext
+- MyInsights_List_View_Def_newEditPage_Ext
+- MyInsights_MultiselectController
+- MyInsights_MultiselectControllerTest
+- MyInsights_PaginatedSelectList
+- MyInsights_TriggerHandler
+- MyInsights_TriggerHandlerTest
+- MyInsights_Custom_Param_TriggerHandler
+- MyInsights_Cust_Param_TriggerHandlerTest
+- LWC_ccp_myi_ObjectPicklist_Controller
+- LWC_ccp_myi_ObjectPicklist_CtrlTest
+- LWC_ccp_MyiRBCustomParamForm_Controller
+- LWC_ccp_myi_HtmlReports_Controller
+- LWC_ccp_API_Backup_Controller
+- LWC_ccp_myi_utility_Controller
+- LWCPicklistEntry
+
+### Apex Triggers
+|Name|Trigger|Action|
+|----|----|----|
+|MyInsights_Admin_Trigger|after update, after insert|Updates the zip and framework version for the MyInsights+ Layout|
+|MyInsights_HTML_Report_Trigger|after insert|Updates the zip version for the MyInsights+ Layout attached to the HTML Report|
+|MyInsights_HTML_Report_Content_Document_Trigger|after insert,
+    after update|Updates the zip version for the MyInsights+ Layout attached to the HTML Report (Lightning only)|
+|MyInsights_Custom_Param_Value_Trigger| after insert, after update|Updates the MyInsights+ Reporting Block Layout custom parameterfield if the report specific parameter fields have changed|
+|MyInsights_RBL_Trigger|after update,after insert|Updates the ReportingBlockLayout's Parameter Values if the custom parameter field is changed|
+
+### Apex Components
+- MyInsights_MultiselectPicklist
+
+### Aura Components
+- Ccp_Myi_Listview_Definition_Upsert_Component
+- Ccp_Myi_Listview_Upsert_Component
+
+### LWC Components
+
+- cpMyiGeneralInfo
+- ccpMyiMultiLevelLookup
+- ccpMyiObjectPicklist
+- ccpMyiOldHtmlReports
+- ccpMyiAllHtmlReports
+- ccpMyiUpsertListview
+- ccpMyiUpsertListviewDefinition
+- ccpMyiRBCustomParameterForm
+- ccpMyiRBCustomParameterField
+
+### Custom Apps
+#### MyInsights+ App
+Helpfull application for the MyInsights+ administrator (or any other user with access to this application). It shows:
+- A list of HTML Reports with usefull information like the deployed zip and last modification dates. 
+- A list of HTML Reports that are old (not changed in 6 months) and may require attention.
+- A list of helpfull links to several documentation pages.
+- An Import tool for MyInsights+ Layouts
+
+### Custom Labels
+- MyInsights_Framework_General_Documentation
+- MyInsights_Framework_General_Information
+- MyInsights_Framework_Release_Notes_Current_Release
+- MyInsights_Framework_Release_Notes_Current_Release_Link
+- MyInsights_Framework_Version
+- Old_HTML_Reports_Title
+- Veeva_MyInsights_Configuration_Documentation
 
 ## Deployment
 
@@ -116,6 +190,13 @@ Follow these steps to install the package for the first time, or to update it.
 5. The result should pop up and show ‘Success: true’. This can take some time. Page will be automatically refreshed every 6 seconds.
 6. If the previous step was a success, go back to ‘Migration’ -> ‘Deploy’ with the setting ‘Rollback on Error’
 7. Click Next and Deploy
+
+### MyInsights+ Framework dataload
+
+Next to the deployment of the MyInsights+ Framework package, for some features, an additional dataload is required.
+
+#### MyInsights+ Parameters
+The provided CSV-file contains a list of parameters that can be configured for a specific MyInsights+ Reporting block type.  
 
 ## Post-Installation Steps
 
@@ -132,6 +213,7 @@ Add the following VMOCs:
 |MyInsights+ List View (MyInsights_List_View__c)||Full Sync|iPad_vod|True|
 |MyInsights+ List View Definition (MyInsights_List_View_Definition__c)||Full Sync|iPad_vod|True|
 |MyInsights+ List View Association (MyInsights_List_View_Association__c)||Full Sync|iPad_vod|True|
+
 
 ### Permission Set Assignment
 
