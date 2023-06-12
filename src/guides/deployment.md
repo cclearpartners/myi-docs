@@ -23,6 +23,8 @@ Contains a dashboard's configuration, reports and list views.
 
 Represent all the types of reports that can be added to a dashboard.
 
+- External Identifier
+
 #### MyInsights+ Tab
 
 Visually groups a set of reports and contains tab-specific configuration.
@@ -59,12 +61,14 @@ Links a Reporting Block Layout to multiple List Views.
 - Lookup to MyInsights+ List View
 
 #### MyInsights+ Parameter
-- To keep organisation independance, this object has an independant Identifier field which can be used to create a lookup-like construction to other objects.
-- Has a MyInsights+ Reporting Block External Id field that is used to create a link between a MyInsights+ Paramater and a MyInsights+ Reporting Block.
+
+- To facilitate deployment, this object has an External Identifier which is used by the MyInsights+ Parameter Value.
+- Lookup to MyInsights+ Reporting Block (via External Identifier).
 
 #### MyInsights+ Parameter Value
+
 - Lookup to MyInsights+ Reporting Block Layout
-- Lookup to MyInsights+ Parameter
+- Lookup to MyInsights+ Parameter (via External Identifier)
 
 ### Tabs
 
@@ -134,6 +138,7 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 - LWCPicklistEntry
 
 ### Apex Triggers
+
 |Name|Trigger|Action|
 |----|----|----|
 |MyInsights_Admin_Trigger|after update, after insert|Updates the zip and framework version for the MyInsights+ Layout|
@@ -144,9 +149,11 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 |MyInsights_RBL_Trigger|after update,after insert|Updates the ReportingBlockLayout's Parameter Values if the custom parameter field is changed|
 
 ### Apex Components
+
 - MyInsights_MultiselectPicklist
 
 ### Aura Components
+
 - Ccp_Myi_Listview_Definition_Upsert_Component
 - Ccp_Myi_Listview_Upsert_Component
 
@@ -163,11 +170,13 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 - ccpMyiRBCustomParameterField
 
 ### Custom Apps
+
 #### MyInsights+ App
-Helpfull application for the MyInsights+ administrator (or any other user with access to this application). It shows:
-- A list of HTML Reports with usefull information like the deployed zip and last modification dates. 
-- A list of HTML Reports that are old (not changed in 6 months) and may require attention.
-- A list of helpfull links to several documentation pages.
+
+Provides an overview to the MyInsights+ administrator. It shows:
+- An overview of all HTML Reports, with useful information like the deployed zip and last modification dates. 
+- A list of HTML Reports that are older than 6 months and may require attention.
+- A list of helpful links to several documentation pages.
 - An Import tool for MyInsights+ Layouts
 
 ### Custom Labels
@@ -191,13 +200,6 @@ Follow these steps to install the package for the first time, or to update it.
 6. If the previous step was a success, go back to ‘Migration’ -> ‘Deploy’ with the setting ‘Rollback on Error’
 7. Click Next and Deploy
 
-### MyInsights+ Framework dataload
-
-Next to the deployment of the MyInsights+ Framework package, for some features, an additional dataload is required.
-
-#### MyInsights+ Parameters
-The provided CSV-file contains a list of parameters that can be configured for a specific MyInsights+ Reporting block type.  
-
 ## Post-Installation Steps
 
 ### VMobile Object Configurations (VMOCs)
@@ -213,7 +215,6 @@ Add the following VMOCs:
 |MyInsights+ List View (MyInsights_List_View__c)||Full Sync|iPad_vod|True|
 |MyInsights+ List View Definition (MyInsights_List_View_Definition__c)||Full Sync|iPad_vod|True|
 |MyInsights+ List View Association (MyInsights_List_View_Association__c)||Full Sync|iPad_vod|True|
-
 
 ### Permission Set Assignment
 
@@ -236,10 +237,12 @@ To assign the Permission Sets directly:
 3. Click on New Task and then on Import. ![New Task > Import](/static/img/guide-deployment-dataload-new-task.png "New Task > Import")
 4. Set the Operation to Upsert. Search for "MyInsights+" and select MyInsights+ Reporting Block. ![Upsert](/static/img/guide-deployment-dataload-upsert.png "Upsert")
 5. Click Next.
-6. Upload the CSV file provided. ![CSV](/static/img/guide-deployment-dataload-csv.png "CSV")
+6. Upload the Reporting Block CSV file provided. ![CSV](/static/img/guide-deployment-dataload-csv.png "CSV")
 7. Verify that all 4 columns are correctly mapped and click Next. ![Mappings](/static/img/guide-deployment-dataload-mappings.png "Mappings")
 8. Verify that all settings are correct and click Save & Run. ![Run](/static/img/guide-deployment-dataload-run.png "Run")
 9. The next screen shows the data load's status. There should be as many successes as there are Reporting Blocks. If there are any errors, contact the developers to resolve the issue. ![Run](/static/img/guide-deployment-dataload-success.png "Run")
+
+Repeat steps 3 through 9 for the MyInsights+ Parameter object and CSV.
 
 ### Optional Steps
 
