@@ -59,8 +59,8 @@ Links a Reporting Block Layout to multiple List Views.
 - Lookup to MyInsights+ List View
 
 #### MyInsights+ Parameter
-- To keep organisation independance, this object has an independant Identifier field which can be used to create a match to other objects.
-- Has a MyInsights+ Reporting Block External Id field that is used to match a paramater to a MyInsights+ Reporting Block.
+- To keep organisation independance, this object has an independant Identifier field which can be used to create a lookup-like construction to other objects.
+- Has a MyInsights+ Reporting Block External Id field that is used to create a link between a MyInsights+ Paramater and a MyInsights+ Reporting Block.
 
 #### MyInsights+ Parameter Value
 - Lookup to MyInsights+ Reporting Block Layout
