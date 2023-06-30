@@ -54,6 +54,10 @@ The Reporting Block Layout will NOT be displayed to users from the countries in 
 
 Example usage: `countriesExclude:BR`
 
+### deferLoad
+
+The Reporting Block Layout is not shown or loaded when the rest of dashboard loads.
+
 ### externalID
 
 Identifies which custom report should handle this reporting block.
