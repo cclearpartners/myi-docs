@@ -20,4 +20,4 @@ The reports that are not shown by default must have the deferLoad custom paramet
 | Name | Type | Description |
 |------|------|-------------|
 | displays | String | A comma-separated list of Reporting Block external IDs. Determines which report icons are shown, and in which order. |
-
+| multiple | Boolean | Allow the user to display more than one report simultaneously. |
