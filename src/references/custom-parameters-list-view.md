@@ -65,6 +65,7 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$TODAY`: For a date field, today's date. Use the `:TIME` suffix for DateTime fields. Example: `filters:Call2_vod__c/Call_Date_vod__c=$TODAY,Sent_Email_vod__c/Email_Sent_Date__vod__c=$TODAY:TIME`.
 - `$TRUE`, `$FALSE`: For boolean fields. Example: `filters:My_Object/Valid=$TRUE AND IsDeleted=$FALSE`.
 - `$USER_ID`: The current user's ID. Example: `filters:Account/OwnerId=$USER_ID`.
+- `$USER_COUNTRY_CODE`: The current user's country code. Note that single quotes are required. Example: `filters:Account/Country = '$USER_COUNTRY_CODE'`.
 
 ## limit
 
