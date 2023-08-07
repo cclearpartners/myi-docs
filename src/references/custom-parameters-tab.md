@@ -51,6 +51,17 @@ The Tab will be displayed ONLY to users from the profiles in this list.
 
 Example: `profilesInclude:PROFILE_2,PROFILE_4;`
 
+### queryExclude
+
+To dynamically exclude the tab, based on a query. If the query returns any results, it will not be shown. All the variables from the List View's filters custom parameter can be used.
+
+Example: `Sent_Email_vod__c/Email_Sent_Date_vod__c < $TODAY` will exclude the tab if there were any emails sent before the current date.
+
+### queryInclude
+
+To dynamically include the tab, based on a query. The tab will only be shown if it returns at least one result. All the variables from the List View's filters custom parameter can be used.
+
+
 ### $END_DATE
 ### $START_DATE
 
