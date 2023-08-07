@@ -61,6 +61,17 @@ Example: `Sent_Email_vod__c/Email_Sent_Date_vod__c < $TODAY` will exclude the ta
 
 To dynamically include the tab, based on a query. The tab will only be shown if it returns at least one result. All the variables from the List View's filters custom parameter can be used.
 
+### usersExclude
+
+A list of usernames to hide this tab from. All other users can see the tab.
+
+Example: `usersExclude:john.doe@myorg.prd,alice.keys@myorg.prd`
+
+### usersInclude
+
+A list of usernames to show this tab to. No other users can see the tab.
+
+Example: `usersInclude:john.doe@myorg.prd,alice.keys@myorg.prd`
 
 ### $END_DATE
 ### $START_DATE
