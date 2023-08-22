@@ -29,6 +29,8 @@ To filter on one field but display another (eg. filter by ID but show the Name f
 
 Use the filters custom parameter to limit the records that are shown.
 
+When using the search custom parameter, to enable users to free text search on fields other than the display field, add them to the List View, with both Display and Filter By checkboxes unchecked.
+
 ## Custom Parameters
 
 | Name                | Type  | Description |
