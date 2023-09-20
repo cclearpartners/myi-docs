@@ -36,4 +36,5 @@ When using the search custom parameter, to enable users to free text search on f
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | filterStyle         | String| Defaults to light. Can also be: primary for a darker look. |
+| noneOption      | Boolean,String    | Forces the filter to display an "empty" option. Can also be given a Veeva Message to use as the label. Otherwise, defaults to "None". |
 | search         | Boolean| Optional. Adds a search box within the dropdown. |
