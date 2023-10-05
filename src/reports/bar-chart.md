@@ -32,4 +32,5 @@ Same configuration with the following custom parameters added: `groupBy2:Call_Da
 | noLegend | Boolean | Defaults to false. When groupBy2 is used and this is set to true, the legend is not displayed. |
 | stacked | Boolean | Used in conjunction with groupBy2 to stack multiple bars within the same category. |
 | yAxisField | String | Field path. Used in conjunction with `yAxisType`. |
-| yAxisType | COUNT,SUM,AVG | Defaults to COUNT, which displays how many records are in each bar. SUM and AVG use the field set in yAxisField to determine the y-axis value. |
+| yAxisType | COUNT,SUM,AVG,PERCENTAGE | Defaults to COUNT, which displays how many records are in each bar. SUM,AVG,PERCENTAGE use the field set in yAxisField to determine the y-axis value. |
+| categoriesMax | Number | Optional. Determents the maxium amount of bars shown, all others will be aggregated into a 'Others' bar. i.e. categoriesMax:3 the top 2 categories (highest value) will be shown and an 'Others' bar is added.  |
