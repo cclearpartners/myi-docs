@@ -19,6 +19,6 @@ To further configure the details displayed in the modal, see the Table Report do
 | highlightFirst | Boolean | If set, the order of displayed elements in the counter will be value first, icon second. By default the icon is shown first.|
 
 ## List View Association Support (LVA)
-_LVA specific custom parameters: colums, _
+_LVA specific custom parameters: colums_
 
 - To display multiple, unrelated counters in the same report, use List View Associations. There will be one counter shown per List View Association, sorted by the Association's Order field and titled with the Association's Title field.
