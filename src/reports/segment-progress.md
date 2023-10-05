@@ -19,6 +19,7 @@ Create an admin list view. Fields used in the max, value and title custom parame
 | type                | String| Can be one of: segment. Defaults to segment. | 
 | value               | String| Field path, as defined in list view. The progress's value is set to the field's value. |
 | title               | String| Field path, as defined in list view. Displayed above the record's progress bar. Optional when mode is sum. |
+| smartLink           | Boolean | Passed into the details table element, determines if the records in the table are smartlinked. |
 
 ### Examples
 
