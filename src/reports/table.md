@@ -5,8 +5,6 @@ description: Displays data in a table
 
 Uses a List View to display data in a table.
 
-To display multiple, unrelated tables in the same report, use List View Associations. There will be one table shown per List View Association, sorted by the Association's Order field and titled with the Association's Title field.
-
 ## Configuration
 
 Use the List View Definition's Help Text field to display a help button at the top of the column.
@@ -27,4 +25,12 @@ Use the List View Definition's Help Text field to display a help button at the t
 | search              | Boolean | Defaults to false. Set this to true to enable searching the table's contents. | 
 | smartlink           | Boolean  | Optional. Defaults to true. When true, if the List View's main object is smartlinkable, the user can click on a row to view the record's page. When false, clicking on the row does not smart link to the individual record. | 
 | tabbed              | Boolean   | Optional. When multiple tables are displayed using List View Associations, set this to true to show them in tabs instead of in a vertical list. |
+
+## List View Association Support (LVA)
+_LVA specific custom parameters: tabbed_
+
+- To display multiple, unrelated tables in the same report, use List View Associations. There will be one table shown per List View Association, sorted by the Association's Order field and titled with the Association's Title field.
+
+- Using LVAs in combination with role:OneToOne, you can add additional columns to the table.  
+
 
