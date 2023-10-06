@@ -26,10 +26,10 @@ The icons are set in the List View Associations' Custom Parameters. The subtitle
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | color | String  | To give the Counter's icon and text a different color, use one of danger, warning or success. Example: `color:danger;` |
-| icon  | Text  | Required. font-awesome classes for the icon to be displayed. | 
-| subtitle     | Text  | Shown under the counter. Can be a plain text, a Veeva Message or `$OBJECT_NAME`. If `$OBJECT_NAME` is used or no value is specified, the pluralised name of the list view's main object is displayed | 
 | columns | Number | Determines the amount of colums displayed when multiple counters are displayed. If the amount of counters exceeds the amount of colums, the next counter will be moved below. |
-| sumBy | Text | The value of this field path will be summed up and displayed as a result in the counter |
 | first | Text | The value of this field path of the first record in the dataset that has a value defined for this field path is diplayed as a result in the counter | 
-| noDetails | Boolean | If set, the details modal will be hidden |
 | highlightFirst | Boolean | If set, the order of displayed elements in the counter will be value first, icon second. By default the icon is shown first.|
+| icon  | Text  | Required. font-awesome classes for the icon to be displayed. | 
+| noDetails | Boolean | If set, the details modal will be hidden |
+| subtitle     | Text  | Shown under the counter. Can be a plain text, a Veeva Message or `$OBJECT_NAME`. If `$OBJECT_NAME` is used or no value is specified, the pluralised name of the list view's main object is displayed | 
+| sumBy | Text | The value of this field path will be summed up and displayed as a result in the counter |
