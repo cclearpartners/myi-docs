@@ -6,13 +6,46 @@ date: 2021-01-10T08:15:49.824Z
 
 ## Usecases
 
+### Count Records in a Query Resultset
+
+Have just one List View Definition in the List View. Set its Order to specify where it appears in the table.
+
+Custom parameters:
+
+- role: OneToOne
+- mode: COUNT
+
+### Sum up Fields in a Query Resultset
+
+Have just one List View Definition in the List View, of a numeric type such as Number or Double. Set its Order to specify where it appears in the table.
+
+Custom parameters:
+
+- role: OneToOne
+- mode: SUM
+
+### Display the Date of the latest Call or Sent Email
+
+In the Date List View Definition, make sure to sort Descending.
+
+Join Field: Account_vod__c (for a Call or Sent Email)
+
+Custom parameters:
+
+- limit: 1
+- role: OneToOne
+
 ### Data Filtering
 
 A filtering List View Association can be used to limit the results of the main List View in a performant way.
 
-### Report Configuration
+### Add Channels to a Timeline Report
 
-For example, the Timeline report uses one List View Association per channel.
+The [Timeline report](/reports/timeline) uses one List View Association per channel.
+
+### Add values to a Counter
+
+The Counter report(/reports/counter-2) can use List View Associations to display multiple values.
 
 ## Custom Parameter Inheritance
 
