@@ -9,6 +9,6 @@ Displays an account's details. Use the Reporting Block Layout's Main List View t
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| showBestVisitTimes  | Boolean| Optional. When true, a calendar is shown in a popup. |
-| showConsentInfo     | Boolean|  |
-| showEmailInfo       | Boolean|  |
+| columnCount         | Number | Optional. Amount of columns the report is build out of. |
+| labelsExclude       | String | Optional. Comma-separated list of field paths. The labels for these field paths will not be displayed. |
+| labelsInclude       | String | Optional. Comma-separated list of field paths. Only the labels for these field paths will be displayed. Is prioritized over labelsExclude |
