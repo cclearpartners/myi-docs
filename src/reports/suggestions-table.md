@@ -32,6 +32,12 @@ To only show certain types of suggestions, you can add the [recordTypes](/refere
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | actionsLabel        | String| Optional. Add a Veeva Message to be displayed as the Actions column's title. |
+| labelDismiss | String | Optional. Add a Veeva Message to be displayed as the Dismiss label |
+| labelMarkAsComplete | String | Optional. Add a Veeva Message to be displayed as the mark as complete label |
+| statusLabel | String | Optional. Add a Veeva Message to be displayed as the status label |
+| doneLabel | String | Optional. Add a Veeva Message to be displayed as the done label |
 | collapseAt          |Number | For the Title and Reason fields, the number of characters to show before collapsing the text. |
 | detailsColumn       | String | The field path of the field whose table column will contain several other fields. All List View Definitions with the same Order as the details column field will appear in this column. |
 | noLegend            | Boolean | Default: false. Set this to true to remove the legend from above the table. |
+| callTypeField | String | Optional. A different call type field can be defined. Default: Call_Type_vod__c |
+| noExecutionButtons | Optional. If set, the execute buttons are hidden.
