@@ -173,3 +173,19 @@ The following values can be used:
 |table      |table|
 |thumbs-up  |thumbs up|
 |thumbs-down|thumbs down|
+
+### width
+
+Enables you to set the width of a cell withing a report. By setting the width, the framework will try to render the report width as close as possible to the defined width. This parameter can be set on layout/reporting block layout level.
+
+Example usage: `width:1-50%//50%,2-40%`
+Example usage: `width:50%`
+Example usage: `width:/50%`
+
+
+|Parameter Part      |Explanation|
+|-----------|------|
+|1- ..         |(Optional) Defines the row on wich the width has to be applied, if not specified the widths are applied to all rows|
+|.. 50%//50%   |Defines the widths for each column, each separated by a '/'. If no separation is defined, the width is applied to all columns. i.e. width:1-50% |
+
+
