@@ -79,3 +79,23 @@ Example: `usersInclude:john.doe@myorg.prd,alice.keys@myorg.prd`
 Set the tab's initial date range. Overrides the date range set at dashboard level. The date-related keywords described in the [List View Custom Parameters](/references/custom-parameters-list-view#keywords) are available: `$TODAY`, `$LAST_N_DAYS`, `$NEXT_N_MONTHS`, etc.
 
 Example for YTD date range: `$START_DATE:$START_OF_YEAR;$END_DATE:$TODAY;`
+
+### $FILTERS
+
+Set initial values for the tab's filters.
+
+Filter reports such as [Record Filter](/reports/record-filter) and [Picklist Filter](/reports/picklist-fiter) will show these values as selected when the dashboard first loads.
+
+Reporting Block Layouts that use these filters in their filters custom parameter will use the values the first time they load.
+
+To set a single value, identify the field with its object and field API names, separated by a dot. Then the equals sign and the value (with no quotes around it).
+
+Example: `$FILTERS:Call2_vod__c.Status_vod__c=Submitted_vod`
+
+To set multiple values, surround the values with parentheses and separate them with commas.
+
+Example: `$FILTERS:Call2_vod__c.Status_vod__c=(Submitted_vod,Planned_vod)`
+
+To set multiple fields, separate them with commas.
+
+Example: `$FILTERS:Call2_vod__c.Status_vod__c=(Submitted_vod,Planned_vod),Product_vod__c.Name=Kerbopple`
