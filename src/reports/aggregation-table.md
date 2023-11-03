@@ -19,6 +19,7 @@ NOTE: Some field types do not have a default aggregation mode, such as strings a
 |---------------------|-------|-------------|
 | aggregationMode     | Text  | Optional. Determines how fields will be aggregated. See details below. |
 | countColumn         | Boolean or Text  | Optional. If set to true, a column will be added showing how many records are in each aggregate. If set to text, it will be used as the title of the column. |
+| details             | Boolean | Optional. If set to false, there is no drill down table. |
 
 #### Aggregation Modes
 
