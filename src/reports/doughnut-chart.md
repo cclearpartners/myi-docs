@@ -33,6 +33,7 @@ Fields with a constrained range of values are best suited to be filters. Picklis
 | noHscroll           | Boolean   | Optional. Defaults to false. Set to true to force all columns of the modal table to fit without horizontal scrolling. |
 | percent             | Boolean | When true, the doughnuts labels will be shown as percentages instead of a total |
 | smartlink           | Boolean | Optional. When false, prevents the detail table from smartlinking to the individual record | 
+| dataLabels          | Boolean | Optional. When true, data labels are drawn on the chart.|
 
 ### Highlight
 

@@ -7,6 +7,14 @@ order: 1
 
 These custom parameters are applicable to all Reporting Block Layouts.
 
+### cellStyle
+
+| Value | Effect |
+|-------|--------|
+| single| Makes all reports in the same cell (same row and same column) appear as if they are in the same report |
+
+Example: `cellStyle:single;`
+
 ### collapsable
 
 Causes the report to be collapsable via a toggle. Here is an example of both states:
@@ -26,13 +34,13 @@ Causes the report to initially appear collapsed and revealable via a toggle.
 
 Example usage: `collapsed;`
 
-### cellStyle
+### collapseRows
 
-| Value | Effect |
-|-------|--------|
-| single| Makes all reports in the same cell (same row and same column) appear as if they are in the same report |
+Collapses the specified rows.
 
-Example: `cellStyle:single;`
+Example: `collapseRows:2,3,5` will collapse rows 2, 3 and 5, but will leave rows 1 and 4 unaffected.
+
+In the previous example, if this is set on a Reporting Block Layout on row 1, it will be unaffected. If this is set on a Reporting Block Layout on row 2, then only the contents of the report will collapse, not the entire row.
 
 ### countriesInclude
 
@@ -45,6 +53,10 @@ Example usage: `countriesInclude:US,MX;`
 The Reporting Block Layout will NOT be displayed to users from the countries in this list.
 
 Example usage: `countriesExclude:BR`
+
+### deferLoad
+
+The Reporting Block Layout is not shown or loaded when the rest of dashboard loads.
 
 ### externalID
 
@@ -65,6 +77,12 @@ Example: `groupBy:Opened_vod__c,Account.Name`
 Hides the Reporting Block Layout when its List View has fewer than the given number of records.The report can still be displayed when, for example, the user changes a filter and the tab is re-rendered.
 
 Example: `hideBelow:3` will not display the report when there are less than 3 records.
+
+### highlight
+
+The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
+
+Example usage: `highlight:false`
 
 ### labels
 
@@ -102,6 +120,25 @@ The Reporting Block Layout will be displayed ONLY to users from the profiles in 
 
 Example usage: `profilesInclude:PROFILE_2,PROFILE_4;`
 
+### recordTypes
+
+This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
+
+### rowGroup
+
+Makes reports on different rows appear as if they belong to a single group.
+
+The best practice is to put the custom parameter on the first Reporting Block Layout of a row. It is typically used with `rowStyle:single;`
+
+Example: `rowGroup:start;`
+
+| Value | Effect |
+|-------|--------|
+| end | Closes the row group |
+| middle | A row within the row group |
+| start | Starts the row group |
+
+
 ### rowStyle
 
 Set this once per row, on any Reporting Block Layout, to affect the row's styling, such as background color and margins.
@@ -109,40 +146,22 @@ Set this once per row, on any Reporting Block Layout, to affect the row's stylin
 | Value | Effect |
 |-------|--------|
 | filters| Suited for a row of filter reports. |
+| single| Remove the margin between all the reports of the row so they appear to be one report. |
 
 Example: `rowStyle:filters;`
+
+### titleStyle
+
+Sets how the report title is displayed.
+
+| Value | Effect |
+|-------|--------|
+| primary| Default. |
+| secondary| Smaller, dark, bold text. |
 
 ### theme
 
 Indicates the UI theme to use. How this is interpreted is up to individual components.
-
-### recordTypes
-
-This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
-
-### showHighlight
-
-The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
-
-Example usage: `showHighlight:false`
-
-### tabFilters
-
-Specifies how the report should use the value selected in a filter, such as a [Record Filter](/reports/record-filter).
-
-Consists of a filter name and an object/field combination. When the specified filter changes, the report is updated.
-
-Example: `tabFilters:Event_vod__c.Id=Event_Attendee_vod__c/Medical_Event_vod__c`
-
-The first part identifies the filter. The second part identifies the field in the List View that must match the filter's value.
-
-For Date Range Filters, the syntax is a little different, as a start date field and an optional end date field may be specified. It is also possible to indicate whether the date fields can be empty with a `*` after the field name.
-
-Example: `tabFilters:objectiveDateRange=Call_Objective_vod__c/Date_vod__c*` The same field is used for the start and end of the range and is required
-
-Example: `tabFilters:eventDateRange=Medical_Event_vod__c/Start_Date_vod__c/End_Date_vod__c` Different fields are used for the start and end of the range and both can be empty
-
-Example: `tabFilters:eventDateRange=Medical_Event_vod__c/Start_Date_vod__c/End_Date_vod__c*` Different fields are used for the start and end of the range and the end date must have a value
 
 ### toc
 
@@ -161,62 +180,29 @@ The following values can be used:
 |thumbs-up  |thumbs up|
 |thumbs-down|thumbs down|
 
-### useTranslationWorkbenchLabels
+### width
 
-Indicates that Translation Workbench labels should be used for listview fields when available. The default behaviour is to use the default Veeva labels.
+Sets the width of one or more reports as a percentage of the dashboard's width. Any report that does not have an assigned width takes up the space available to it. Only use this custom parameter when you do not want to divide space equally between reports.
 
-Disadvantages of using the Translation Workbench labels:
+#### Single Report
 
-1. If multiple objects have fields with the same label, the resulting table will have columns with the same name
-2. The wrong label may be used if there are several fields from the same lookup object.
+To set the width of a single report, use width in the Reporting Block Layout's custom parameters: `width:40%;`. Reports in the same row without a width assignment will divide the remaining space equally.
 
-Example usage: `useTranslationWorkbenchLabels:true;`
+#### Multiple Reports
 
-### weight
+To set the width of multiple reports in a tab, use width in the Tab's custom parameters:
 
-Adapts the size of the report. Optional, defaults to 1. The size of the report relative to the other reports.
+Use the slash (/) to assign widths to different columns. If each row in the tab has 4 columns, you can set them all like this: `width:20%/30%/10%/40%;`.
 
-## Home Page List View Reports
+You can assign widths to specific rows: `width:1-20%/80%,2-50%/25%/25%;`. Here, only reports in the first and second rows have widths assigned.
 
-### Child_Accounts_vod__c
+You can set a default for all rows, then override it for a row with a different number of columns: `width:30%/70%,3-50%/25%/25%;`. Here, reports in the third row are assigned different widths to reports in all other rows.
 
-#### childAccountDirection
+To set only some columns of a row, leave either side of the slash blank. `width:50%/` will set the first column of every row to 50%. The other reports will fill the remaining space equitably. `width:2-/30%//20%` assigns widths to the second and fourth columns of the second row.
 
-Controls the direction of the lookup when using Child_Accounts_vod__c in a listview.
-
-|Value|Effect|
-|-----|------|
-|children|Default. Find accounts that belong to the current account|
-|parents|Find accounts that the current account is a member of|
-|both|Find accounts in both directions|
-
-Example usage: `childAccountDirection:parents;`
-
-## Account Info
-
-Displays an account's details. Displays differently in Account Overview layout and in GDPR layout.
-
-### Custom Parameters
-
-#### showBestVisitTimes
-
-Determines whether a calendar is made available
-
-#### showConsentInfo
+|Parameter Part | Type |Explanation|
+|-----------|-----|------|
+|1-n         | Number | (Optional) Defines the row on wich the width has to be applied, if not specified the widths are applied to all rows|
+|50%//50%   | Percent | Defines the widths for each column, each separated by a '/'. If no separation is defined, the width is applied to all columns. i.e. width:1-50% |
 
 
-#### showEmailInfo
-
-## Multi-Column Account Info 
-
-External ID: accountInfoMultiColumn
-
-### Custom Parameters
-
-#### showBestVisitTimes
-
-Determines whether a calendar is made available
-
-#### showConsentInfo
-
-#### showEmailInfo
