@@ -16,6 +16,8 @@ No listview is required for the date range filter.
 
 ## Custom Parameters
 
+`start` and `end` can use the date-related keywords from the [filters custom parameter](references/custom-parameters-list-view) such as $TODAY or $LAST_N_DAYS.
+
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | start         | String | A default start date can be set for the filter. If not set, the dashboard's default start date will be used. |
