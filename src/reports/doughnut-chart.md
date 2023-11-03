@@ -24,6 +24,7 @@ Fields with a constrained range of values are best suited to be filters. Picklis
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | categoriesMax       | Number  | Total number of categories that should be shown. Eg. 4 means that the 3 biggest categories will be shown and all remaining categories will be aggregated into one.  |
+| dataLabels          | Boolean| Default: false. When set to true, the value of each category is displayed. |
 | details             | modal/left/right  | Default: modal. Position of detail table. modal is in a popup. left and right make the table always visible on either side of the doughnut. The table is filtered when the doughnut or a legend is clicked. |
 | highlight           | true/false/center/both | Default: true. true puts the highlight is displayed in the report's top right corner. center moves the highlight to the middle of the doughnut. both puts the highlight in the center and a record count in the top right corner. false removes the highlight completely. |
 | highlightCats       | String | A comma-separated list of the categories to highlight. Other categories will be grey. Eg. when grouping on Call Status, highlight only submitted and saved calls: `highlightCats:Submitted_vod,Saved_vod`. When grouping on a checkbox field, you can use true or false: `highlightCats:true`. |
