@@ -7,6 +7,14 @@ order: 1
 
 These custom parameters are applicable to all Reporting Block Layouts.
 
+### cellStyle
+
+| Value | Effect |
+|-------|--------|
+| single| Makes all reports in the same cell (same row and same column) appear as if they are in the same report |
+
+Example: `cellStyle:single;`
+
 ### collapsable
 
 Causes the report to be collapsable via a toggle. Here is an example of both states:
@@ -26,13 +34,13 @@ Causes the report to initially appear collapsed and revealable via a toggle.
 
 Example usage: `collapsed;`
 
-### cellStyle
+### collapseRows
 
-| Value | Effect |
-|-------|--------|
-| single| Makes all reports in the same cell (same row and same column) appear as if they are in the same report |
+Collapses the specified rows.
 
-Example: `cellStyle:single;`
+Example: `collapseRows:2,3,5` will collapse rows 2, 3 and 5, but will leave rows 1 and 4 unaffected.
+
+In the previous example, if this is set on a Reporting Block Layout on row 1, it will be unaffected. If this is set on a Reporting Block Layout on row 2, then only the contents of the report will collapse, not the entire row.
 
 ### countriesInclude
 
@@ -45,6 +53,10 @@ Example usage: `countriesInclude:US,MX;`
 The Reporting Block Layout will NOT be displayed to users from the countries in this list.
 
 Example usage: `countriesExclude:BR`
+
+### deferLoad
+
+The Reporting Block Layout is not shown or loaded when the rest of dashboard loads.
 
 ### externalID
 
@@ -59,6 +71,12 @@ Sets the look of the report's filters. Defaults to light, can also be primary.
 Override the groupBy set in listview. A comma-separated list of field API names.
 
 Example: `groupBy:Opened_vod__c,Account.Name`
+
+### highlight
+
+The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
+
+Example usage: `highlight:false`
 
 ### labels
 
@@ -96,6 +114,25 @@ The Reporting Block Layout will be displayed ONLY to users from the profiles in 
 
 Example usage: `profilesInclude:PROFILE_2,PROFILE_4;`
 
+### recordTypes
+
+This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
+
+### rowGroup
+
+Makes reports on different rows appear as if they belong to a single group.
+
+The best practice is to put the custom parameter on the first Reporting Block Layout of a row. It is typically used with `rowStyle:single;`
+
+Example: `rowGroup:start;`
+
+| Value | Effect |
+|-------|--------|
+| end | Closes the row group |
+| middle | A row within the row group |
+| start | Starts the row group |
+
+
 ### rowStyle
 
 Set this once per row, on any Reporting Block Layout, to affect the row's styling, such as background color and margins.
@@ -103,22 +140,22 @@ Set this once per row, on any Reporting Block Layout, to affect the row's stylin
 | Value | Effect |
 |-------|--------|
 | filters| Suited for a row of filter reports. |
+| single| Remove the margin between all the reports of the row so they appear to be one report. |
 
 Example: `rowStyle:filters;`
+
+### titleStyle
+
+Sets how the report title is displayed.
+
+| Value | Effect |
+|-------|--------|
+| primary| Default. |
+| secondary| Smaller, dark, bold text. |
 
 ### theme
 
 Indicates the UI theme to use. How this is interpreted is up to individual components.
-
-### recordTypes
-
-This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
-
-### highlight
-
-The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
-
-Example usage: `highlight:false`
 
 ### toc
 

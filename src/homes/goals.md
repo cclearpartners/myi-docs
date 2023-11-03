@@ -7,6 +7,6 @@ At [C-Clear Partners](https://c-clearpartners.com/), we believe that data is the
 With the sales reps being the face of your organization, we want to provide them with all the tools and insights needed, to optimize their contacts with HCPs. 
 Therefore, Veeva CRM MyInsights delivers visualizations of specific data for immediate field execution. They display contextual and historical information to assist users in their day-to-day activities. 
 
-The **MyInsights+** framework designed by C-Clear Partners allows you to get more out of the standard reporting features in Veeva MyInsights.
+The **Insights+** framework designed by C-Clear Partners allows you to get more out of the standard reporting features in Veeva MyInsights.
 
-**MyInsights+** goes beyond the data visualization offered in Veeva MyInsights with tailormade dashboards no-code configuration. We focus on increasing business value and improving the user experience.
+**Insights+** goes beyond the data visualization offered in Veeva MyInsights with tailormade dashboards no-code configuration. We focus on increasing business value and improving the user experience.

@@ -5,6 +5,8 @@ description: Filter other reports by named date ranges
 
 This filter allows users to set the dashboard's date range to named, pre-defined ranges. A custom date range picker can optionally be added.
 
+To use the values set by the filter, use the [$START_DATE and $END_DATE](/references/custom-parameters-list-view/#keywords) variables in the filters custom parameter of the Reporting Block Layouts.
+
 ## Examples
 
 ### Simple
