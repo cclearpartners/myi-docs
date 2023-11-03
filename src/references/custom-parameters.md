@@ -72,6 +72,12 @@ Override the groupBy set in listview. A comma-separated list of field API names.
 
 Example: `groupBy:Opened_vod__c,Account.Name`
 
+### hideBelow
+
+Hides the Reporting Block Layout when its List View has fewer than the given number of records.The report can still be displayed when, for example, the user changes a filter and the tab is re-rendered.
+
+Example: `hideBelow:3` will not display the report when there are less than 3 records.
+
 ### highlight
 
 The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
