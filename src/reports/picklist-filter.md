@@ -22,5 +22,7 @@ For example, a Reporting Block Layout listening to this filter can use its value
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | field         | String| A field API name from the given object. |
+| multiple            | Boolean | Defaults to true. When set to false, only one option can be selected. |
 | object         | String| An object API name. |
 | filterStyle         | String| Defaults to light. Can also be: primary for a darker look. |
+| search         | Boolean| Optional. Adds a search box within the dropdown. |

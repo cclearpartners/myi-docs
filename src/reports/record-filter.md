@@ -7,7 +7,7 @@ Filters on a list of unique values from a specific field.
 
 The report's Main List View determines which records are taken into account and which field is used in the dropdown.
 
-Use the `$FILTER_FIELDS` or `$FILTER` in the [filters custom parameter](references/custom-parameters-list-view) in another Reporting Block Layout to use the values selected in this filter.
+Use the `$FILTER:ALL` or `$FILTER` in the [filters custom parameter](references/custom-parameters-list-view) in another Reporting Block Layout to use the values selected in this filter.
 
 To use this filter explicitly in other Reporting Block Layouts, its name is Object_Name.Field_Name, eg. `Call2_vod__c.Status_vod__c`.
 
@@ -23,6 +23,7 @@ You must select only one field to display, meaning that the Display checkbox is 
 
 To filter on one field but display another (eg. filter by ID but show the Name field):
 
+- make sure the first field's Filter By checkbox is unchecked and its Display checkbox is checked
 - add a second field
 - uncheck its Display checkbox
 - check its Filter By checkbox
@@ -35,6 +36,8 @@ When using the search custom parameter, to enable users to free text search on f
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
+| allOption           | Boolean,String| When combined with `multiple:false`, adds an "All" option to the dropdown. Can be given a Veeva Message to customise the label. |
 | filterStyle         | String| Defaults to light. Can also be: primary for a darker look. |
+| multiple            | Boolean | Defaults to true. When set to false, only one option can be selected. |
 | noneOption      | Boolean,String    | Forces the filter to display an "empty" option. Can also be given a Veeva Message to use as the label. Otherwise, defaults to "None". |
 | search         | Boolean| Optional. Adds a search box within the dropdown. |

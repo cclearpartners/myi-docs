@@ -23,8 +23,10 @@ The report must have a List View. It determines which fields are displayed in th
 | vertical | boolean | Defaults to false. When set to true, labels and values are placed above one another, instead of side-by-side. |
 | mode | String | A 'has-one' mode can be specified per object. i.e. mode:Account=has-one,Product_vod__c=has-one. If the 'has-one' mode is set for an object, the multi column element is reduced to 1 column showing whether results are available for the given object dataset. |
 | listViews | Strings | Comma-separated list of List View names. The order of the List Views determines the order they are shown in. Allows you to show multiple datasets in the same report. | 
+| labelsInclude | string | Comma-separated list of field paths. Only the labels for these field paths will be displayed. |
+| labelsExclude | string | Comma-separated list of field paths. The labels for these field paths will not be displayed. |
 
-## Examples 
+## Examples
 
 ## Default 2 Columns
 

@@ -1,6 +1,6 @@
 ---
-title: "Deploy the MyInsights+ Package to Your Org"
-description: Learn how to install or update the MyInsights+ package
+title: "Deploy the Insights+ Package to Your Org"
+description: Learn how to install or update the Insights+ package
 date: 2020-12-31
 toc: true
 ---
