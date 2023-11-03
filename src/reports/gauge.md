@@ -18,4 +18,4 @@ Create an admin list view. Fields used in the max, value and title custom parame
 | title               | String| Field path, as defined in list view. Displayed above the record's gauge. Optional when mode is sum. |
 | smartLink           | Boolean | Passed into the details table element, determines if the records in the table are smartlinked. |
 | percent             | Boolean | If set, the value shown in the gauge's highlight will be a percentage. Max will be set to 100. |
-| sector-..           | String | Colors can be defined for sectors within the gauge, i.e. sector-0-50="orange" will paint the gauge orange if the value is between 0 and 50. |
+| sector-X-Y           | String | Colors can be defined for sectors within the gauge, i.e. sector-0-50="orange" will paint the gauge orange if the value is between 0 and 50. |

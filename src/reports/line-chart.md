@@ -10,13 +10,14 @@ There must be at least one DATE or DATETIME List View Definition for the x axis.
 
 ## Configuration
 
+A Main List View is required.
+
 ## Custom Parameters
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| yAxisField | Text | Optional, if set the fields will be used as the yAxisvalues. Otherwise, is the record count per date. |
-| yAxisType | Text | Optional, default COUNT. Can be COUNT, AVG, SUM |
+| noLegend | Boolean | Optional. Defaults to false. Set to true to remove the chart's legend. Example: `noLegend;` |
+| yAxisField | Field Path | Optional. By default, the Y-axis shows how many records exist per date. If set, the specified field will be displayed on the Y-axis. |
+| yAxisType | Text | Optional. Default: COUNT. Can be: COUNT, AVG, SUM |
 | xAxisField | Text | Optional, if set, the groupby variable's role changes. See groupBy (Important variables) |
-| noLegend | Boolean | Optional, if true, no legend is shown in the chart|
-
 

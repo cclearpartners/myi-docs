@@ -27,10 +27,27 @@ Use the List View Definition's Help Text field to display a help button at the t
 | tabbed              | Boolean   | Optional. When multiple tables are displayed using List View Associations, set this to true to show them in tabs instead of in a vertical list. |
 
 ## List View Association Support (LVA)
-_LVA specific custom parameters: tabbed_
 
-- To display multiple, unrelated tables in the same report, use List View Associations. There will be one table shown per List View Association, sorted by the Association's Order field and titled with the Association's Title field.
+### Multiple Tables
 
-- Using LVAs in combination with role:OneToOne, you can add additional columns to the table.  
+To display multiple, unrelated tables in the same report, use List View Associations instead of the Main List View. There will be one table shown per List View Association, sorted by the List View Associations' Order field and titled with the List View Associations' Title field.
 
+Use the tabbed custom parameter on the Reporting Block Layout to lay the tables out in tabs instead of vertically one after the other.
+
+### Enhanced Table
+
+List View Associations can be used in combination with the Main List View to add columns to a single table.
+
+Set the List View Associations' role to OneToOne.
+
+The List View Definitions' Order field determines where they are placed in the table. Each List View Association can add multiple columns.
+
+Make sure to use the appropriate filters, sorting and limit to ensure the correct record is used.
+
+When the List View Association only adds one field, it is possible to use the mode custom parameter, which can be set to SUM (for numeric fields) or COUNT.
+
+#### Usecases: 
+
+- Show the last or next Call Date, Sent Email Date, etc
+- Count the number of Calls submitted or emails sent.
 
