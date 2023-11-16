@@ -5,13 +5,13 @@ description: Displays data in a table
 
 Uses a List View to display data in a table.
 
-To display multiple, unrelated tables in the same report, use List View Associations. There will be one table shown per List View Association, sorted by the Association's Order field and titled with the Association's Title field.
-
 ## Configuration
 
 Use the List View Definition's Help Text field to display a help button at the top of the column.
 
 ![Table with help buttons](/static/img/report-table-help.png "Table with help buttons")
+
+Use the List View Definitions's Icon field to display an icon instead of a text label. The text label will be displayed in a tooltip when the user clicks on the icon. This is useful for very long labels, or when a table has many columns.
 
 ## Custom Parameters
 
@@ -27,4 +27,29 @@ Use the List View Definition's Help Text field to display a help button at the t
 | search              | Boolean | Defaults to false. Set this to true to enable searching the table's contents. | 
 | smartlink           | Boolean  | Optional. Defaults to true. When true, if the List View's main object is smartlinkable, the user can click on a row to view the record's page. When false, clicking on the row does not smart link to the individual record. | 
 | tabbed              | Boolean   | Optional. When multiple tables are displayed using List View Associations, set this to true to show them in tabs instead of in a vertical list. |
+
+## List View Association Support
+
+### Multiple Tables
+
+To display multiple, unrelated tables in the same report, use List View Associations instead of the Main List View. There will be one table shown per List View Association, sorted by the List View Associations' Order field and titled with the List View Associations' Title field.
+
+Use the tabbed custom parameter on the Reporting Block Layout to lay the tables out in tabs instead of vertically one after the other.
+
+### Enhanced Table
+
+List View Associations can be used in combination with the Main List View to add columns to a single table.
+
+Set the List View Associations' role to OneToOne.
+
+The List View Definitions' Order field determines where they are placed in the table. Each List View Association can add multiple columns.
+
+Make sure to use the appropriate filters, sorting and limit to ensure the correct record is used.
+
+When the List View Association only adds one field, the mode custom parameter can be set on the List View Assocation. Available values are: SUM (for numeric fields) to show the total value of the field across all of the List View Association's results and COUNT to display how many results the List View Association has.
+
+#### Usecases: 
+
+- Show the last or next Call Date, Sent Email Date, Event Attended date, etc
+- Count the number of Calls submitted or emails sent.
 

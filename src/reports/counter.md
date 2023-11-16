@@ -24,6 +24,9 @@ Use the `listViews` custom parameter to show more than one counter in the same r
 |---------------------|-------|-------------|
 | icon  | Text  | Required. font-awesome classes for the icon to be displayed. | 
 | subtitle     | Text  | Shown under the counter. Can be a plain text, a Veeva Message or `$OBJECT_NAME`. If `$OBJECT_NAME` is used or no value is specified, the pluralised name of the list view's main object is displayed | 
+| counterSubtitle | Text | Shown under the respective counters as defined in the listViews custom parameter|
+| counterIconClasses | Text | font-awesome classes for the icon to be displayed for the respective counters as defined in the listViews custom parameter |
 | listViews           | Text  | Comma-separated list of List View names. The order of the List Views determines the order they are shown in. `icon` becomes a comma-separated list. `subtitle` becomes a comma-separated list, with the special token `$OBJECT_NAME` used for the objects' translated and pluralised name. |
 | smartlink           | Boolean  | When false, prevents the detail table from smartlinking to the individual record | 
+
 

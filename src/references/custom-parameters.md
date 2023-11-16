@@ -72,6 +72,12 @@ Override the groupBy set in listview. A comma-separated list of field API names.
 
 Example: `groupBy:Opened_vod__c,Account.Name`
 
+### hideBelow
+
+Hides the Reporting Block Layout when its List View has fewer than the given number of records.The report can still be displayed when, for example, the user changes a filter and the tab is re-rendered.
+
+Example: `hideBelow:3` will not display the report when there are less than 3 records.
+
 ### highlight
 
 The block's highlight value will not be displayed when this is set to `false`. Defaults to `true`.
@@ -173,3 +179,30 @@ The following values can be used:
 |table      |table|
 |thumbs-up  |thumbs up|
 |thumbs-down|thumbs down|
+
+### width
+
+Sets the width of one or more reports as a percentage of the dashboard's width. Any report that does not have an assigned width takes up the space available to it. Only use this custom parameter when you do not want to divide space equally between reports.
+
+#### Single Report
+
+To set the width of a single report, use width in the Reporting Block Layout's custom parameters: `width:40%;`. Reports in the same row without a width assignment will divide the remaining space equally.
+
+#### Multiple Reports
+
+To set the width of multiple reports in a tab, use width in the Tab's custom parameters:
+
+Use the slash (/) to assign widths to different columns. If each row in the tab has 4 columns, you can set them all like this: `width:20%/30%/10%/40%;`.
+
+You can assign widths to specific rows: `width:1-20%/80%,2-50%/25%/25%;`. Here, only reports in the first and second rows have widths assigned.
+
+You can set a default for all rows, then override it for a row with a different number of columns: `width:30%/70%,3-50%/25%/25%;`. Here, reports in the third row are assigned different widths to reports in all other rows.
+
+To set only some columns of a row, leave either side of the slash blank. `width:50%/` will set the first column of every row to 50%. The other reports will fill the remaining space equitably. `width:2-/30%//20%` assigns widths to the second and fourth columns of the second row.
+
+|Parameter Part | Type |Explanation|
+|-----------|-----|------|
+|1-n         | Number | (Optional) Defines the row on wich the width has to be applied, if not specified the widths are applied to all rows|
+|50%//50%   | Percent | Defines the widths for each column, each separated by a '/'. If no separation is defined, the width is applied to all columns. i.e. width:1-50% |
+
+
