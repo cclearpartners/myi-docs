@@ -1,5 +1,5 @@
 ---
-title: MyInsights+ 2021 R2
+title: Insights+ 2021 R2
 description: Filters Custom Parameter Improvements, Conversion to DX and Bugfixes
 date: 2021-05-19T20:04:41.863Z
 ---
@@ -15,7 +15,7 @@ See all the details in the [Custom Parameters Reference](/references/custom-para
 
 DX is Salesforce's latest and greatest way of packaging code deployed to orgs. Instead of one, very large XML file, we will provide a clearer, more structured view in smaller XML files.
 
-In the future, this will enable MyInsights+ packages to be deployed just like packages from the Salesforce AppExchange.
+In the future, this will enable Insights+ packages to be deployed just like packages from the Salesforce AppExchange.
 
 ## Remove "Displayed On" field from Listview
 <feature-badges package></feature-badges>
