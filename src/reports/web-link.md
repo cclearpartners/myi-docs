@@ -23,5 +23,6 @@ Parameters can be used in the URL to customise it for the current Account or Use
 |-------|---------|-------------|
 | label | Text    | Optional. The text to display | 
 | parameters | Text    | Optional. Comma-separated tokens. A token is $PARAMETER_NAME=$FIELD_PATH.  | 
+| target | Text | Optional. The link's target attribute. Defaults to _blank. |
 | url   | Text    | Required. The URL to link to. Parameters must be surrounded by curly braces and be a path to a List View Definition in the List View. Eg. Name or Account_vod__c.Country |
 | vpn   | Boolean | Optional. Set to true if the website can only be accessed via VPN. |
