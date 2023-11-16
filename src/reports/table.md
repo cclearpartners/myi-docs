@@ -11,6 +11,8 @@ Use the List View Definition's Help Text field to display a help button at the t
 
 ![Table with help buttons](/static/img/report-table-help.png "Table with help buttons")
 
+Use the List View Definitions's Icon field to display an icon instead of a text label. The text label will be displayed in a tooltip when the user clicks on the icon. This is useful for very long labels, or when a table has many columns.
+
 ## Custom Parameters
 
 | Name                | Type  | Description |
@@ -26,7 +28,7 @@ Use the List View Definition's Help Text field to display a help button at the t
 | smartlink           | Boolean  | Optional. Defaults to true. When true, if the List View's main object is smartlinkable, the user can click on a row to view the record's page. When false, clicking on the row does not smart link to the individual record. | 
 | tabbed              | Boolean   | Optional. When multiple tables are displayed using List View Associations, set this to true to show them in tabs instead of in a vertical list. |
 
-## List View Association Support (LVA)
+## List View Association Support
 
 ### Multiple Tables
 
@@ -44,10 +46,10 @@ The List View Definitions' Order field determines where they are placed in the t
 
 Make sure to use the appropriate filters, sorting and limit to ensure the correct record is used.
 
-When the List View Association only adds one field, it is possible to use the mode custom parameter, which can be set to SUM (for numeric fields) or COUNT.
+When the List View Association only adds one field, the mode custom parameter can be set on the List View Assocation. Available values are: SUM (for numeric fields) to show the total value of the field across all of the List View Association's results and COUNT to display how many results the List View Association has.
 
 #### Usecases: 
 
-- Show the last or next Call Date, Sent Email Date, etc
+- Show the last or next Call Date, Sent Email Date, Event Attended date, etc
 - Count the number of Calls submitted or emails sent.
 
