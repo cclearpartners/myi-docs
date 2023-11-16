@@ -23,7 +23,7 @@ A Suggestion Tag List View Association may be used to add Suggestion Tag fields.
 
 To show Suggestions that have been actioned, use the Suggestion Feedback object for the main List View.
 
-To show open Suggestions, you may use something like the following: `filters:Suggestion_vod__c/$NULL_NUM(Actioned_vod__c) AND $NULL_NUM(Dismissed_vod__c) AND $NULL_NUM(Marked_As_Complete_vod__c) AND Expiration_Date_vod__c >=$TODAY`.
+To show open Suggestions, you may use something like the following: `filters:Suggestion_vod__c/Actioned_vod__c = $NULL:NUM AND Dismissed_vod__c = $NULL:NUM AND Marked_As_Complete_vod__c = $NULL:NUM AND Expiration_Date_vod__c >= $TODAY`.
 
 To only show certain types of suggestions, you can add the [recordTypes](/references/custom-parameters-list-view) custom parameter: `recordTypes:Suggestion_vod__c/Call_vod,Insight_vod`.
 
@@ -32,12 +32,12 @@ To only show certain types of suggestions, you can add the [recordTypes](/refere
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | actionsLabel        | String| Optional. Add a Veeva Message to be displayed as the Actions column's title. |
-| labelDismiss | String | Optional. Add a Veeva Message to be displayed as the Dismiss label |
-| labelMarkAsComplete | String | Optional. Add a Veeva Message to be displayed as the mark as complete label |
-| statusLabel | String | Optional. Add a Veeva Message to be displayed as the status label |
-| doneLabel | String | Optional. Add a Veeva Message to be displayed as the done label |
+| callTypeField | String | Optional. A different call type field can be defined. Default: Call_Type_vod__c |
 | collapseAt          |Number | For the Title and Reason fields, the number of characters to show before collapsing the text. |
 | detailsColumn       | String | The field path of the field whose table column will contain several other fields. All List View Definitions with the same Order as the details column field will appear in this column. |
-| noLegend            | Boolean | Default: false. Set this to true to remove the legend from above the table. |
-| callTypeField | String | Optional. A different call type field can be defined. Default: Call_Type_vod__c |
+| doneLabel | String | Optional. Add a Veeva Message to be displayed as the done label |
+| labelDismiss | String | Optional. Add a Veeva Message to be displayed as the Dismiss label |
+| labelMarkAsComplete | String | Optional. Add a Veeva Message to be displayed as the mark as complete label |
 | noExecutionButtons | Optional. If set, the execute buttons are hidden.
+| noLegend            | Boolean | Default: false. Set this to true to remove the legend from above the table. |
+| statusLabel | String | Optional. Add a Veeva Message to be displayed as the status label |
