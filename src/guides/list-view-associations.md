@@ -47,6 +47,16 @@ The [Timeline report](/reports/timeline) uses one List View Association per chan
 
 The Counter report(/reports/counter-2) can use List View Associations to display multiple values.
 
+## Join Fields
+
+### Main List View Join Field
+
+This is the field on the Main List View that links to the Associated List View. It defaults to Id, which is the most typical case. For example, if the Main List View is on the Call object and the List View Association on the Call Key Message object, this field can be left blank or set to Id. If the Main List View is on the Suggestion object and the Associated List View is on the Call object, then this field would be Account_vod__c because that field is shared by both the Suggestion and Call objects.
+
+### Associated List View Join Field
+
+This is the field on the List View Association's own List View that links to the Main List View. For example, if the Main List View is on the Account object and the Associated List View is on the Suggestion object, this field would be Account_vod__c, because it is a lookup to the Account's Id field.
+
 ## Custom Parameter Inheritance
 
 In descending order of priority:
