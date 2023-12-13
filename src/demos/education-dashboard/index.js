@@ -13072,7 +13072,7 @@
     },
     {
       label: "error_missing_myinsights_permission_set",
-      translations: {en_US: "You do not have the MyInsights+ End User Permission Set, which is required to view this dashboard. If you believe this is an error, please contact your administrator."}
+      translations: {en_US: "You do not have the Insights+ End User Permission Set, which is required to view this dashboard. If you believe this is an error, please contact your administrator."}
     },
     {
       label: "event_participations",

@@ -11,94 +11,94 @@ Here is an overview of everything that is included in the package:
 
 ### Objects
 
-#### MyInsights+ Layout
+#### Insights+ Layout
 
 Contains a dashboard's configuration, reports and list views.
 
-- Master-detail relationship to MyInsights+ List View
-- Master-detail relationship to MyInsights+ Tab
-- Master-detail relationship to MyInsights+ Reporting Block Layout
+- Master-detail relationship to Insights+ List View
+- Master-detail relationship to Insights+ Tab
+- Master-detail relationship to Insights+ Reporting Block Layout
 
-#### MyInsights+ Reporting Block
+#### Insights+ Reporting Block
 
 Represent all the types of reports that can be added to a dashboard.
 
 - External Identifier
 
-#### MyInsights+ Tab
+#### Insights+ Tab
 
 Visually groups a set of reports and contains tab-specific configuration.
 
-- Child of MyInsights+ Layout
+- Child of Insights+ Layout
 
-#### MyInsights+ Reporting Block Layout
+#### Insights+ Reporting Block Layout
 
 Represents a report within a dashboard. Contains report-specific configuration.
 
-- Child of MyInsights+ Layout
-- Child of MyInsights+ Tab
-- Lookup to MyInsights+ Reporting Block
-- Lookup to MyInsights+ List View
+- Child of Insights+ Layout
+- Child of Insights+ Tab
+- Lookup to Insights+ Reporting Block
+- Lookup to Insights+ List View
 
-#### MyInsights+ List View
+#### Insights+ List View
 
 Data source configuration for reports.
 
-- Child of MyInsights+ Layout
-- Master-detail relationship to MyInsights+ List View Definition
+- Child of Insights+ Layout
+- Master-detail relationship to Insights+ List View Definition
 
-#### MyInsights+ List View Definition
+#### Insights+ List View Definition
 
 A field within a List View
 
-- Child of MyInsights+ List View
+- Child of Insights+ List View
 
-#### MyInsights+ List View Association
+#### Insights+ List View Association
 
 Links a Reporting Block Layout to multiple List Views.
 
-- Lookup to MyInsights+ Reporting Block Layout
-- Lookup to MyInsights+ List View
+- Lookup to Insights+ Reporting Block Layout
+- Lookup to Insights+ List View
 
-#### MyInsights+ Parameter
+#### Insights+ Parameter
 
-- To facilitate deployment, this object has an External Identifier which is used by the MyInsights+ Parameter Value.
-- Lookup to MyInsights+ Reporting Block (via External Identifier).
+- To facilitate deployment, this object has an External Identifier which is used by the Insights+ Parameter Value.
+- Lookup to Insights+ Reporting Block (via External Identifier).
 
-#### MyInsights+ Parameter Value
+#### Insights+ Parameter Value
 
-- Lookup to MyInsights+ Reporting Block Layout
-- Lookup to MyInsights+ Parameter (via External Identifier)
+- Lookup to Insights+ Reporting Block Layout
+- Lookup to Insights+ Parameter (via External Identifier)
 
 ### Tabs
 
-Only visible to users with the MyInsights+ Administrator permission set assigned.
+Only visible to users with the Insights+ Administrator permission set assigned.
 
 |Name|Role|
 |----|----|
-|MyInsights+ Layouts|Provide access to the MyInsights+ Layout records|
-|MyInsights+ Reporting Blocks|Provide access to the MyInsights+ Reporting Blocks records|
-|MyInsights+ ListView|Provide access to the MyInsights+ ListView records|
+|Insights+ Layouts|Provide access to the Insights+ Layout records|
+|Insights+ Reporting Blocks|Provide access to the Insights+ Reporting Blocks records|
+|Insights+ ListView|Provide access to the Insights+ ListView records|
 
 ### Permission Sets
 
 |Name|Target Group|Role|
 |----|------------|----|
-|MyInsights+ Administrator|Salesforce admins who will create and manage the dashboards|Full CRUD rights to all MyInsights+ objects and fields. Access to the tabs, Visual Force pages and Apex classes|
-|MyInsights+ End User|End users who will use the dashboards|Read access to all MyInsights+ objects and fields|
+|Insights+ Administrator|Salesforce admins who will create and manage the dashboards|Full CRUD rights to all Insights+ objects and fields. Access to the tabs, Visual Force pages and Apex classes|
+|Insights+ End User|End users who will use the dashboards|Read access to all Insights+ objects and fields|
 
 ### Organization-Wide Default Settings
 
 |Object|Setting|
 |------|-------|
-|MyInsights+ Admin|Public Read/Write|
-|MyInsights+ Reporting Block|Public Read/Write|
-|MyInsights+ Reporting Block Layout|Controlled by Parent|
-|MyInsights+ List View|Controlled by Parent|
-|MyInsights+ List View Definition|Controlled by Parent|
-|MyInsights+ List View Association|Controlled by Parent|
-|MyInsights+ Parameter|Public Read/Write|
-|MyInsights+ Parameter Value|Controlled by Parent|
+|Insights+ Admin|Public Read/Write|
+|Insights+ Reporting Block|Public Read/Write|
+|Insights+ Reporting Block Layout|Controlled by Parent|
+|Insights+ List View|Controlled by Parent|
+|Insights+ List View Definition|Controlled by Parent|
+|Insights+ List View Association|Controlled by Parent|
+|Insights+ Parameter|Public Read/Write|
+|Insights+ Parameter Value|Controlled by Parent|
 
 ### Sharing Rules
 
@@ -106,14 +106,14 @@ If OWD settings are set to public, then no sharing rules are needed. Sharing rul
 
 ### Visual Force Pages
 
-Only visible to users with the MyInsights+ Administrator permission set assigned.
+Only visible to users with the Insights+ Administrator permission set assigned.
 
 |Name|Role|
 |----|----|
 |MyInsights_Admin_NewEditPage|Allows multiple profiles to be assigned to a MyInsights Layout|
 |MyInsights_List_View_NewEditPage|Allows any object (standard or custom) to be assigned to a List View|
 |MyInsights_List_View_Def_NewEditPage|Allows List View Definitions to be created for any field on the List View's object or on an object accessible via lookup|
-|MyInsights_Admin_DeepClone|Overwrites the default MyInsights+ Layout clone button to perform a clone of the object itself and all the attached children|
+|MyInsights_Admin_DeepClone|Overwrites the default Insights+ Layout clone button to perform a clone of the object itself and all the attached children|
 
 ### Apex Classes
 
@@ -141,11 +141,11 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 
 |Name|Trigger|Action|
 |----|----|----|
-|MyInsights_Admin_Trigger|after update, after insert|Updates the zip and framework version for the MyInsights+ Layout|
-|MyInsights_HTML_Report_Trigger|after insert|Updates the zip version for the MyInsights+ Layout attached to the HTML Report|
+|MyInsights_Admin_Trigger|after update, after insert|Updates the zip and framework version for the Insights+ Layout|
+|MyInsights_HTML_Report_Trigger|after insert|Updates the zip version for the Insights+ Layout attached to the HTML Report|
 |MyInsights_HTML_Report_Content_Document_Trigger|after insert,
-    after update|Updates the zip version for the MyInsights+ Layout attached to the HTML Report (Lightning only)|
-|MyInsights_Custom_Param_Value_Trigger| after insert, after update|Updates the MyInsights+ Reporting Block Layout custom parameterfield if the report specific parameter fields have changed|
+    after update|Updates the zip version for the Insights+ Layout attached to the HTML Report (Lightning only)|
+|MyInsights_Custom_Param_Value_Trigger| after insert, after update|Updates the Insights+ Reporting Block Layout custom parameterfield if the report specific parameter fields have changed|
 |MyInsights_RBL_Trigger|after update,after insert|Updates the ReportingBlockLayout's Parameter Values if the custom parameter field is changed|
 
 ### Apex Components
@@ -171,13 +171,13 @@ Only visible to users with the MyInsights+ Administrator permission set assigned
 
 ### Custom Apps
 
-#### MyInsights+ App
+#### Insights+ App
 
-Provides an overview to the MyInsights+ administrator. It shows:
+Provides an overview to the Insights+ administrator. It shows:
 - An overview of all HTML Reports, with useful information like the deployed zip and last modification dates. 
 - A list of HTML Reports that are older than 6 months and may require attention.
 - A list of helpful links to several documentation pages.
-- An Import tool for MyInsights+ Layouts
+- An Import tool for Insights+ Layouts
 
 ### Custom Labels
 - MyInsights_Framework_General_Documentation
@@ -208,13 +208,13 @@ Add the following VMOCs:
 
 |Object|Where|Type|Device|Active|
 |------|-----|----|------|------|
-|MyInsights+ Layout (MyInsights_Admin__c)||Full Sync|iPad_vod|True|
-|MyInsights+ Reporting Block (MyInsights_Reporting_Block__c)||Full Sync|iPad_vod|True|
-|MyInsights+ Tab (MyInsights_Tab__c)||Full Sync|iPad_vod|True|
-|MyInsights+ Reporting Block Layout (MyInsights_Reporting_Block_Lay_Out__c)||Full Sync|iPad_vod|True|
-|MyInsights+ List View (MyInsights_List_View__c)||Full Sync|iPad_vod|True|
-|MyInsights+ List View Definition (MyInsights_List_View_Definition__c)||Full Sync|iPad_vod|True|
-|MyInsights+ List View Association (MyInsights_List_View_Association__c)||Full Sync|iPad_vod|True|
+|Insights+ Layout (MyInsights_Admin__c)||Full Sync|iPad_vod|True|
+|Insights+ Reporting Block (MyInsights_Reporting_Block__c)||Full Sync|iPad_vod|True|
+|Insights+ Tab (MyInsights_Tab__c)||Full Sync|iPad_vod|True|
+|Insights+ Reporting Block Layout (MyInsights_Reporting_Block_Lay_Out__c)||Full Sync|iPad_vod|True|
+|Insights+ List View (MyInsights_List_View__c)||Full Sync|iPad_vod|True|
+|Insights+ List View Definition (MyInsights_List_View_Definition__c)||Full Sync|iPad_vod|True|
+|Insights+ List View Association (MyInsights_List_View_Association__c)||Full Sync|iPad_vod|True|
 
 ### Permission Set Assignment
 
@@ -224,25 +224,25 @@ To assign the Permission Sets directly:
 
 1. Go to Setup. ![Setup](/static/img/guide-deployment-ps-setup.png "Setup")
 2. Go to the Permission Sets menu. ![Menu](/static/img/guide-deployment-ps-menu.png "Menu")
-3. Select the MyInsights+ Administrator Permission Set. ![Selection](/static/img/guide-deployment-ps-selection.png "Selection")
+3. Select the Insights+ Administrator Permission Set. ![Selection](/static/img/guide-deployment-ps-selection.png "Selection")
 4. Click Manage Assignments. ![Manage Assignments](/static/img/guide-deployment-ps-manage-assignments.png "Manage Assignments")
 5. Click Add Assignments. ![Add Assignments](/static/img/guide-deployment-ps-add-assignments.png "Add Assignments")
 6. Choose the users you wish to assign the Permission Set to. Click Assign. ![Assign](/static/img/guide-deployment-ps-assign.png "Assign")
-7. Repeat steps 3 - 6 for the MyInsights+ End User Permission Set.
+7. Repeat steps 3 - 6 for the Insights+ End User Permission Set.
 
 ### Data Loads
 
 1. Go to [Dataloader](https://dataloader.io).
 2. Click on Login with Salesforce and enter your credentials.
 3. Click on New Task and then on Import. ![New Task > Import](/static/img/guide-deployment-dataload-new-task.png "New Task > Import")
-4. Set the Operation to Upsert. Search for "MyInsights+" and select MyInsights+ Reporting Block. ![Upsert](/static/img/guide-deployment-dataload-upsert.png "Upsert")
+4. Set the Operation to Upsert. Search for "Insights+" and select Insights+ Reporting Block. ![Upsert](/static/img/guide-deployment-dataload-upsert.png "Upsert")
 5. Click Next.
 6. Upload the Reporting Block CSV file provided. ![CSV](/static/img/guide-deployment-dataload-csv.png "CSV")
 7. Verify that all 4 columns are correctly mapped and click Next. ![Mappings](/static/img/guide-deployment-dataload-mappings.png "Mappings")
 8. Verify that all settings are correct and click Save & Run. ![Run](/static/img/guide-deployment-dataload-run.png "Run")
 9. The next screen shows the data load's status. There should be as many successes as there are Reporting Blocks. If there are any errors, contact the developers to resolve the issue. ![Run](/static/img/guide-deployment-dataload-success.png "Run")
 
-Repeat steps 3 through 9 for the MyInsights+ Parameter object and CSV.
+Repeat steps 3 through 9 for the Insights+ Parameter object and CSV.
 
 ### Optional Steps
 
