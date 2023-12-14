@@ -1,11 +1,13 @@
 ---
-title: Dashboard Configuration
-description: Details of all available standard dashboard fields and custom parameters
+title: Layout Configuration
+description: Details of all available standard layout fields and custom parameters
 date: 2021-01-03T00:00:00.000Z
 order: 3
 ---
 
 ## Status
+
+Initially set to In Development. Set it to Active when your layout is ready to be used.
 
 ## Default Time Filter
 
@@ -13,7 +15,7 @@ To use the dates from the user's Cycle Plan check the Use Cycle Plan Dates check
 
 To set start and end dates of data in the dashboard independently of the Cycle Plan, use the Previous Months and Next Months fields.
 
-In both cases, these are initial values. To enable the user to change the date range of the dashboard's data, add the [Period Filter](/reports/period-filter) to the dashboard.
+In both cases, these are initial values. To enable the user to change the date range of the dashboard's data, add the [Period Filter](/reports/period-filter) to the layout.
 
 Previous Months and Next Months accept a range of values:
 
@@ -22,11 +24,11 @@ Previous Months and Next Months accept a range of values:
 
 ## Custom Parameters
 
-Dashboard-level custom parameters are automatically copied to each report. They allow you to set a default configuration for all reports, while retaining the ability to override that configuration for a specific report.
+Layout-level custom parameters are automatically copied to each report. They allow you to set a default configuration for all reports, while retaining the ability to override that configuration for a specific report.
 
 ### useMySetupProductsOnly
 
-Signals that reports in this dashboard should only query for Products configured in the user's My Setup Products.
+Signals that reports in this layout should only query for Products configured in the user's My Setup Products.
 
 The value is a comma-separated list of countries to which this custom parameter applies.
 
