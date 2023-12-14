@@ -82,7 +82,7 @@ Example for YTD date range: `$START_DATE:$START_OF_YEAR;$END_DATE:$TODAY;`
 
 ### $FILTERS
 
-Set initial values for the tab's filters.
+Set initial values for the tab's filters. Can also be used at dashboard level, if all tabs need the same values.
 
 Filter reports such as [Record Filter](/reports/record-filter) and [Picklist Filter](/reports/picklist-fiter) will show these values as selected when the dashboard first loads.
 
