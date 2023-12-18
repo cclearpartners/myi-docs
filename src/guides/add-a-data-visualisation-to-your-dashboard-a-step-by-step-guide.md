@@ -9,7 +9,7 @@ Each visualisation has three aspects: what to show, how to show it and where to 
 
 ## List View for Data
 
-The MyInsights+ List View object determines the data that will be used in the visualisation.
+The Insights+ List View object determines the data that will be used in the visualisation.
 
 Choose the List View's main object.
 

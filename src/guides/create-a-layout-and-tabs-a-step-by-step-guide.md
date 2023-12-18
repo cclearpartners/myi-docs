@@ -7,7 +7,7 @@ date: 2021-01-02
 
 The Layout is the container for the entire dashboard.
 
-To view or create your Layouts, you can use the App Launcher or add a MyInsights+ Layouts tab to your navigation bar:
+To view or create your Layouts, you can use the App Launcher or add a Insights+ Layouts tab to your navigation bar:
 
 ![App Switcher](/static/img/layout-01.png "App Switcher")
 
