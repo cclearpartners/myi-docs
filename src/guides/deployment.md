@@ -70,6 +70,9 @@ Links a Reporting Block Layout to multiple List Views.
 - Lookup to Insights+ Reporting Block Layout
 - Lookup to Insights+ Parameter (via External Identifier)
 
+#### Insights+ Log
+- Used to log errors, issues or events. This object can be queried by an Administrator or a report can be created to have an overview.
+
 ### Tabs
 
 Only visible to users with the Insights+ Administrator permission set assigned.
@@ -79,6 +82,7 @@ Only visible to users with the Insights+ Administrator permission set assigned.
 |Insights+ Layouts|Provide access to the Insights+ Layout records|
 |Insights+ Reporting Blocks|Provide access to the Insights+ Reporting Blocks records|
 |Insights+ ListView|Provide access to the Insights+ ListView records|
+|Insights+ Environment Variables| Enable Administrator to view and edit Insights+ Environment Variables.
 
 ### Permission Sets
 
@@ -99,6 +103,7 @@ Only visible to users with the Insights+ Administrator permission set assigned.
 |Insights+ List View Association|Controlled by Parent|
 |Insights+ Parameter|Public Read/Write|
 |Insights+ Parameter Value|Controlled by Parent|
+|Insights+ Log|Public Read/Write|
 
 ### Sharing Rules
 
@@ -136,6 +141,8 @@ Only visible to users with the Insights+ Administrator permission set assigned.
 - LWC_ccp_API_Backup_Controller
 - LWC_ccp_myi_utility_Controller
 - LWCPicklistEntry
+- MyInsights_Object_API
+- MyInsights_Layout_Import_Export
 
 ### Apex Triggers
 
@@ -168,6 +175,8 @@ Only visible to users with the Insights+ Administrator permission set assigned.
 - ccpMyiUpsertListviewDefinition
 - ccpMyiRBCustomParameterForm
 - ccpMyiRBCustomParameterField
+- ccpMyiExportLayout
+- ccpMyiImportLayout
 
 ### Custom Apps
 
