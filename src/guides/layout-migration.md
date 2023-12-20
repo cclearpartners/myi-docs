@@ -34,14 +34,16 @@ While importing, additional options can be selected:
 
 | Option | Effect |
 |-------|--------|
-| (Optional) Select HTML Report | Limits the options in the Insights+ Layout selection box and makes sure the importen layout is immediately attached to the selected HTML Report. If an HTML Report is selected, the layout will not be set to active. Instead it will remain in the 'in development' status. If an Insights+ layout is imported without selecting an HTML report, the status is immediately set to 'Active' |
-| (Optional) Select Insights+ Layout | When selected, the layout is replaced by the imported layout and the related HTML report is selected in the form. This means the layout will be imported with a selected HTML report (see the 'Select a Report Option'). |
+| (Optional) Select HTML Report | Limits the options in the Insights+ Layout selection box and makes sure the imported layout is immediately attached to the selected HTML Report. If an HTML Report is selected, the layout will not be set to active. Instead it will remain in the 'In Development' state. If an Insights+ Layout is imported without selecting an HTML report, the status is immediately set to 'Active' |
+| (Optional) Select Insights+ Layout | When selected, the layout is replaced by the imported layout and the related HTML report is selected in the form. This means the layout will be imported with a selected HTML Report (see the 'Select a Report Option'). |
 | (Optional) Check delete box | If the delete checkbox is checked, the selected Insights+ Layout in the form will be removed after the import and the new Insights+ Layout will automatically become 'Active'.  |
 
 The second way of importing an Insights+ Layout is by clicking 'Import Layout' at the top of the Insights+ Layout List page. This will open the same form as described in the first import options.
 The third way is to go to the detail page of the Insights+ Layout of you want to replace, and click 'Replace' at the top right. This will show you the layout import form with HTML-Report and Insights+ Layout selection prefilled. 
 
-**NOTE**: Depending on the seleted options, the administrator may have to take additional actions like deletion or activation of the newly imported Insights+ Layout.
+**NOTE**: Depending on the seleted options, the administrator may have to take additional actions like deletion or activation of the newly imported Insights+ Layout whilst de-activating the old Insights+ Layout.
+
+When the import is succeeded the admin can have look at the Insights+ Layout by clicking the 'View-Layout' button that has appeared at the bottom of the form. 
 
 
 
