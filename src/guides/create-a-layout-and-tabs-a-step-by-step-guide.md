@@ -57,6 +57,8 @@ These three fields set the dashboard’s default time period:
 
 ![Dates](/static/img/layout-07.png "Dates")
 
+See the [Layout Configuration reference Default Time Filter section](/references/configuration-layout#default-time-filter) for full details on the values and keywords that can be used.
+
 You should use either Previous/Next Months or Cycle Plan dates, not both together.
 
 **Previous Months**: The number of months to go back in the past, relative to the current month.
