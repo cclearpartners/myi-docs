@@ -75,3 +75,4 @@ Note: limit and requiredLookups custom parameters set on the Reporting Block Lay
 |------|------|-------------|
 | mode | String | Optional. Can be: COUNT (display the number of results, in conjuction with role:OneToOne) |
 | role | String | If the Join Field is filled in, it must be one of: Filtering, OneToMany or OneToOne. Otherwise, can be left empty. |
+| skipWhenNoPermissions | Boolean | If set, the List View Association is skipped when access to the object or a field is not permitted for the user. This allows the administrator to add fields to a dataset based on the security settings for specific users.
