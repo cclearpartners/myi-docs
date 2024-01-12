@@ -20,4 +20,6 @@ A Main List View is required.
 | yAxisField | Field Path | Optional. By default, the Y-axis shows how many records exist per date. If set, the specified field will be displayed on the Y-axis. |
 | yAxisType | Text | Optional. Default: COUNT. Can be: COUNT, AVG, SUM |
 | xAxisField | Text | Optional, if set, the groupby variable's role changes. See groupBy (Important variables) |
+| xAxisUnit | (Optional) By default it will change according to the amount of records (try to fit them in neatly). Can be set to month, day, year or any valid momentjs date format. |
+
 
