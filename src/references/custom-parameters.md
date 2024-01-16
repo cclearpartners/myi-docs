@@ -102,6 +102,18 @@ In a table, this will limit how many rows are displayed, but not how many rows a
 
 Example: `moreLimit:4`
 
+## offlineOnly
+
+The Reporting Block Layout will only be shown offline (iPad, Windows app, iPhone).
+
+Example: `offlineOnly;`
+
+## onlineOnly
+
+The Reporting Block Layout will only be shown online (desktop browser).
+
+Example: `onlineOnly;`
+
 ### panelType
 
 Determines the panel's background color.

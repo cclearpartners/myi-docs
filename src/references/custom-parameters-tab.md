@@ -39,6 +39,12 @@ The Tab will only be shown offline (iPad, Windows app, iPhone).
 
 Example: `offlineOnly;`
 
+## onlineOnly
+
+The Tab will only be shown online (desktop browser).
+
+Example: `onlineOnly;`
+
 ### profilesExclude
 
 The Tab will NOT be displayed to users from the profiles in this list. Profiles take precedence over countries
