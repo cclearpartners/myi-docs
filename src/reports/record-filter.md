@@ -41,3 +41,4 @@ When using the search custom parameter, to enable users to free text search on f
 | multiple            | Boolean | Defaults to true. When set to false, only one option can be selected. |
 | noneOption      | Boolean,String    | Forces the filter to display an "empty" option. Can also be given a Veeva Message to use as the label. Otherwise, defaults to "None". |
 | search         | Boolean| Optional. Adds a search box within the dropdown. |
+| showSelectionsInTitle | Number | In a multiple select filter, the title will show the name of up to the given number of selected values. When more values or no values are selected, the standard title is displayed. Eg. showSelectionsInTitle:2; |

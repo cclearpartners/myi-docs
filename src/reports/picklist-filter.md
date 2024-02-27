@@ -26,3 +26,4 @@ For example, a Reporting Block Layout listening to this filter can use its value
 | object         | String| An object API name. |
 | filterStyle         | String| Defaults to light. Can also be: primary for a darker look. |
 | search         | Boolean| Optional. Adds a search box within the dropdown. |
+| showSelectionsInTitle | Number | In a multiple select filter, the title will show the name of up to the given number of selected values. When more values or no values are selected, the standard title is displayed. Eg. showSelectionsInTitle:2; |
