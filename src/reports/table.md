@@ -26,10 +26,10 @@ Use the List View Definitions's Icon field to display an icon instead of a text 
 | placeholder         | String | Optional. Text to show when a field is empty. E.g. a dash (-). |
 | search              | Boolean | Defaults to false. Set this to true to enable searching the table's contents. | 
 | smartlink           | Boolean  | Optional. Defaults to true. When true, if the List View's main object is smartlinkable, the user can click on a row to view the record's page. When false, clicking on the row does not smart link to the individual record. |
-| showTotals          | sub,grand,both | sub: Show sub-totals for each group of rows. grand: Show the total at the end of the table. both: Show sub-totals and grand total. |
+| showTotals          | sub,grand,both | Use this in combination with `totalColumns`. sub: Show sub-totals for each group of rows, as defined by the Group By. grand: Show the total at the end of the table. both: Show sub-totals and grand total. Eg. `showTotals:grand;totalColumns:Duration_vod__c;` |
 | tabbed              | Boolean   | Optional. When multiple tables are displayed using List View Associations, set this to true to show them in tabs instead of in a vertical list. |
 | tableSort           | String  | Optional. Specifies the field path and order to sort the table. Order can be `ASC` or `DESC`. Useful when this is different than what is defined in the List View Definitions. Example: when a List View Association is sorted by Date to get an Account's most recent Call, but the table must be sorted by Account Name: `tableSort:Account_vod__c.Name ASC`.  |
-| totalColumns        | String | Optional. A comma-separated list of fields paths that will be included in total rows |
+| totalColumns        | String | Use this in combination with `showTotals`. A comma-separated list of fields paths that will be included in total rows. All fields must be numeric. Eg. `showTotals:both;totalColumns:Duration_vod__c,Email_ccp__c.Opened_Count_vod__c;` |
 
 ## List View Association Support
 
