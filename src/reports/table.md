@@ -28,6 +28,8 @@ Use the List View Definitions's Icon field to display an icon instead of a text 
 | smartlink           | Boolean  | Optional. Defaults to true. When true, if the List View's main object is smartlinkable, the user can click on a row to view the record's page. When false, clicking on the row does not smart link to the individual record. | 
 | tabbed              | Boolean   | Optional. When multiple tables are displayed using List View Associations, set this to true to show them in tabs instead of in a vertical list. |
 | tableSort           | String  | Optional. Specifies the field path and order to sort the table. Order can be `ASC` or `DESC`. Useful when this is different than what is defined in the List View Definitions. Example: when a List View Association is sorted by Date to get an Account's most recent Call, but the table must be sorted by Account Name: `tableSort:Account_vod__c.Name ASC`.  |
+| totalColumns        | String | Optional. Allows the administrator to pass column field names for which a total is to be displayed. Use in combination with ‘showTotals’ CP. A total can only be shown for a field of type NUMBER. Non-number fields are ignored. |
+| showTotals          | String | Optional. Values: sub, grand, both. Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: only the overall grand total is shown in the table. both: shows both sub and grand. |
 
 ## List View Association Support
 
