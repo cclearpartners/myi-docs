@@ -22,8 +22,7 @@ NOTE: Some field types do not have a default aggregation mode, such as strings a
 | details             | Boolean | Optional. If set to false, there is no drill down table. |
 | groupBy             | Text  | The groupBy Custom parameter can be used to have both an aggregated field and a grouped field. The fields can be passed into the CP as a comma separated list. i.e. Category_ccp__c,Key_Message_vod__c.Name. Aggregation is done only for the last field in the custom parameter. The other fields are used as groupBy fields to group the dataset. |
 | columnsBy           | Text  |  Optional. Enables administrators to add columns to the aggregation table in a dynamic way. Depending on the specified field, unit and available dataset, a number of columns will be added to the table showing the split aggregation based on the field. i.e. add a monthly split displaying the interaction count for each month. The value of the columnsBy CP is <field>:<unit>. The unit part of the CP is currently only used when the field is a DATE field. the unit can be day, month or year. Both DATE and PICKLIST fields are supported. |
-| showTotals          | Text | Optional. Values: sub, grand, both. Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: only the overall grand total is shown in the table. both: shows both sub and grand.
-totals are automatically shown for columnBy and Record Count fields |
+| showTotals          | Text | Optional. Values: sub, grand, both. Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: only the overall grand total is shown in the table. both: shows both sub and grand. Totals are automatically shown for columnBy and Record Count fields |
 
 #### Aggregation Modes
 
