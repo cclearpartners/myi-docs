@@ -45,6 +45,8 @@ After clicking Save, the next step is to upload the ZIP file you received from t
 
 Once that is uploaded, you can [start creating your own custom dashboard](/guides/create-a-layout-and-tabs-a-step-by-step-guide).
 
+By Default, uploading an Insights+ Zip is enabled in Salesforce Classic. If you want to enable it in Lightning, follow [this](https://crmhelp.veeva.com/doc/Content/CRM_topics/General/Lightning/UsingSalesforceFiles.htm#SyncingSalesforceFilestoMobileDevices) guide.
+
 ## Maintenance
 
 You can use the Insights+ Lightning App to, among other things, get an overview of the HTML Reports that may need to be updated. ZIPs that were uploaded more than 6 months ago are listed in a table.

@@ -45,3 +45,9 @@ In this case, SUM will be used for all applicable fields, except for `Amount_ccp
 
 `countColumn;aggregationMode:...`: A column will be added, with the default title.
 `countColumn:My_Title;aggregationMode:...`: The translated text will be used as the column's title.
+
+#### Custom Modal
+
+By default, the modal displayed when a row is clicked is defined by the report's Main List View. To show different columns in the modal, create a List View Association and set Role to `Modal`. The List View Association's List View will then be used to determine the columns shown in the modal.
+
+The modal List View may only contain columns that are also in the main List View. So, to show columns that are not shown in the main table, add them to the main List View and uncheck the Display checkbox.

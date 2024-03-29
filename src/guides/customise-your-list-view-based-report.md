@@ -80,9 +80,13 @@ There are many standard custom parameters: those that [apply to all Reports](/re
 
 The developer will document which custom parameters and values are available for each custom report.
 
+## Synthetic Fields
+
+Synthetic fields can be used, in collaboration with a developer, to configure the use of calculated fields or non-CRM data. See the [Synthetic Fields reference](/references/synthetic-fields) for full details.
+
 ## List View Associations
 
-List View Associations enable more complex scenarios.
+List View Associations enable more complex scenarios. See the [List View Association guide](/guides/list-view-associations) for more details.
 
 ### Filtering
 
