@@ -17,12 +17,12 @@ NOTE: Some field types do not have a default aggregation mode, such as strings a
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| aggregationMode     | Text  | Optional. Determines how fields will be aggregated. See details below. |
-| countColumn         | Boolean or Text  | Optional. If set to true, a column will be added showing how many records are in each aggregate. If set to text, it will be used as the title of the column. |
-| details             | Boolean | Optional. If set to false, there is no drill down table. |
-| groupBy             | Text  | The groupBy Custom parameter can be used to have both an aggregated field and a grouped field. The fields can be passed into the CP as a comma separated list. i.e. Category_ccp__c,Key_Message_vod__c.Name. Aggregation is done only for the last field in the custom parameter. The other fields are used as groupBy fields to group the dataset. |
-| columnsBy           | Text  |  Optional. Enables administrators to add columns to the aggregation table in a dynamic way. Depending on the specified field, unit and available dataset, a number of columns will be added to the table showing the split aggregation based on the field. i.e. add a monthly split displaying the interaction count for each month. The value of the columnsBy CP is <field>/<unit>. The unit part of the CP is currently only used when the field is a DATE field. the unit can be day, month or year. Both DATE and PICKLIST fields are supported. |
-| showTotals          | Text | Optional. Values: sub, grand, both. Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: only the overall grand total is shown in the table. both: shows both sub and grand. Totals are automatically shown for columnBy and Record Count fields |
+| aggregationMode     | Text  | Determines how fields will be aggregated. See details below. |
+| countColumn         | Boolean or Text  | If set to true, a column will be added showing how many records are in each aggregate. If set to text, it will be used as the title of the column. |
+| columnsBy           | Text  | A field path, optionally followed by a unit. Adds columns based on the data in the table. For example, it can display a column per month or per picklist value. DATE and PICKLIST fields are supported. Example: `columnsBy:Status_vod__c`. For DATE fields, a unit of either day, month or year can be added. If none is added, the default is month. Example: `columnsBy:Call_Date_vod__c/year;`. |
+| details             | Boolean | Defaults to true. If set to false, there is no drill down table. Example: `details:false;`. |
+| groupBy             | Text  | A comma-separated list of field paths. The last field path designates the aggregated columns. All other field paths are grouped. Example: `Category_ccp__c,Key_Message_vod__c.Name`. |
+| showTotals          | sub,grand,both | Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: the overall total is shown at the bottom of the table. both: shows both sub and grand. Totals are shown for columnsBy and Record Count fields |
 
 #### Aggregation Modes
 
