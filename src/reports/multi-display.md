@@ -13,7 +13,7 @@ The Multi-display report enables the user to switch between different reports.
 
 The reports being switched between (such as the bar chart and doughnut chart in the example above) must be in the same row and column and have the same order.
 
-The multi display report controls the visibility of two or more other reports. Meaning the multi display report is a standalone report next to the reports for which the externalId is passed into the display custom parameter.
+The multi display report controls the visibility of two or more other reports. Meaning the multi display report is a standalone report next to the reports for which the externalId is passed into the displays custom parameter.
 
 The reports that are not shown by default must have the deferLoad custom parameter.
 
