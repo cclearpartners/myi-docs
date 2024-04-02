@@ -17,9 +17,12 @@ NOTE: Some field types do not have a default aggregation mode, such as strings a
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| aggregationMode     | Text  | Optional. Determines how fields will be aggregated. See details below. |
-| countColumn         | Boolean or Text  | Optional. If set to true, a column will be added showing how many records are in each aggregate. If set to text, it will be used as the title of the column. |
-| details             | Boolean | Optional. If set to false, there is no drill down table. |
+| aggregationMode     | Text  | Determines how fields will be aggregated. See details below. |
+| countColumn         | Boolean or Text  | If set to true, a column will be added showing how many records are in each aggregate. If set to text, it will be used as the title of the column. |
+| columnsBy           | Text  | A field path, optionally followed by a unit. Adds columns based on the data in the table. For example, it can display a column per month or per picklist value. DATE and PICKLIST fields are supported. Example: `columnsBy:Status_vod__c`. For DATE fields, a unit of either day, month or year can be added. If none is added, the default is month. Example: `columnsBy:Call_Date_vod__c/year;`. |
+| details             | Boolean | Defaults to true. If set to false, there is no drill down table. Example: `details:false;`. |
+| groupBy             | Text  | A comma-separated list of field paths. The last field path designates the aggregated columns. All other field paths are grouped. Example: `Category_ccp__c,Key_Message_vod__c.Name`. |
+| showTotals          | sub,grand,both | Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: the overall total is shown at the bottom of the table. both: shows both sub and grand. Totals are shown for columnsBy and Record Count fields |
 
 #### Aggregation Modes
 
@@ -45,6 +48,9 @@ In this case, SUM will be used for all applicable fields, except for `Amount_ccp
 
 `countColumn;aggregationMode:...`: A column will be added, with the default title.
 `countColumn:My_Title;aggregationMode:...`: The translated text will be used as the column's title.
+
+#### columnsBy
+`columnsBy:Call_Date_vod__c/month`: Adds a new columns per month that is represented in the dataset. The value of the field will be the concattenated value for all records that have a call date in that month.
 
 #### Custom Modal
 
