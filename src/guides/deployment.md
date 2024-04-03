@@ -252,3 +252,7 @@ Repeat steps 3 through 9 for the Insights+ Parameter object and CSV.
 ## Next Steps
 
 You are now ready to [create your first dashboard](/guides/create-an-html-report-a-step-by-step-guide)!
+
+## Notes
+
+After installing or updating the package, it is possible that Profiles' Last Modified Date and Last Modified By are updated. This happens when new objects are added and profiles gain settings for them.
