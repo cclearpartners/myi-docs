@@ -11,7 +11,9 @@ Exports the JSON representation of a layout identified by the layout ID.
 ### Response
 
 - The response will be a JSON object representing the layout.
-<br><br><br>
+  
+<br>
+
 ## Import Layout
 
 **POST** `<instance>/services/apexrest/cpt/layout/import`
@@ -38,7 +40,9 @@ Imports a layout using a JSON representation.
 ### Response
 
 - The response will be the ID of the newly imported Insights+ Layout.
-<br><br><br>
+  
+<br>
+
 ## Activate Layout
 
 **PUT** `<instance>/services/apexrest/cpt/layout/{ID}/activate`
@@ -48,6 +52,8 @@ Updates the status field to 'Active' for the layout identified by the layout ID.
 ### Response
 
 - The response will OK with a 200 status code.
+  
+<br>
 
 ## Notes
 
@@ -56,11 +62,15 @@ Updates the status field to 'Active' for the layout identified by the layout ID.
 - For the import endpoint, the `json` field in the request body must be a valid JSON object representing the layout.
 - The `replace` field in the import request body is optional; if set to `true` and a valid `layoutId` is provided, the existing layout will be replaced by the imported layout.
 
+<br>
+
 ## Error Codes
 
 - `204` - No Content: The request was processed, but no content was found.
 - `400` - Bad Request: The request was invalid or cannot be otherwise served.
 - `500` - Internal Server Error: An unexpected condition was encountered.
+
+<br>
 
 ## Examples
 
