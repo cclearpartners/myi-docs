@@ -34,7 +34,7 @@ Imports a layout using a JSON representation.
 
 - `json`: A JSON formatted string that defines the structure and settings of the layout to be imported.
 - `layoutId`: (Optional) The ID of the layout that you want to replace. If `replace` is set to `true`, this field or the htmlReportId must be provided.
-- `htmlReportId`: (Optional) The ID of the HTML report that the new layout is associated with.
+- `htmlReportId`: (Optional) The ID of the HTML report that the new layout is associated with. If no layoutId is specified, the htmlReportId will be used to attempt to retreive a layoutId.
 - `replace`: (Optional) A boolean flag that, when set to `true`, indicates that the existing layout specified by `layoutId` should be replaced with the new layout defined in the `json` field. The old layout will be deleted.
 
 ### Response
