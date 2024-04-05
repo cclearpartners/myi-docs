@@ -1,3 +1,8 @@
+---
+title: "Insights+ Layout REST API Documentation"
+description: Learn how to add export and import Insights+ Layouts using the API
+date: 2024-04-05T08:15:49.824Z
+---
 # Insights+ Layout REST API Documentation
 
 The Insights+ Layout API provides endpoints for importing, exporting, and activating layouts within a specified Salesforce (SF) organization.
