@@ -1,6 +1,6 @@
 ---
 title: "Insights+ Layout REST API Documentation"
-description: Learn how to add export and import Insights+ Layouts using the API
+description: Learn how to export and import Insights+ Layouts using the Insights+ REST API
 date: 2024-04-05T08:15:49.824Z
 ---
 # Insights+ Layout REST API Documentation
