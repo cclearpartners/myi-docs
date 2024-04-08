@@ -38,6 +38,7 @@ When using the search custom parameter, to enable users to free text search on f
 |---------------------|-------|-------------|
 | allOption           | Boolean,String| When combined with `multiple:false`, adds an "All" option to the dropdown. Can be given a Veeva Message to customise the label. Eg. `allOption;multiple:false` or `allOption:My_Veeva_Message;multiple:false;` |
 | allOptionSelected   | Boolean| When using allOption, this visually sets "All" as selected by default. Eg. `allOption;allOptionSelected;multiple:false;` |
+| emitMultipleValues  | Boolean| Use this when `multiple` is false and the filter contains can contain values that may lead to parsing errors. Eg. `multiple:false;emitMultipleValues`. |
 | filterStyle         | String| Defaults to light. Can also be: primary for a darker look. |
 | multiple            | Boolean | Defaults to true. When set to false, only one option can be selected. |
 | noneOption      | Boolean,String    | Forces the filter to display an "empty" option. Can also be given a Veeva Message to use as the label. Otherwise, defaults to "None". |
