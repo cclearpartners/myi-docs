@@ -29,6 +29,8 @@ In the API (Enable OAuth Settings) section, enable the OAuth Settings.
 
 Other settings can be kept to default values. Save the Connected App. Next the policies for the connected app will be set.
 
+![Create the Insights+ App](/static/img/I+Connected-App.png "Connected App Example")
+
 ## Configure policies for the Connected App
 From Setup, go to ‘Manage Connected Apps’ and select your newly created app. Click on ‘Edit Policies’ and set the following fields.
 
@@ -45,6 +47,8 @@ In the session policies section
 
 As a user (calling the API), to be able to have access via the connected app we just created, access must be given to the connected app and the Apex class defining the API. 
 
+![Insights+ Connected App Policies](/static/img/I+Connected-app-pol.png "Connected App Policies")
+
 ## Manage App Access
 Create or re-use an existing Permission Set to grand access to the connected app and API related Apex classes. To avoid the permission to be overwritten by future deploys, we recommend creating a new Permission Set specifically for this purpose. 
 
@@ -60,7 +64,12 @@ To give a user or API-user access to the connected add, assign the Permission Se
 ## Consumer Details
 Your consumer details are needed to authorize your application with the Connected App and inherently get access to the Insights+ API.
 While logged in as the API consuming user, in Setup, go to the ‘App Manager’. Next, look for the connected app we just created and in the right dropdown menu click ‘View’.
-Now in the ‘API (Enable OAuth Settings)’ section click on the ‘Manage Consumer Details’ button. This (after email code verification) will bring you to a page where you should be able to find your ‘Client Key’ and ‘Consumer Details’. 
+
+Now in the ‘API (Enable OAuth Settings)’ section click on the ‘Manage Consumer Details’ button. 
+![Insights+ Connected App Consumer Details](/static/img/I+Connected-App-Con-Det.png "Insights+ Connected App Consumer Details")
+
+This (after email code verification) will bring you to a page where you should be able to find your ‘Client Key’ and ‘Consumer Details’. 
+![Insights+ Connected App Consumer Keys](/static/img/I+Connected-app-Con-Key.png "Insights+ Connected App Consumer Keys")
 
 ## API Authentication
 For authentication we recommend using the [OAuth 2.0 web server flow](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_web_server_flow.htm&type=5). 
