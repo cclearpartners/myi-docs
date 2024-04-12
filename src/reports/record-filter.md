@@ -32,6 +32,10 @@ Use the filters custom parameter to limit the records that are shown.
 
 When using the search custom parameter, to enable users to free text search on fields other than the display field, add them to the List View, with both Display and Filter By checkboxes unchecked.
 
+## Title Configuration
+
+By default, the filter's title is the name of the field being displayed. To set a different title, fill in the List View Definition's Label field.
+
 ## Custom Parameters
 
 | Name                | Type  | Description |
