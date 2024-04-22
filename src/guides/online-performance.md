@@ -4,7 +4,7 @@ description: How to speed up online dashboards
 date: 2024-03-29T00:00:00.000Z
 ---
 
-Online dashboards, especially at Territory-level can become slow. Here are some recommendations to speed them back up.
+Online dashboards, especially at Territory-level can become slow. Here are some recommendations to speed them up.
 
 ## List View Caching
 
@@ -15,6 +15,8 @@ Global Cache List Views are queried before the reports start loading. When the r
 A cache must only query one object. There should not be any lookups.
 
 Reports will not have access to any records that are not in the cache, so make sure the Global Cache List View gathers all the data the dashboard could ever need. For example, when caching Calls, if there is a Period Filter that goes back 2 years, the Global Cache List View must query calls from 2 years ago.
+
+When caching multiple related objects, use the Global Cache Order field (or the `globalCacheOrder` custom parameter if the field is not available) on the List View to determine which objects to cache first. For example, when caching Accounts and Calls for those Accounts, set the Accounts List View's Global Cache Order to 1 and the Calls List View's to 2.
 
 ## ZIP Size Reduction
 
