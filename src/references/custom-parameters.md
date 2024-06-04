@@ -66,6 +66,26 @@ Identifies which custom report should handle this reporting block.
 
 Sets the look of the report's filters. Defaults to light, can also be primary.
 
+### flsExclude
+
+The Reporting Block Layout will be displayed ONLY to users who do NOT have access to the specified field.
+
+This is useful, for example, when progressively rolling out a new report that uses a new field, to continue showing the old version to users who don't have access to it yet.
+
+The advantage over countriesExclude, is that this is more dynamic: as soon as a user is granted FLS the report will disappear, without requiring the list of excluded countries to be updated.
+
+Example: `flsExclude:Account.My_Field` means that only users without access to `My_Field` on the Account object will see this Reporting Block Layout.
+
+### flsInclude
+
+The Reporting Block Layout will be displayed ONLY to users who have access to the specified field.
+
+This is useful, for example, when progressively rolling out a new report that uses a new field, to show the new version to users who already have access to it, while providing a fallback to those who don't.
+
+The advantage over countriesInclude, is that this is more dynamic: as soon as a user is granted FLS this report will appear, without requiring the list of excluded countries to be updated.
+
+Example: `flsInclude:Account.My_Field` means that only users with access to `My_Field` on the Account object will see this Reporting Block Layout.
+
 ### groupBy
 
 Override the groupBy set in listview. A comma-separated list of field API names.
