@@ -15,6 +15,6 @@ For example, in a tab containing both the Accounts In Territory Filter and a Tab
 
 | Name                | Type    | Description |
 |---------------------|---------|-------------|
-| territoryOutLabel   | String  | Defaults to `no` |
 | territoryInLabel    | String  | Defaults to `yes` |
 | territoryInSelected | Boolean | When set to true, the in territory option is selected by default |
+| territoryOutLabel   | String  | Defaults to `no` |
