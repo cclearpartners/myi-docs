@@ -21,6 +21,7 @@ Use the List View Definitions's Icon field to display an icon instead of a text 
 | filterStyle         | String| Optional. When set to `inline`, List View Definition fields with Filter By are displayed only in the table, instead of at the top of the report. |
 | frozenColumn        | String  | Optional. Comma-separated list of column field paths. When the table is bigger than the report it is in and the user scrolls horizontally, these columns will not scroll offscreen. They will remain stuck to the left of the report. This is particularly useful for Account names, for example. |
 | highlight           | Boolean  | Optional. Defaults to true. Set to false to hide the row count in the top-right corner of the report. |
+| noDataLabel         | String  | Optional. Sets the message displayed when the table is empty. Can be a Veeva Message. Defaults to the `no_data` message. Can be used in reports where the table is in a modal, such as Counter. |
 | noHscroll           | Boolean   | Optional. Defaults to false. Set to true to force all columns to fit without horizontal scrolling. |
 | pagination          | Number,Boolean | Defaults to 10. Set to false to remove all pagination. Set to a number to change page size. Set to a comma-separated list of numbers to allow the user to choose between multiple page sizes. |
 | placeholder         | String | Optional. Text to show when a field is empty. E.g. a dash (-). |

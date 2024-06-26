@@ -13,6 +13,8 @@ Certain fields have special handling. For example, booleans are shown as checkbo
 
 The report must have a List View. It determines which fields are displayed in the report. The report will display only the first result of the query, so use the sort field, appropriate [filters](/references/custom-parameters-list-view#filters) and [limit](/references/custom-parameters-list-view#limit) if necessary.
 
+The Icon field of the List View Definitions can be used to display an icon alongside the text label. The icon classes from [Font Awesome](https://fontawesome.com/v5/search) must be used. Example: `far fa-envelope`. To use an icon instead of a text label, set the List View Definition's Label field to `$NONE`.
+
 ### Custom Parameters
 
 | Name                | Type  | Description |
