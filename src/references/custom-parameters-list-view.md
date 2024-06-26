@@ -37,6 +37,12 @@ Use this to narrow down query results. The format is: `Object_API_Name/WHERE CLA
 
 Example: `filters:Product_vod__c/Product_Type_vod__c='Sample' OR Approved=$TRUE,Call2_vod__c/Status='Submitted_vod' AND Call_Date_vod__c >= $LAST_N_DAYS:60 AND Account_vod__c=$ACCOUNT_ID`
 
+## globalCacheOrder
+
+This is relevant only when the Global Cache checkbox is checked.
+
+The globalCacheOrder custom parameter allows you to decide in which order objects must be cached. This is useful, for example, to cache Calls that are linked to already-cached Accounts. This increases the performance of caching.
+
 ### Keywords
 
 Keywords are used to make the queries more powerful and handle values that are not [cross-platform](https://support.veeva.com/hc/en-us/articles/360021663794-Why-do-HTML-Reports-Work-Differently-on-Different-Platforms-?source=search). When the query is executed, keywords are replaced by actual values.

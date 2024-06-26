@@ -7,6 +7,22 @@ order: 1
 
 These custom parameters are applicable to all Reporting Block Layouts.
 
+### allowChunkedQueries
+
+Allows queries containing more than 100,000 characters to be executed online. This custom parameter should only be used as a last resort, if there are no other ways to make the query more focused. This is because overly long queries generally indicate that the query is insufficiently filtered or contains duplicate IDs.
+
+| Value | Effect |
+|-------|--------|
+| true  | Enables online queries with 100,000+ characters. |
+| false | Disables support. Useful when it is set at RBL-level but not necessary at LVA-level. |
+| Number| Sets chunk size. Should only be necessary in very advanced cases. Defaults to 3000. |
+
+Examples: 
+
+- `allowChunkedQueries;`
+- `allowChunkedQueries:false;`
+- `allowChunkedQueries:1500;`
+
 ### cellStyle
 
 | Value | Effect |
