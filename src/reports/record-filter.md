@@ -7,7 +7,7 @@ Filters on a list of unique values from a specific field.
 
 The report's Main List View determines which records are taken into account and which field is used in the dropdown.
 
-Use the `$FILTER:ALL` or `$FILTER` in the [filters custom parameter](references/custom-parameters-list-view) in another Reporting Block Layout to use the values selected in this filter.
+Use the `$FILTER:ALL` or `$FILTER` in the [filters custom parameter](/references/custom-parameters-list-view) in another Reporting Block Layout to use the values selected in this filter.
 
 To use this filter explicitly in other Reporting Block Layouts, its name is Object_Name.Field_Name, eg. `Call2_vod__c.Status_vod__c`.
 
