@@ -7,9 +7,19 @@ order: 2
 
 These custom parameters can be set either on a List View or on a Reporting Block Layout. The ones set on Reporting Block Layout override the ones set on List View.
 
+## distinct
+
+After the List View's query is executed, records containing the same value in the specified field are discarded. The distinct field must be included in the List View Definitions.
+
+Examples:
+
+`distinct:Name`
+
+`distinct:Account_vod__c.Name`
+
 ## fieldsInclude
 
-When the block's listview is executed, the specified fields are queried ONLY for users in the given countries.
+When the Reporting Block Layout's List View is executed, the specified fields are queried ONLY for users in the given countries.
 
 One token specifies one object API name, a comma-separated list of country codes and a comma-separated list of field API names. These 3 parts are separated by a dash (-). Tokens are separated by a slash (/).
 
@@ -25,7 +35,7 @@ This means that ony the US will query for Clinical Trial.
 
 ## fieldsExclude
 
-When the block's listview is executed, the specified fields are queried for users all countries EXCEPT in the given countries. Cf. `fieldsInclude` for syntax rules.
+When the Reporting Block Layout's List View is executed, the specified fields are queried for users all countries EXCEPT in the given countries. Cf. `fieldsInclude` for syntax rules.
 
 Example usage: `fieldsExclude:Account-US,BR-Field_1_vod__c,Field_2_vod__c/Call2_vod__c-MX-Field_3;`
 
