@@ -81,15 +81,15 @@ Keywords are used to make the queries more powerful and handle values that are n
 - `$USER_ID`: The current user's ID. Example: `filters:Account/OwnerId=$USER_ID`.
 - `$USER_COUNTRY_CODE`: The current user's country code. Note that single quotes are required. Example: `filters:Account/Country = '$USER_COUNTRY_CODE'`.
 
+## limit
+
+A number. Limits the number of results for the query on the list view's main object.
+
 ## globalCacheOrder
 
 This is relevant only when the Global Cache checkbox is checked.
 
 The globalCacheOrder custom parameter allows you to decide in which order objects must be cached. This is useful, for example, to cache Calls that are linked to already-cached Accounts. This increases the performance of caching.
-
-## limit
-
-A number. Limits the number of results for the query on the list view's main object.
 
 ## noAccountId
 
