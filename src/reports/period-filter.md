@@ -22,7 +22,7 @@ To use the values set by the filter, use the [$START_DATE and $END_DATE](/refere
 | Name | Type | Description |
 |------|------|-------------|
 | addDateRange | Boolean | Defaults to false. When set to true, a custom date range is added next to the period dropdown. |
-| periods | String | A comma-separated list of period codes (listed below), in the order in which they will be displayed in the filter. The first code will be selected by default. Example: `periods:QP,QC,QN,M-6,Y-1,YC,M+6,Y+1` |
+| periods | String | A comma-separated list of period codes (listed below), in the order in which they will be displayed in the filter. The first code will be selected by default. Use an asterisk after the period code to set a different default. Example: `periods:QP,QC,QN,M-6,Y-1,YC,M+6,Y+1` sets the previous quarter as default. `periods:QP,QC*,QN,YTD` sets the current quarter as default. |
 
 ### Period Codes
 
