@@ -5,6 +5,11 @@ description: Displays data in a table
 
 Uses a List View to display data in a table.
 
+When the table is too wide for the screen, arrows indicate the off-screen columns and allow the user to navigate to them.
+
+![Table Off-Screen Table Columns Indicator](/static/img/release-2024R3-table-column-off-screen-indicator.png "Table Off-Screen Table Columns Indicator")
+
+
 ## Configuration
 
 Use the List View Definition's Help Text field to display a help button at the top of the column.

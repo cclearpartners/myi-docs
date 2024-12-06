@@ -48,3 +48,4 @@ By default, the filter's title is the name of the field being displayed. To set 
 | noneOption      | Boolean,String    | Forces the filter to display an "empty" option. Can also be given a Veeva Message to use as the label. Otherwise, defaults to "None". |
 | search         | Boolean| Optional. Adds a search box within the dropdown. |
 | showSelectionsInTitle | Number | In a multiple select filter, the title will show the name of up to the given number of selected values. When more values or no values are selected, the standard title is displayed. Eg. showSelectionsInTitle:2; |
+| updateOnChange | Boolean | This Record Filter updates when any other filter changes. Use this so that the values in the filter always reflect what is available in the rest of the dashboard. |

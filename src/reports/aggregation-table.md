@@ -22,6 +22,9 @@ NOTE: Some field types do not have a default aggregation mode, such as strings a
 | columnsBy           | Text  | A field path, optionally followed by a unit. Adds columns based on the data in the table. For example, it can display a column per month or per picklist value. DATE and PICKLIST fields are supported. Example: `columnsBy:Status_vod__c`. For DATE fields, a unit of either day, month or year can be added. If none is added, the default is month. Example: `columnsBy:Call_Date_vod__c/year;`. |
 | details             | Boolean | Defaults to true. If set to false, there is no drill down table. Example: `details:false;`. |
 | groupBy             | Text  | A comma-separated list of field paths. The last field path designates the aggregated columns. All other field paths are grouped. Example: `Category_ccp__c,Key_Message_vod__c.Name`. |
+| groupCollapsable    | Boolean | Enables collapsing the grouped rows so that only the header row is visible. Requires `groupHeader` to be true. |
+| groupCollapsed    | Boolean | Sets the initial state of the grouped rows to collapsed. Requires `groupHeader` to be true. |
+| groupHeader         | Boolean | Enables grouping the rows under a header row. |
 | showTotals          | sub,grand,both | Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: the overall total is shown at the bottom of the table. both: shows both sub and grand. Totals are shown for columnsBy and Record Count fields |
 
 #### Aggregation Modes
