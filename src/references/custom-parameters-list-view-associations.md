@@ -20,3 +20,6 @@ Can be one of:
 - OneToOne: the fields of the first record in the resultset will be added directly to the corresponding record.
 - OneToMany: the resultset will be added to the corresponding record as an array.
 
+## Parent List View Association
+A List View Association can now be linked to another List View Association. This allows 'One to Many' and 'One to One' relationships between List View Associations in reports such as Timeline. Hierarchy depth is currently limited to 3.
+The child List View Association is linked to the parent which in its turn is linked to the main List View. 
