@@ -23,6 +23,9 @@ NOTE: Some field types do not have a default aggregation mode, such as strings a
 | details             | Boolean | Defaults to true. If set to false, there is no drill down table. Example: `details:false;`. |
 | groupBy             | Text  | A comma-separated list of field paths. The last field path designates the aggregated columns. All other field paths are grouped. Example: `Category_ccp__c,Key_Message_vod__c.Name`. |
 | showTotals          | sub,grand,both | Determines which totals are to be shown in the table. sub: shows totals for sub groups if the groupby table functionality is used. grand: the overall total is shown at the bottom of the table. both: shows both sub and grand. Totals are shown for columnsBy and Record Count fields |
+| groupHeader         | If set a group header is added to the table groups |
+| groupCollapsable    | If set to true, the table groups will be collapsable. |
+| groupCollapsed      | If set the table groups can be collapsed, and will be by default. The table groups will automatically be set collapsable if set. |
 
 #### Aggregation Modes
 
