@@ -7,6 +7,7 @@ Use this report to display simple messages, such as info about dashboard usage o
 
 ## Custom Parameters
 
-| Name                | Type  | Description |
-|---------------------|-------|-------------|
-| textBody            | String| Can be a Veeva Message name, a framework message or hardcoded text. In each case, HTML is supported. Hardcoded text can contain HTML directly, but for Veeva Messages and framework messages, the HTML must be in the message, not in the custom parameter |
+| Name                | Type   | Description |
+|---------------------|--------|-------------|
+| contentVertical     | string | Can be center or top. Defaults to top. |
+| textBody            | String | Can be a Veeva Message name, a framework message or hardcoded text. In each case, HTML is supported. Hardcoded text can contain HTML directly, but for Veeva Messages and framework messages, the HTML must be in the message, not in the custom parameter |
