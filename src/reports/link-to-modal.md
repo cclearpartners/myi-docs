@@ -23,4 +23,6 @@ In addition to those below, all [Table custom parameters](/reports/table#custom-
 
 | Name | Type  | Description |
 |------|-------|-------------|
+| contentHorizontal | string | Can be right or left. Defaults to left. |
+| contentVertical | string | Can be center or top. Defaults to top. |
 | text | string | The link's text. Can be a Veeva Message or hardcoded. |
