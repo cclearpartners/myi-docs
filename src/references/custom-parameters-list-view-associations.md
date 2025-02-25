@@ -19,6 +19,16 @@ The List View Association will NOT be displayed to users from the countries in t
 
 Example: `countriesExclude:BR`
 
+### mode
+
+#### COUNT
+
+For OneToOne List View Associations. Adds a field containing the number of records in the LVA's query. In most reports, this field is shown automatically.
+
+#### SUM
+
+For OneToOne List View Assocations. Adds a field containing the sum of the values in a field of the LVA's query. The List View must only contain one List View Defintion. The List View Definition must be a Number. In most reports, this field is shown automatically.
+
 ## prefix
 
 When there are multiple List View Associations with the role OneToOne or OneToMany that query the same object, it is necessary to give each one a unique prefix. Otherwise the data from one List View Association will overwrite the other.
