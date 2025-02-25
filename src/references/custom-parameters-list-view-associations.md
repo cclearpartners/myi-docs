@@ -21,13 +21,19 @@ Example: `countriesExclude:BR`
 
 ### mode
 
+Influences how the List View Association's data will be added to the main data. The value can be one of the below.
+
 #### COUNT
 
 For OneToOne List View Associations. Adds a field containing the number of records in the LVA's query. In most reports, this field is shown automatically.
 
+Example: `mode:COUNT`
+
 #### SUM
 
 For OneToOne List View Assocations. Adds a field containing the sum of the values in a field of the LVA's query. The List View must only contain one List View Defintion. The List View Definition must be a Number. In most reports, this field is shown automatically.
+
+Example: `mode:SUM`
 
 ## prefix
 
