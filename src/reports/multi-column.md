@@ -26,7 +26,7 @@ The Icon field of the List View Definitions can be used to display an icon along
 | labelsInclude | List | Comma-separated list of field paths. Only the labels for these field paths will be displayed. |
 | listViews | List | Comma-separated list of List View names. The order of the List Views determines the order they are shown in. Allows you to show multiple datasets in the same report. | 
 | noDataLabel | String | A Veeva Message or text that will be displayed when there is no data to display. |
-| mode | String | A 'has-one' mode can be specified per object. i.e. mode:Account=has-one,Product_vod__c=has-one. If the 'has-one' mode is set for an object, the multi column element is reduced to 1 column showing whether results are available for the given object dataset. |
+| mode | has-one,SUM | Reduces the multi column element to 1 column. Specified per object: `mode:Sent_Email_vod__c=SUM,Product_vod__c=has-one`. Data shown depends on selected mode. **has-one**:  shows true or false depending on whether results are available for the given object dataset. **SUM**: shows the sum of the values of the field for all records in the dataset. There must only be one field. Field must be numeric. |
 | recordDirection | String | Defaults to vertical. Can be set to horizontal. Only relevant when displaying more than one record. |
 | theme | String | Optional. When displaying more than one record, can be set to `multiple` so that each record appears to be a separate report. |
 | vertical | Boolean | Defaults to false. When set to true, labels and values are placed above one another, instead of side-by-side. |
