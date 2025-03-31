@@ -7,6 +7,18 @@ order: 2
 
 These custom parameters can be set either on a List View or on a Reporting Block Layout. The ones set on Reporting Block Layout override the ones set on List View.
 
+## dataValueLabels
+
+`dataValueLabels` takes a comma-separated list of tokens. Each token can have one of several formats:
+
+- value=label: All fields of a record with this value will use this label, regardless of object. Example: `Submitted_vod=Validated`
+- field.value=label: All fields of a record with this name and this value will use this label, regardless of object. Example: `Status_vod__c.Submitted_vod=Validated`
+- object/field.value=label: The field of a record with this name, this value and of the given object will use this label. Example: `Call2_vod__c/Status_vod__c.Submitted_vod=Validated`
+
+Example: `dataValueLabels:Opt_In_vod=Active,true=Yes,1=Single,Interaction_Medium_vod__c.Face_to_Face=Screen to Screen,Call2_vod__c/Status_vod__c.Submitted_vod=Validated;`
+
+When changing the value's type (eg. number to string), you must set the LVD Convert Type field.
+
 ## distinct
 
 After the List View's query is executed, records containing the same value in the specified field are discarded. The distinct field must be included in the List View Definitions.

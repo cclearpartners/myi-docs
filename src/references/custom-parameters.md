@@ -78,6 +78,14 @@ The Reporting Block Layout is not shown or loaded when the rest of dashboard loa
 
 Identifies which custom report should handle this reporting block.
 
+### fieldsExcludeWithoutFls
+
+Silently remove List View Definitions for fields the user does not have FLS for. Can be set at any level, from dashboard to List View Association, depending on desired scope.
+
+Example usage: `fieldsExcludeWithoutFls`
+
+Note: For lookups, only the field on the last object is checked.
+
 ### filterStyle
 
 Sets the look of the report's filters. Defaults to light, can also be primary.
