@@ -206,6 +206,14 @@ Set this once per row, on any Reporting Block Layout, to affect the row's stylin
 
 Example: `rowStyle:filters;`
 
+### rowWrap
+
+Can be used in combination with `rowStyle:filters`. Set this once per row, on any Reporting Block Layout.
+
+| Value | Effect |
+|-------|--------|
+| false| Prevents the reports from wrapping onto the next row. |
+
 ### titleStyle
 
 Sets how the report title is displayed.
