@@ -62,6 +62,19 @@ In this example, the previous chart is filtered on the "Planned" call status, bu
 
 When Display is checked, that column is displayed in the table view (both in the main view and in the modal). When using a listview with a custom report, it can be useful to retrieve a field for data manipulation purposes, but not display it to the end user.
 
+### Convert Types
+
+The Convert Type picklist controls how a field displayed. For example a DOUBLE field displays `2.0` by default. When Convert Type is set to NUMBER, it will be displayed as `2`. Converting NUMBERs to BOOLEANs or DATETIMEs to DATEs are other common usecases.
+
+Supported conversions:
+
+- BOOLEAN → DOUBLE: true becomes 1.0 and false becomes 0.0
+- BOOLEAN → NUMBER: true becomes 1 and false becomes 0
+- DOUBLE → NUMBER: 2.1 becomes 2. 2.9 becomes 3. 2.5 becomes 3.
+- NUMBER → BOOLEAN: 1 becomes `true`. Anything else becomes `false`.
+- NUMBER → DOUBLE: 2 becomes 2.0.
+- DATETIME → DATE: 01/01/2025 14:05 becomes 01/01/2025.
+
 ### Required Lookups
 
 The Required Lookup checkbox applies only to fields on a lookup object, and not on the main object. It indicates that records which do not have this lookup will be ignored. This can happen when:
