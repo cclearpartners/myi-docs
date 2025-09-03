@@ -57,16 +57,6 @@ Set this to true if the main record should be filtered out when the List View As
 
 Example: `requiredAssociation;`
 
-### requiredIfTabFiltered
-
-Enables tab filters (eg. [Record Filter](/reports/record-filter), [Picklist Filter](/reports/picklist-filter)) to filter main List View records based on List View Association records.
-
-It takes a comma-separated list of tab filter names.
-
-Example: A table of Accounts, which also shows a field from Product Metrics, has a tab filter on a Product Metrics field. When no Product Metrics value is selected in the tab, all Accounts are shown. When the filter has a selected value, only Accounts with at least one Product Metrics matching that value are shown.
-
-`requiredIfTabFiltered:Product_Metrics_vod__c.My_Field__c`
-
 ## Role
 
 Can be one of:
