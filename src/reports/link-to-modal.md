@@ -23,6 +23,7 @@ In addition to those below, all [Table custom parameters](/reports/table#custom-
 
 | Name | Type  | Description |
 |------|-------|-------------|
+| analytics | boolean | Track when the modal is opened. The Action is "Link to Modal". The Action Detail is translated value of the `text` custom parameter. |
 | contentHorizontal | string | Can be right or left. Defaults to left. |
 | contentVertical | string | Can be center or top. Defaults to top. |
 | text | string | The link's text. Can be a Veeva Message or hardcoded. |
