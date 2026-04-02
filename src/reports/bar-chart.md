@@ -23,6 +23,7 @@ Same configuration with the following custom parameters added: `groupBy2:Call_Da
 
 | Name | Type | Description |
 |------|------|-------------|
+| chartColors | Map | Comma-separated list. Each item in the list has a the grouped field name, an underscore, the value, an equals sign and a color. Example: `Status_vod__c_Planned_vod=#eeffee,Status_vod__c_Submitted_vod=#3333cc` |
 | dataLabels | Boolean | Defaults to false. Set to true to write the value on each bar. |
 | details | Boolean | Defaults to true. When set to false, no modal will be shown when the user clicks on the chart. |
 | groupBy2 | String | A field path to group bars along a second dimension. This results in multiple bars per category created with the List View's Group By field. |
