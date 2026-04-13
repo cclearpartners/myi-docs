@@ -182,7 +182,7 @@ This has moved to [List View Custom Parameters](/references/custom-parameters-li
 
 ### requiredIfTabFiltered
 
-Enables tab filters (eg. [Record Filter](/reports/record-filter), [Picklist Filter](/reports/picklist-filter)) to filter main List View records based on List View Association records.
+Enables tab filters (eg. [Record Filter](/reports/record-filter), [Picklist Filter](/reports/picklist-filter)) to filter main List View records based on List View Association records. Is set on the Reporting Block Layout. Applies to both One to One and One to Many List View Associations.
 
 It takes a comma-separated list of tab filter names.
 
