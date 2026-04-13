@@ -13,12 +13,14 @@ To show a column only in the drill down table, uncheck the Display checkbox.
 
 NOTE: Some field types do not have a default aggregation mode, such as strings and picklists. By default, these will not be shown in the aggregation table, even if the Display checkbox is checked. To display them anyway, specify an aggregation mode for the field in the custom parameters, as shown below. Typically, this will be FIRST or LIST.
 
+To show the count of aggregated records, create a calculated List View Definition named `Count__calc`.
+
 ### Custom Parameters
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | aggregationMode     | Text  | Determines how fields will be aggregated. See details below. |
-| countColumn         | Boolean or Text  | If set to true, a column will be added showing how many records are in each aggregate. If set to text, it will be used as the title of the column. |
+| countColumn         | Boolean or Text  | DEPRECATED: Use the `Count__calc` column instead. If set to true, a column will be added showing how many records are in each aggregate. If set to text, it will be used as the title of the column. |
 | columnsBy           | Text  | A field path, optionally followed by a unit. Adds columns based on the data in the table. For example, it can display a column per month or per picklist value. DATE and PICKLIST fields are supported. Example: `columnsBy:Status_vod__c`. For DATE fields, a unit of either day, month or year can be added. If none is added, the default is month. Example: `columnsBy:Call_Date_vod__c/year;`. |
 | details             | Boolean | Defaults to true. If set to false, there is no drill down table. Example: `details:false;`. |
 | groupBy             | Text  | A comma-separated list of field paths. The last field path designates the aggregated columns. All other field paths are grouped. Example: `Category_ccp__c,Key_Message_vod__c.Name`. |
