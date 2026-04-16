@@ -188,7 +188,14 @@ It takes a comma-separated list of tab filter names.
 
 Example: A table of Accounts, which also shows a field from Product Metrics, has a tab filter on a Product Metrics field. When no Product Metrics value is selected in the tab, all Accounts are shown. When the filter has a selected value, only Accounts with at least one Product Metrics matching that value are shown.
 
-`requiredIfTabFiltered:Product_Metrics_vod__c.My_Field__c`
+`requiredIfTabFiltered:Product_Metrics_vod__c.Products_vod__c`
+
+In more advanced cases, the filter can be applied to a different object by using a slash:
+
+`requiredIfTabFiltered:Product_Metrics_vod__c.Products_vod__c/Product_vod__c`
+
+This example can be used when there is a List View Assocation on the Product object. This means that when the Product of a Product Metric is selected in the tab filter, only records from the main List View with at least one Product are shown.
+
 
 ### rowGroup
 
