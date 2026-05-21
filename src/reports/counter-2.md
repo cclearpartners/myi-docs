@@ -27,6 +27,7 @@ The icons are set in the List View Associations' Custom Parameters. The subtitle
 |---------------------|-------|-------------|
 | color | String  | To give the Counter's icon and text a different color, use one of danger, warning or success. Example: `color:danger;` |
 | columns | Number | Determines the amount of colums displayed when multiple counters are displayed. If the amount of counters exceeds the amount of colums, the next counter will be moved below. |
+| currency | String| Formats the highlight as a currency. The value must be a currency ISO code, such as USD or EUR. |
 | first | Text | The value of this field path of the first record in the dataset that has a value defined for this field path is diplayed as a result in the counter | 
 | highlightFirst | Boolean | If set, the order of displayed elements in the counter will be value first, icon second. By default the icon is shown first.|
 | icon  | Text  | Required. font-awesome classes for the icon to be displayed. | 
