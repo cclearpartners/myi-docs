@@ -19,6 +19,12 @@ Example: `dataValueLabels:Opt_In_vod=Active,true=Yes,1=Single,Interaction_Medium
 
 When changing the value's type (eg. number to string), you must set the LVD Convert Type field.
 
+You can force the value to be string by surrounding it with double quotes. This is useful, for example, when the value consists solely of numbers.
+
+Example: `dataValueLabels:"2016"=My Product Name,2016=A number`
+
+In the example, the first value will match a text field, whereas the second will match a number field.
+
 ## distinct
 
 After the List View's query is executed, records containing the same value in the specified field are discarded. The distinct field must be included in the List View Definitions.
