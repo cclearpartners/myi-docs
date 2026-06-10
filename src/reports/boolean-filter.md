@@ -22,5 +22,7 @@ No listview is required for the boolean filter. The object and field are determi
 
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
-| object         | String| Required. Object API name on wich the filter should apply |
 | field         | String| Field name on wich the filter should apply |
+| labelFalse  | String | Veeva Message or text for the false value. Defaults to "no". |
+| labelTrue  | String | Veeva Message or text for the true value. Defaults to "yes". |
+| object         | String| Required. Object API name on wich the filter should apply |
