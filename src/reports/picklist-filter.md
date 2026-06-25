@@ -7,7 +7,7 @@ Filters on a list of picklist values from a specific field.
 
 The `object` and `field` custom parameters determine which field is used.
 
-Use `$FILTER:ALL` or `$FILTER` in the [filters custom parameter](references/custom-parameters-list-view) in another Reporting Block Layout to use the values selected in this filter.
+Use `$FILTER:ALL` or `$FILTER` in the [filters custom parameter](/references/custom-parameters-list-view) in another Reporting Block Layout to use the values selected in this filter.
 
 To use this filter explicitly in other Reporting Block Layouts, its name is Object_Name.Field_Name, eg. `Call2_vod__c.Status_vod__c`.
 
