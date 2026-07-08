@@ -23,7 +23,9 @@ No listview is required for the boolean filter. The object and field are determi
 | Name                | Type  | Description |
 |---------------------|-------|-------------|
 | field         | String| Field name on wich the filter should apply |
+| labelAll  | String | Veeva Message or text for the all value. Defaults to "all". |
 | labelFalse  | String | Veeva Message or text for the false value. Defaults to "no". |
 | labelTrue  | String | Veeva Message or text for the true value. Defaults to "yes". |
+| multiple  | Boolean | Set this to true when the filter is customised in a way that it makes sense for users to be able to select both options. |
 | object         | String| Required. Object API name on wich the filter should apply |
 | synthetic | Boolean | Set to true when setting up a custom filter that doesn't map to an object or field. The report's title will be shown instead of the object and field labels |
