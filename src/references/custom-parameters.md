@@ -180,6 +180,14 @@ Example usage: `profilesInclude:PROFILE_2,PROFILE_4;`
 
 This has moved to [List View Custom Parameters](/references/custom-parameters-list-view/#recordtypes)
 
+### replaceTemplateDataFromLVAs
+
+Use this when templated List View Definitions on the main List View require data from a One-to-One List View Association. A custom parameter is required to activate this functionality for performance reasons.
+
+Example:
+
+`replaceTemplateDataFromLVAs;`
+
 ### requiredIfTabFiltered
 
 Enables tab filters (eg. [Record Filter](/reports/record-filter), [Picklist Filter](/reports/picklist-filter)) to filter main List View records based on List View Association records. Is set on the Reporting Block Layout. Applies to both One to One and One to Many List View Associations.
