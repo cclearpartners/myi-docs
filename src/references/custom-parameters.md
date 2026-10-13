@@ -23,6 +23,19 @@ Examples:
 - `allowChunkedQueries:false;`
 - `allowChunkedQueries:1500;`
 
+### forceQueryChunking
+
+Forces queries to be chunked even though the threshold (queries with 100,000+) may not have been reached, use #in #combination with allowChunkedQueries. 
+
+| Value | Effect |
+|-------|--------|
+| true  | Forces querry chunking |
+| false | Disables support. Useful when it is set at RBL-level but not necessary at LVA-level. |
+
+Examples: 
+
+- `forceQueryChunking;`
+
 ### cellStyle
 
 | Value | Effect |
